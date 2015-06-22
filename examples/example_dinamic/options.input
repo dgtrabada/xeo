@@ -1,0 +1,20 @@
+1                               itheory (0=Harris, 1=DOGS, 2=Ext-hubbard)
+0                               ispin
+1                               itheory_xc (0=HXC, 1=SNXC, 2=OLSXC)
+200                             max_scf_iterations (irrelevant for harris)
+1                               iqout (Lowdin = 1, Mulliken = 2)
+0.0d0                           qstate
+-5                              iquench
+0                               iTEMPERATURE
+0                               ibarrier
+0 0 0 0                         The big 4
+0                               ifixcharges
+0                               ifixneigh
+0                               icluster
+0                               iordern
+0                               iumbrella
+0                               ivdw
+0                               igauss
+0                               iimage
+0                               ipathintegral
+0

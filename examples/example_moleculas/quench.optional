@@ -1,0 +1,4 @@
+0.000001                   energy tolerance
+0.0001                    force tolerance
+0.0                      Temperature wanted
+50.0                     taurelax for simulated annealing

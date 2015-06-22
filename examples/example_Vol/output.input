@@ -1,0 +1,15 @@
+0                               iwrtcdcoefs (coefficients for wavefunctions)
+0                               iwrtcharges (writes out Lowdin or Mulliken)
+0                               iwrtdensity (write out density matrix)
+1                               iwrteigen (writes out the energy eigenvalues)
+0                               iwrtefermi (write out fermi occupations)
+0                               iwrtfpieces (writes out force components)
+0                               iwrthampiece (write pieces of H matrix)
+0                               iwrtcomponents (write components of ebs energy)
+0                               iwrtneigh (write out neighbor map)
+0                               iwrtneigh_com (write out common neighbor map)
+0                               iwrtxyz (write out xyz movie file)
+0                               iwrtdos (write DOS) 
+0                               iwrthop (write hoppings)
+0				iwrtatom
+output.input: Switches for output control.

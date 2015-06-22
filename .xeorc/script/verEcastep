@@ -1,0 +1,4 @@
+#!/bin/bash
+name=${1:-salida.out}
+grep 'Final energy' $name | cut -d'=' -f2 | cut -d'e' -f1 > col.temp 
+ 

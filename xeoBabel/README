@@ -1,0 +1,17 @@
+You can run xeoBabel
+  1)  ./xeoBabel
+  2)  java -jar xeoBabel.jar
+
+you have to modify your profile (.bashrc or .profile or .cshrc, depending on the shell).
+this is an example using the .bashrc
+
+ 3.)  export PATH="$PATH:this directoy" 
+
+
+//------------------------------------------------------------------------
+Copyright 2009  by Daniel Gonzalez Trabada
+xeoBabel is free software
+you can redistribute it and/or modify it under the terms of the
+GNU General Public License GPLv3 as published by the Free Software Foundation.
+//------------------------------------------------------------------------
+

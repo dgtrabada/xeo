@@ -1,0 +1,10 @@
+&option
+dt = 0.50
+T_initial = 0.0
+basisfile = input.bas
+lvsfile = input.lvs
+kptpreference = input.kpts
+&end
+&output
+iwrtxyz = 1
+&end

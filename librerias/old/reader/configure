@@ -1,0 +1,23 @@
+name=reader
+
+rm -fr *.jar
+
+cd src/${name}
+javac *java
+cd ..
+javac *java
+cd ..
+
+
+mkdir class
+mv src/*class class/
+mkdir class/${name}
+mv src/${name}/*class class/${name}/
+cp src/manifiesto.dat class/
+
+cd class
+jar -cfm ${name}.jar manifiesto.dat *.class ${name}/
+mv ${name}.jar ../
+cd ..
+rm -fr class
+java -jar ${name}.jar -version

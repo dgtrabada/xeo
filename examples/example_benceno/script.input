@@ -1,0 +1,9 @@
+ini.bas                               basis file
+cluster.lvs                           lattice vector filename
+GAMMA.kpts                            k-point filename
+1,100                                 initstep,finalstep
+0.50                                  time step (fs)
+answer.xv                             xv file name
+answer.ac                             ac file name
+0.0                                   tavg
+EOF

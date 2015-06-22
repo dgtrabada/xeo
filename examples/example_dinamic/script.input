@@ -1,0 +1,9 @@
+ini.bas                               basis file
+SiC_2x3_4.43.lvs                      lattice vector filename
+SiC_2x3_4.43_8-8.8kpts                k-point filename
+1,300                                initstep,finalstep
+0.50                                  time step (fs)
+answer.xv                             xv file name
+answer.ac                             ac file name
+1000.00                            tavg
+EOF

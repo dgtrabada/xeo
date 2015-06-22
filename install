@@ -1,0 +1,63 @@
+clear
+cat<<EOF> README 
+you can run xeo (different ways):
+                   1.)       ./xeo
+                   2.)       java -jar xeo.jar 
+also you can modify your profile (.bashrc or .profile or .cshrc, depending on the shell).
+this is an example using the .bashrc                    
+EOF
+echo '                   3.)       export PATH="$PATH:'$(pwd)'/"  #recommended ' >> README
+echo '  '>> README
+echo 'if you want to install xeo for all users write 4.) in /etc/profile ' >> README
+cat<<EOF>> README 
+
+//------------------------------------------------------------------------
+ xeo is a free (GPLv3) open project management for nanostructures using Java
+ Copyright (C) 2009 by Daniel González Trabada
+
+ This program comes with ABSOLUTELY NO WARRANTY; for details type (show w).
+ This is free software, and you are welcome to redistribute it
+ under certain conditions; type (show c) for details.
+//------------------------------------------------------------------------
+
+EOF
+
+cat README
+
+
+echo "$(pwd)/examples/example_STM/script.input fireball xeoBabel" > .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_benceno/script.input fireball xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_C5H10/script.input fireball xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_Vol/script.input fireball xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_Castep/sic_3x2.cell castep xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_spin/spin.xyz xyz xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_fireballTG/fireball.in fireball_TG xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_sic/script.input fireball xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_abinit/t98.in abinit xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_vasp_benceno/POSCAR vasp xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_java_STM_AFM_0/struc_b.xeo xeo xeoBabel" >> .xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_java_STM_AFM_1/struc.xeo xeo xeoBabel">>.xeorc/profile-xeo_0
+echo "$(pwd)/examples/example_XEO/xeo.xyz xyz xeoBabel" > .xeorc/profile-xeo_1
+ 
+
+
+if [ -a $HOME/.xeorc ] ; then
+echo "install doesn't chage your $HOME/.xeorc (only the help)"
+rm -fr $HOME/.xeorc/help
+cp -r .xeorc/help $HOME/.xeorc/ 
+else
+cp -r .xeorc $HOME/.xeorc
+fi
+echo '#!/bin/bash' > xeo
+#echo 'java -jar ${here}.jar ${here::$((${#here}-3))} $@ ' >>xeo
+
+echo 'if [ ! -r $HOME/.xeorc ];' >> xeo
+echo 'then cp -r ${0%xeo}.xeorc $HOME/.xeorc ; chmod -R u+rw $HOME/.xeorc; fi' >> xeo
+echo ' ' >> xeo
+echo 'java -jar $0.jar $@  2> /dev/null' >> xeo
+echo ' ' >> xeo
+echo 'if [ -r $HOME/.xeorc/temp ] ; then' >> xeo
+echo 'rm -fr $HOME/.xeorc/temp/*;fi' >> xeo
+chmod a+x xeo
+chmod a-x install
+echo $'\n'

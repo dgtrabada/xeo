@@ -1,0 +1,5 @@
+#rm -f CHARGES
+#rm -f *.dat 
+#rm -f *.xv *.ac 
+Script_clean
+../progs/fireball.x >> salida.out  

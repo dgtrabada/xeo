@@ -1,0 +1,6 @@
+#!/bin/bash
+name=${1:-salida.out}
+grep 'Grand Total' "$name" | cut -d'=' -f3 > col2.temp
+grep  ' ETOT' $name | grep -n ''|cut -d'=' -f2 > col1.temp
+paste col1.temp col2.temp > col.temp
+rm -fr col1.temp col2.temp

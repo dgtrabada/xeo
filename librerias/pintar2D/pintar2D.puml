@@ -1,0 +1,40 @@
+@startuml
+class java.awt.Color
+class java.awt.Font
+class java.awt.image.BufferedImage
+class java.io.BufferedReader
+class java.io.DataOutputStream
+class java.io.File
+class java.io.FileOutputStream
+class java.io.FileReader
+class java.io.IOException
+class java.util.ArrayList
+class javax.swing.JColorChooser
+class javax.swing.JFrame
+class javax.swing.JTextField
+class pintar2D.Main
+class pintar2D.Options2DPlot
+class pintar2D.pintar2D
+class pintar2D.pizarra
+class reader.reader
+pintar2D.Options2DPlot ..> java.awt.Color
+pintar2D.Options2DPlot ..> java.awt.Font
+pintar2D.Options2DPlot ..> javax.swing.JColorChooser
+pintar2D.Options2DPlot --|> javax.swing.JFrame
+pintar2D.Options2DPlot ..> javax.swing.JTextField
+pintar2D.pintar2D ..> java.awt.Color
+pintar2D.pintar2D ..> java.awt.image.BufferedImage
+pintar2D.pintar2D ..> java.io.BufferedReader
+pintar2D.pintar2D ..> java.io.DataOutputStream
+pintar2D.pintar2D ..> java.io.File
+pintar2D.pintar2D ..> java.io.FileOutputStream
+pintar2D.pintar2D ..> java.io.FileReader
+pintar2D.pintar2D ..> java.io.IOException
+pintar2D.pintar2D ..> java.util.ArrayList
+pintar2D.pintar2D ..> reader.reader
+pintar2D.pizarra ..> java.awt.image.BufferedImage
+pintar2D.pizarra ..> java.io.File
+pintar2D.pizarra ..> java.io.IOException
+pintar2D.pizarra ..> java.util.ArrayList
+pintar2D.pizarra --|> javax.swing.JFrame
+@enduml

@@ -1,0 +1,8 @@
+archivo.bas                                     basis file
+archivo.lvs                                     lattice vector filename
+archivo.kpts                                    k-point filename
+1,1                                             initstep,finalstep
+0.25                                            time step (fs)
+archivo.xv                                          xv file name
+archivo.ac                                          ac file name
+0.0                                             tavg

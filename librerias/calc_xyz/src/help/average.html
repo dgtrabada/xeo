@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<a name="average xyz"><h1>Calc_xyz</h1></a>
+<link rel="stylesheet" href="formato.css" type="text/css" /></head>
+<body>
+<hr>
+<div align="center">
+<h4>
+If you use <input type="radio" name="All steps" checked> All steps<br>
+you obtain the average of the file.xyz, in the format:<br>
+<pre>
+n_atoms
+
+Z_1  X_1_aver  Y_1_aver  Z_1_aver  sigma_x1  0 0  -sigma_x1 0 0  0 sigma_y1 0  0 -sigma_y1 0  0 0 sigma_z1  0 0 -sigma_z1
+Z_2  X_2_aver  Y_2_aver  Z_2_aver  sigma_x2  0 0  -sigma_x2 0 0  0 sigma_y2 0  0 -sigma_y2 0  0 0 sigma_z2  0 0 -sigma_z2
+ .      .         .         .          .     . .        .   . .  .      .   .  .       .   .  . .      .    . .       .         
+ .      .         .         .          .     . .        .   . .  .      .   .  .       .   .  . .      .    . .       .
+ .      .         .         .          .     . .        .   . .  .      .   .  .       .   .  . .      .    . .       .
+Z_n  X_n_aver  Y_n_aver  Z_n_aver  sigma_xn  0 0  -sigma_xn 0 0  0 sigma_yn 0  0 -sigma_yn 0  0 0 sigma_zn  0 0 -sigma_zn
+</pre>
+If you use <input type="radio" name="Only the steps" checked> Only the steps<br>
+you obtain the average between the steps you want, the out-file has the same format as before.<br>
+You can load this file with xeo and select the option (see arrows).
+</h4>
+</body></html>

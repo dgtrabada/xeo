@@ -1,0 +1,4 @@
+javac xeoBabel/*java
+jar -cfm  xeoBabel.jar xeoBabel/manifiesto.dat xeoBabel/*class
+java -jar xeoBabel.jar
+mv xeoBabel.jar ../

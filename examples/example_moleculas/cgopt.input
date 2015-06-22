@@ -1,0 +1,6 @@
+0.01                 ! max. displacement 
+0.5                  ! dummy argument
+0.00001              ! etot tolerance
+0.05                 ! ftot tolerance
+100                  ! max. number of CG steps
+3                    ! max. number of internal iterations

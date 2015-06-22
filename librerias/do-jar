@@ -1,0 +1,15 @@
+for i in reader calculadora
+do
+echo hacemos $i
+javac $i/$i.java 
+jar -cfm ${i}.jar ${i}/manifiesto.dat ${i}/${i}.class 
+mv ${i}.jar $i
+done
+
+i=language
+echo hacemos $i
+javac $i/$i.java 
+mv  ${i}/languages .
+jar -cfm ${i}.jar ${i}/manifiesto.dat ${i}/${i}.class languages 
+mv languages ${i}/
+mv ${i}.jar $i

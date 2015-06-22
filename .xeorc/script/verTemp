@@ -1,0 +1,3 @@
+#!/bin/bash
+name=${1:-salida.out}
+grep 'T_instant' $name|grep -n ''|cut -d'=' -f2|cut -d'T' -f1> col.temp  

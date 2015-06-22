@@ -1,0 +1,11 @@
+To run the project :
+
+
+java -jar java_STM_AFM.jar
+
+
+Copyright 2006,2009  by Daniel Gonzalez Trabada
+java_STM_AFM is free software you can redistribute 
+it and/or modify it under the terms of the
+GNU General Public License (GPLv3) as published 
+by the Free Software Foundation.

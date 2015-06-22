@@ -1,0 +1,4 @@
+#!/bin/bash
+name=${1:-salida.out}
+grep V_ $name | cut -d'=' -f3 | cut -d's' -f1 > col.temp
+

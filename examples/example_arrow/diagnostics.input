@@ -1,0 +1,31 @@
+File - diagnostic.input: For testing various terms in the Hamiltonian.
+Warning. Changing any value to 0 gives an invalid calculation.
+Note ioff=1 means the file is ON. This is the correct thing.
+1                ioff - 2c overlap
+1                ioff - 2c vna_ontopl
+1                ioff - 2c vna_ontopr
+1                ioff - 2c vna_atom-atom
+1                ioff - 2c non-local
+1                ioff - 2c xc_ontop
+1                ioff - 2c xc_atom-atom
+1                ioff - 2c xc_correction
+1                ioff - 2c z-dipole
+1                ioff - 2c y-dipole
+1                ioff - 2c x-dipole
+1                ioff - 2c coulomb
+1                ioff - 2c kinetic
+1                ioff - 2c exteneded hubbard
+1                ioff - 2c den_ontopl
+1                ioff - 2c den_ontopr
+1                ioff - 2c den_atom
+1		 ioff - 2c denS_ontopl
+1                ioff - 2c denS_ontopr
+1                ioff - 2c denS_atom
+1                ioff - 2c_overlapS
+1                ioff - 3c neutral-atom
+1                ioff - 3c exchange-correlation
+1                ioff - 3c average density OLSXC
+1		 ioff - 3c average density OLSXC (spheric)
+1		 ioff - 3c average density OLSXC (spheric)
+1		 ioff - 3c average density OLSXC (spheric)
+1, 0.0           itestrange, rangetest

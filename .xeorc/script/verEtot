@@ -1,0 +1,3 @@
+#!/bin/bash
+name=${1:-salida.out}
+grep  ' ETOT' $name | grep -n ''|cut -d'=' -f2 > col.temp

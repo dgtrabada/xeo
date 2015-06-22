@@ -1,0 +1,5 @@
+#!/bin/bash
+name=${1:-salida.out}
+iatom=${2:-1} #the position of the atom what ever you want to see
+cadena=' '$iatom' ftot'
+grep "$cadena" $name | cut -d'=' -f3 > col.temp
