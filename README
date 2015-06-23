@@ -1,4 +1,4 @@
-you can run xeo (different ways):
+you can run xeo using different ways:
                    1.)       ./xeo
                    2.)       java -jar xeo.jar 
 also you can modify your profile (.bashrc or .profile or .cshrc, depending on the shell).
