@@ -1,9 +1,12 @@
-you can run xeo using different ways:
+
+git clone https://github.com/dgtrabada/xeo.git
+
+you can run xeo (different ways):
                    1.)       ./xeo
                    2.)       java -jar xeo.jar 
 also you can modify your profile (.bashrc or .profile or .cshrc, depending on the shell).
 this is an example using the .bashrc                    
-                   3.)       export PATH="$PATH:/home/dani/Desktop/javaDani/xeo/"  #recommended 
+                   3.)       export PATH="$PATH:/where_is_xeo/"  #recommended 
   
 if you want to install xeo for all users write 4.) in /etc/profile 
 
@@ -11,8 +14,8 @@ if you want to install xeo for all users write 4.) in /etc/profile
  xeo is a free (GPLv3) open project management for nanostructures using Java
  Copyright (C) 2009 by Daniel González Trabada
 
- This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+ This program comes with ABSOLUTELY NO WARRANTY; for details type (show w).
  This is free software, and you are welcome to redistribute it
- under certain conditions; type `show c' for details.
+ under certain conditions; type (show c) for details.
 //------------------------------------------------------------------------
 
