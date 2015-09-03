@@ -54,7 +54,7 @@ public class plugin {
     fireball_TG fireball_TG   = new fireball_TG();
     vasp        vasp          = new vasp();
     xeo         xeo           = new xeo();
-    more        more          = new more();
+//    more        more          = new more();
     xyz         xyz           = new xyz();
     
     
@@ -117,9 +117,9 @@ public class plugin {
         info.add("read and write"); //https://sourceforge.net/projects/xeo/
         
         //--------- more ----------
-        type.add("more");
-        end_InputFile.add(".xyz");
-        info.add("write"); 
+//        type.add("more");
+//        end_InputFile.add(".xyz");
+//        info.add("write"); 
 
         //--------- xyz ---------------
         type.add("xyz");
@@ -160,7 +160,7 @@ public class plugin {
         if(sort.equals("fireball_TG"))  fireball_TG.write(outputFile,xeoFormat);
         if(sort.equals("bas"))                  bas.write(outputFile,xeoFormat);
         if(sort.equals("xeo"))                  xeo.write(outputFile,xeoFormat);
-        if(sort.equals("more"))                more.write(outputFile,xeoFormat);
+//        if(sort.equals("more"))                more.write(outputFile,xeoFormat);
         if(sort.equals("xyz"))                  xyz.write(outputFile,xeoFormat);
         
     }

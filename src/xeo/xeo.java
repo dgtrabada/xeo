@@ -20,6 +20,7 @@
 
 package xeo;
 
+import calc_xyz.JCalc_xyz;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,15 +38,7 @@ import java.awt.Graphics;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.AWTEvent;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-
-//------------------------
-
-import xeo.bulk;
-import xeo.mol;
-import xeo.povray;
+//-----------------------
 import fireball.fireball;
 import pintar2D.pintar2D;
 import reader.reader;
@@ -53,9 +46,9 @@ import java_STM_AFM.java_STM_AFM;
 import editor.editor;
 import calculadora.calculadora;
 import jCalc.jCalc;
-import java.awt.Component;
-import java.awt.PopupMenu;
+import java.awt.event.MouseEvent;
 import language.language;
+import xeokpts.jKpts;
 
 public class xeo extends javax.swing.JFrame {
     //---externos -----
@@ -129,15 +122,18 @@ public class xeo extends javax.swing.JFrame {
     }
     
     JMenuItem elemento ;
-    void JMenu_xeoBabel() {
-        ActionListener al = new ActionListener() {
+    private void JMenu_xeoBabel() {
+        ActionListener al;
+        al = new ActionListener() {
+            @Override
             public void actionPerformed(  ActionEvent evt ){
                 //System.out.println( ((JMenuItem)evt.getSource()).getText() );
                 pintarMol.babel.infBas.orderBas();
                 //limpiamos:
                 ls= new File(write_tmp).listFiles();
-                for (int i=0; i<ls.length; i++)
-                    ls[i].delete();
+                for (File l : ls) {
+                    l.delete();
+                }
                 if(((JMenuItem)evt.getSource()).getText().equals("xyz"))
                     pintarMol.babel.write("xyz",write_tmp+SEP+"step_"+xyz_step.getText()+".xyz");
                 else
@@ -158,8 +154,9 @@ public class xeo extends javax.swing.JFrame {
         enableEvents( AWTEvent.MOUSE_EVENT_MASK );
     }
 //----------------------------------------
-    void JLanguage() {
+    private void JLanguage() {
         ActionListener al = new ActionListener() {
+            @Override
             public void actionPerformed( ActionEvent evt ){
                 lang.lastLanguage=lang.Language;
                 // if(lang.Language.equals("mandarin")) fuente = new Font("SansSerif",Font.PLAIN,11);
@@ -167,10 +164,10 @@ public class xeo extends javax.swing.JFrame {
                 loadVal();
             }
         };
-        for(int e=0;e<lang.lan.size();e++){
-            elemento = new JMenuItem(lang.lan.get(e));
-            elemento.setText(lang.traslate(lang.lan.get(e)));
-            elemento.setToolTipText(lang.lan.get(e));
+        for (String lan : lang.lan) {
+            elemento = new JMenuItem(lan);
+            elemento.setText(lang.traslate(lan));
+            elemento.setToolTipText(lan);
             elemento.addActionListener( al );
             elemento.setBackground(Color.white);
             elemento.setFont(fuente);
@@ -179,8 +176,9 @@ public class xeo extends javax.swing.JFrame {
         enableEvents( AWTEvent.MOUSE_EVENT_MASK );
     }
 //----------------------------------------
-    void JMenuFireball() {
+    private void JMenuFireball() {
         ActionListener al = new ActionListener() {
+            @Override
             public void actionPerformed(  ActionEvent evt ){
                 pintarMol.babel.infBas.orderBas();
                 fireball.onPress(((JMenuItem)evt.getSource()).getText(),pintarMol.babel.path,pintarMol.babel.getXeoFormat());
@@ -5287,8 +5285,8 @@ public class xeo extends javax.swing.JFrame {
         java.awt.GraphicsEnvironment env = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         String[] familynames = env.getAvailableFontFamilyNames();
         javax.swing.DefaultListModel listaFont= new javax.swing.DefaultListModel();
-        for(int i=0;i<familynames.length;i++){
-            listaFont.addElement(familynames[i]);
+        for (String familyname : familynames) {
+            listaFont.addElement(familyname);
         }
         jListFont.setModel(listaFont);
     }//GEN-LAST:event_jButton30MousePressed
@@ -5354,7 +5352,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelXYZMouseEntered
     
     private void xyz_stepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_xyz_stepKeyPressed
-        if(evt.VK_ENTER == evt.getKeyCode() ) {
+        if(KeyEvent.VK_ENTER == evt.getKeyCode() ) {
             pintarMol.babel.infBas.iStep=cadena.readColInt(1,xyz_step.getText());
             barra_XYZ((pintarMol.babel.infBas.iStep*jLabelXYZ.getWidth())/pintarMol.babel.infBas.nPasosTotal, pintarMol.babel.infBas.iniStepMEM*jLabelXYZ.getWidth()/pintarMol.babel.infBas.nPasosTotal, pintarMol.babel.infBas.xyz.size()*jLabelXYZ.getWidth()/pintarMol.babel.infBas.nPasosTotal);
             cargarUnPaso();
@@ -5455,27 +5453,27 @@ public class xeo extends javax.swing.JFrame {
     javax.swing.tree.DefaultMutableTreeNode nodeA ;
     private void TreeAKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TreeAKeyPressed
         KEY_comun(evt);
-        if(evt.VK_F2== evt.getKeyCode()) TreeA.setEditable(true);
-        if(evt.VK_F7==evt.getKeyCode()) {
+        if(KeyEvent.VK_F2== evt.getKeyCode()) TreeA.setEditable(true);
+        if(KeyEvent.VK_F7==evt.getKeyCode()) {
             if(jSplitForm.getDividerLocation()==1)jSplitForm.setDividerLocation(180);
             else jSplitForm.setDividerLocation(1);
         }
-        if(evt.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
-        if(evt.VK_ENTER   == evt.getKeyCode() ){
+        if(KeyEvent.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
+        if(KeyEvent.VK_ENTER   == evt.getKeyCode() ){
             selectProject();
             loadMOL();
         }
-        if(evt.VK_DELETE  == evt.getKeyCode() ) TreeA_delete();
+        if(KeyEvent.VK_DELETE  == evt.getKeyCode() ) TreeA_delete();
         if(evt.getKeyCode() == 104) TreeA_up();
         if(evt.getKeyCode() == 98) TreeA_down();
-        //   if(evt.VK_F2 == evt.getKeyCode()) renameOpen();
-        if(evt.VK_RIGHT == evt.getKeyCode()){
+        //   if(KeyEvent.VK_F2 == evt.getKeyCode()) renameOpen();
+        if(KeyEvent.VK_RIGHT == evt.getKeyCode()){
             nInsp++;
             if(nInsp>=ins.size())nInsp=0;
             Limpiar_Inspector();
             Inspector();
         }
-        if(evt.VK_LEFT == evt.getKeyCode()){
+        if(KeyEvent.VK_LEFT == evt.getKeyCode()){
             nInsp--;
             if(nInsp<0)nInsp=ins.size()-1;
             Limpiar_Inspector();
@@ -5484,15 +5482,15 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_TreeAKeyPressed
     
     private void TreeAKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TreeAKeyReleased
-        if(evt.VK_UP == evt.getKeyCode() ) {  selectProject(); loadMOL(); }
-        if(evt.VK_DOWN == evt.getKeyCode() ){  selectProject(); loadMOL(); }
+        if(KeyEvent.VK_UP == evt.getKeyCode() ) {  selectProject(); loadMOL(); }
+        if(KeyEvent.VK_DOWN == evt.getKeyCode() ){  selectProject(); loadMOL(); }
     }//GEN-LAST:event_TreeAKeyReleased
     
     private void TreeAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TreeAMousePressed
         Limpiar_Inspector();
-        if(evt.getButton()==evt.BUTTON2) loadMOL();
-        if(evt.getButton()==evt.BUTTON3) menuA.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
-        if(evt.getButton()==evt.BUTTON1) selectProject();
+        if(evt.getButton()==MouseEvent.BUTTON2) loadMOL();
+        if(evt.getButton()==MouseEvent.BUTTON3) menuA.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
+        if(evt.getButton()==MouseEvent.BUTTON1) selectProject();
         if(ProjectTree.isVisible()) {
             path_project.setText(new File(pintarMol.babel.path).getParent());
             projectOpen();
@@ -5531,7 +5529,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel13ComponentResized
     
     private void jPanel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MousePressed
-        if(evt.getButton()==evt.BUTTON3) menuInspctor.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
+        if(evt.getButton()==MouseEvent.BUTTON3) menuInspctor.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
     }//GEN-LAST:event_jPanel13MousePressed
     
     private void jPanel13MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jPanel13MouseWheelMoved
@@ -5562,10 +5560,12 @@ public class xeo extends javax.swing.JFrame {
         jbabel.pack();
         jbabel.setVisible(true);
         int item_xyz=-1;
-        for(int i=0;i<babel.size();i++){
-            jComboBoxBabelRead.addItem( cadena.readColString(1,babel.get(i)));
-            jComboBoxBabelWrite.addItem( cadena.readColString(1,babel.get(i)));
-            if(cadena.readColString(1,babel.get(i)).equals("xyz")) item_xyz= jComboBoxBabelWrite.getItemCount()-1;
+        for (String babel1 : babel) {
+            jComboBoxBabelRead.addItem(cadena.readColString(1, babel1));
+            jComboBoxBabelWrite.addItem(cadena.readColString(1, babel1));
+            if (cadena.readColString(1, babel1).equals("xyz")) {
+                item_xyz= jComboBoxBabelWrite.getItemCount()-1;
+            }
         }
         jComboBoxBabelWrite.setSelectedIndex(item_xyz);
         jComboBoxBabelRead.setSelectedIndex(item_xyz);
@@ -5681,19 +5681,19 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_me7MousePressed
     
     private void changeLVSMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_changeLVSMousePressed
-        pintarMol.babel.infBas.lvs[0][0] = Double.valueOf(lvs_11.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[0][1] = Double.valueOf(lvs_12.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[0][2] = Double.valueOf(lvs_12.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[1][0] = Double.valueOf(lvs_21.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[1][1] = Double.valueOf(lvs_22.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[1][2] = Double.valueOf(lvs_23.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[2][0] = Double.valueOf(lvs_31.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[2][1] = Double.valueOf(lvs_32.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs[2][2] = Double.valueOf(lvs_33.getText()).doubleValue();
+        pintarMol.babel.infBas.lvs[0][0] = Double.parseDouble(lvs_11.getText());
+        pintarMol.babel.infBas.lvs[0][1] = Double.parseDouble(lvs_12.getText());
+        pintarMol.babel.infBas.lvs[0][2] = Double.parseDouble(lvs_12.getText());
+        pintarMol.babel.infBas.lvs[1][0] = Double.parseDouble(lvs_21.getText());
+        pintarMol.babel.infBas.lvs[1][1] = Double.parseDouble(lvs_22.getText());
+        pintarMol.babel.infBas.lvs[1][2] = Double.parseDouble(lvs_23.getText());
+        pintarMol.babel.infBas.lvs[2][0] = Double.parseDouble(lvs_31.getText());
+        pintarMol.babel.infBas.lvs[2][1] = Double.parseDouble(lvs_32.getText());
+        pintarMol.babel.infBas.lvs[2][2] = Double.parseDouble(lvs_33.getText());
     }//GEN-LAST:event_changeLVSMousePressed
     
     private void Te58MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Te58MousePressed
-        double a=Double.valueOf(rot_TextX.getText()).doubleValue();
+        double a=Double.parseDouble(rot_TextX.getText());
         a=a*Math.PI/180;
         CalcX.setText("y*cos("+a+")+z*sin("+a+")" );
         CalcY.setText("-y*sin("+a+")+z*cos("+a+")" );
@@ -5701,7 +5701,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_Te58MousePressed
     
     private void Te57MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Te57MousePressed
-        double a=Double.valueOf(rot_TextY.getText()).doubleValue();
+        double a=Double.parseDouble(rot_TextY.getText());
         a=a*Math.PI/180;
         CalcX.setText("x*cos("+a+")+z*sin("+a+")" );
         CalcY.setText("-x*sin("+a+")+z*cos("+a+")" );
@@ -5709,7 +5709,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_Te57MousePressed
     
     private void Te56MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Te56MousePressed
-        double a=Double.valueOf(rot_TextZ.getText()).doubleValue();
+        double a=Double.parseDouble(rot_TextZ.getText());
         a=a*Math.PI/180;
         CalcX.setText("x*cos("+a+")+y*sin("+a+")" );
         CalcY.setText("-x*sin("+a+")+y*cos("+a+")" );
@@ -5751,8 +5751,8 @@ public class xeo extends javax.swing.JFrame {
         java.awt.GraphicsEnvironment env = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         String[] familynames = env.getAvailableFontFamilyNames();
         javax.swing.DefaultListModel listaFont= new javax.swing.DefaultListModel();
-        for(int i=0;i<familynames.length;i++){
-            listaFont.addElement(familynames[i]);
+        for (String familyname : familynames) {
+            listaFont.addElement(familyname);
         }
         jListFont.setModel(listaFont);
     }//GEN-LAST:event_me6MousePressed
@@ -5808,7 +5808,7 @@ public class xeo extends javax.swing.JFrame {
         jFrameKpts.pack();
         jFrameKpts.setLocation((int) (jSplitForm.getLocationOnScreen().getX() + jSplitForm.getDividerLocation()+jSplitForm.getDividerSize()),(int) jSplitForm.getLocationOnScreen().getY());
         jFrameKpts.setVisible(true);
-        jFrameKpts.setDefaultCloseOperation(jFrameKpts.HIDE_ON_CLOSE);
+        jFrameKpts.setDefaultCloseOperation(jKpts.HIDE_ON_CLOSE);
     }//GEN-LAST:event_me_kpointsMousePressed
     
     private void me_scriptjMenuItem2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_me_scriptjMenuItem2MousePressed
@@ -5862,7 +5862,7 @@ public class xeo extends javax.swing.JFrame {
         dinam++;
         dinamic.setLocation((int) (jSplitForm.getLocationOnScreen().getX() + jSplitForm.getDividerLocation()+jSplitForm.getDividerSize()),(int) jSplitForm.getLocationOnScreen().getY());
         dinamic.setVisible(true);
-        dinamic.setDefaultCloseOperation(dinamic.HIDE_ON_CLOSE);
+        dinamic.setDefaultCloseOperation(JCalc_xyz.HIDE_ON_CLOSE);
     }//GEN-LAST:event_me_dinamicMousePressed
     
     private void me5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_me5MousePressed
@@ -5900,21 +5900,21 @@ public class xeo extends javax.swing.JFrame {
     
     private void jListSizeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListSizeMousePressed
         jTextSize.setText(jListSize.getSelectedValue().toString());
-        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.valueOf(jTextSize.getText()).doubleValue())));
+        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.parseDouble(jTextSize.getText()))));
     }//GEN-LAST:event_jListSizeMousePressed
     
     private void jListStyleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListStyleMousePressed
         jTextStyle.setText(jListStyle.getSelectedValue().toString());
-        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.valueOf(jTextSize.getText()).doubleValue())));
+        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.parseDouble(jTextSize.getText()))));
     }//GEN-LAST:event_jListStyleMousePressed
     
     private void jListFontMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListFontMousePressed
         jTextFont.setText(jListFont.getSelectedValue().toString());
-        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.valueOf(jTextSize.getText()).doubleValue())));
+        jLabelFont.setFont(new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.parseDouble(jTextSize.getText()))));
     }//GEN-LAST:event_jListFontMousePressed
     
     private void jButton34MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton34MousePressed
-        fuente=new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.valueOf(jTextSize.getText()).doubleValue()));
+        fuente=new Font(jListFont.getSelectedValue().toString(),jListStyle.getSelectedIndex(),((int) Double.parseDouble(jTextSize.getText())));
         fontName=fuente.getName();
         fontSize=fuente.getSize();
         loadVal();
@@ -6052,7 +6052,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_Bt1MousePressed
     
     private void TreeBKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TreeBKeyReleased
-        if(evt.getKeyCode()==evt.VK_UP ){
+        if(evt.getKeyCode()==KeyEvent.VK_UP ){
             if(!modeTreeB){
                 nInsp=TreeB.getMaxSelectionRow()-1;
                 if(nInsp>=ins.size())nInsp=0;
@@ -6061,7 +6061,7 @@ public class xeo extends javax.swing.JFrame {
                 Inspector();
             }
         }
-        if(evt.getKeyCode()==evt.VK_DOWN ){
+        if(evt.getKeyCode()==KeyEvent.VK_DOWN ){
             if(!modeTreeB){
                 nInsp=TreeB.getMaxSelectionRow()-1;
                 if(nInsp>=ins.size())nInsp=0;
@@ -6081,13 +6081,13 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_me16MousePressed
     
     private void TreeBKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TreeBKeyPressed
-        if(evt.getKeyCode() == evt.VK_F2)
+        if(evt.getKeyCode() == KeyEvent.VK_F2)
             if(!modeTreeB)
                 if(!TreeB.isSelectionEmpty()) {
             TreeA.setSelectionRow(0);
             //      renameOpen(); BORRAR
                 }
-        if(evt.getKeyCode()==evt.VK_ENTER ){
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER ){
             if(!modeTreeB){
                 nInsp=TreeB.getMaxSelectionRow()-1;
                 if(nInsp>=ins.size())nInsp=0;
@@ -6096,15 +6096,15 @@ public class xeo extends javax.swing.JFrame {
                 Inspector();
             }
         }
-        if(evt.getKeyCode()==evt.VK_DELETE )
+        if(evt.getKeyCode()==KeyEvent.VK_DELETE )
             if(!modeTreeB)
                 deleteInsp();
         if(evt.getKeyCode() == 104) TreeBup();
         if(evt.getKeyCode() == 98) TreeBdown();
-        if(evt.getKeyCode() == evt.VK_F5)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"alvaro_pablo.gif"));
-        if(evt.getKeyCode() == evt.VK_F6)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"cris.gif"));
-        if(evt.getKeyCode() == evt.VK_F7)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"galicia1.jpg"));
-        if(evt.getKeyCode() == evt.VK_F8)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"galicia2.jpg"));
+        if(evt.getKeyCode() == KeyEvent.VK_F5)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"alvaro_pablo.gif"));
+        if(evt.getKeyCode() == KeyEvent.VK_F6)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"cris.gif"));
+        if(evt.getKeyCode() == KeyEvent.VK_F7)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"galicia1.jpg"));
+        if(evt.getKeyCode() == KeyEvent.VK_F8)  screen5.setIcon(new javax.swing.ImageIcon(pintarMol.babel.xeorc+".local"+SEP+"share"+SEP+".ooo-2.0-pre"+SEP+"galicia2.jpg"));
         
     }//GEN-LAST:event_TreeBKeyPressed
     
@@ -6170,7 +6170,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_screen5MouseMoved
     
     private void MiniEjesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MiniEjesKeyPressed
-        if(evt.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
+        if(KeyEvent.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
     }//GEN-LAST:event_MiniEjesKeyPressed
     
     private void Te62MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Te62MousePressed
@@ -6345,7 +6345,7 @@ public class xeo extends javax.swing.JFrame {
         pintarMol.X_mouse_ini=evt.getX();
         pintarMol.Y_mouse_ini=evt.getY();
         if(pintarMol.MOL_enable) {
-            if(evt.getButton()==evt.BUTTON3 ){
+            if(evt.getButton()==MouseEvent.BUTTON3 ){
                 if(pintarMol.nejes!=4){
                     if(pintarMol.BoolEje[0]) pintarMol.move((new calculadora().calcular(Tdespl.getText())),0,0);
                     if(pintarMol.BoolEje[1]) pintarMol.move(-(new calculadora().calcular(Tdespl.getText())),0,0);
@@ -6360,7 +6360,7 @@ public class xeo extends javax.swing.JFrame {
                 if(seeBond.isSelected()) pintarMol.babel.infBas.load_enlaces();
                 ver3D_MOL();
             }
-            if(evt.getButton()==evt.BUTTON1){
+            if(evt.getButton()==MouseEvent.BUTTON1){
                 tiempo=System.currentTimeMillis();
             }
         }
@@ -6446,8 +6446,8 @@ public class xeo extends javax.swing.JFrame {
     
     private void zy_molMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zy_molMousePressed
         if(pintarMol.MOL_enable){
-            if(evt.getButton()==evt.BUTTON1)  pintarMol.C3D.Ozy();
-            if(evt.getButton()==evt.BUTTON3)  pintarMol.C3D.Ozx();
+            if(evt.getButton()==MouseEvent.BUTTON1)  pintarMol.C3D.Ozy();
+            if(evt.getButton()==MouseEvent.BUTTON3)  pintarMol.C3D.Ozx();
             if(pov_auto.isSelected()) povray(false);  
             else ver3D_MOL();
         }
@@ -6455,8 +6455,8 @@ public class xeo extends javax.swing.JFrame {
     
     private void xy_molMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xy_molMousePressed
         if(pintarMol.MOL_enable){
-            if(evt.getButton()==evt.BUTTON1) pintarMol.C3D.Oxy();
-            if(evt.getButton()==evt.BUTTON3) pintarMol.C3D.Omyx();
+            if(evt.getButton()==MouseEvent.BUTTON1) pintarMol.C3D.Oxy();
+            if(evt.getButton()==MouseEvent.BUTTON3) pintarMol.C3D.Omyx();
             if(pov_auto.isSelected()) povray(false);  
             else ver3D_MOL();
         }
@@ -6464,8 +6464,8 @@ public class xeo extends javax.swing.JFrame {
     
     private void yx_molMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yx_molMousePressed
         if(pintarMol.MOL_enable){
-            if(evt.getButton()==evt.BUTTON1)  pintarMol.C3D.Oyx();
-            if(evt.getButton()==evt.BUTTON3)  pintarMol.C3D.Oxmy();
+            if(evt.getButton()==MouseEvent.BUTTON1)  pintarMol.C3D.Oyx();
+            if(evt.getButton()==MouseEvent.BUTTON3)  pintarMol.C3D.Oxmy();
             if(pov_auto.isSelected()) povray(false);  
             else ver3D_MOL();
         }
@@ -6473,8 +6473,8 @@ public class xeo extends javax.swing.JFrame {
     
     private void xz_molMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xz_molMousePressed
         if(pintarMol.MOL_enable){
-            if(evt.getButton()==evt.BUTTON1) pintarMol.C3D.Oxz();
-            if(evt.getButton()==evt.BUTTON3) pintarMol.C3D.Oyz();
+            if(evt.getButton()==MouseEvent.BUTTON1) pintarMol.C3D.Oxz();
+            if(evt.getButton()==MouseEvent.BUTTON3) pintarMol.C3D.Oyz();
             if(pov_auto.isSelected()) povray(false);  
             else ver3D_MOL();
         }
@@ -6493,14 +6493,14 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_diffRadioMouseClicked
     
     private void screen5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_screen5KeyPressed
-        if(evt.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
+        if(KeyEvent.VK_F1== evt.getKeyCode()) new dialogo.help(pintarMol.babel.xeorc+"help/index.html").setVisible(true);
         if(pintarMol.MOL_enable) {
-            if(evt.VK_DELETE == evt.getKeyCode() ) {
+            if(KeyEvent.VK_DELETE == evt.getKeyCode() ) {
                 pintarMol.babel.infBas.eliminate();
             }
-            if(evt.VK_ADD == evt.getKeyCode() ) pintarMol.C3D.mas();
-            if(evt.VK_MINUS == evt.getKeyCode() ) pintarMol.C3D.menos();
-            if(evt.VK_DOWN == evt.getKeyCode() ) {
+            if(KeyEvent.VK_ADD == evt.getKeyCode() ) pintarMol.C3D.mas();
+            if(KeyEvent.VK_MINUS == evt.getKeyCode() ) pintarMol.C3D.menos();
+            if(KeyEvent.VK_DOWN == evt.getKeyCode() ) {
                 for(int i=0;i<6;i++)
                     if(pintarMol.BoolEje[i]) {
                     pintarMol.BoolEje[i]=false;
@@ -6510,7 +6510,7 @@ public class xeo extends javax.swing.JFrame {
                     }
                 if(seeBond.isSelected()) pintarMol.babel.infBas.load_enlaces();
             }
-            if(evt.VK_UP == evt.getKeyCode() ){
+            if(KeyEvent.VK_UP == evt.getKeyCode() ){
                 for(int i=0;i<6;i++)
                     if(pintarMol.BoolEje[i]) {
                     pintarMol.BoolEje[i]=false;
@@ -6520,7 +6520,7 @@ public class xeo extends javax.swing.JFrame {
                     }
                 if(seeBond.isSelected()) pintarMol.babel.infBas.load_enlaces();
             }
-            if(evt.VK_LEFT == evt.getKeyCode() ){
+            if(KeyEvent.VK_LEFT == evt.getKeyCode() ){
                 if(pintarMol.BoolEje[0]) pintarMol.move((new calculadora().calcular(Tdespl.getText())),0,0);
                 if(pintarMol.BoolEje[1]) pintarMol.move(-(new calculadora().calcular(Tdespl.getText())),0,0);
                 if(pintarMol.BoolEje[2]) pintarMol.move(0,(new calculadora().calcular(Tdespl.getText())),0);
@@ -6529,7 +6529,7 @@ public class xeo extends javax.swing.JFrame {
                 if(pintarMol.BoolEje[5]) pintarMol.move(0,0,-(new calculadora().calcular(Tdespl.getText())));
                 if(seeBond.isSelected()) pintarMol.babel.infBas.load_enlaces();
             }
-            if(evt.VK_RIGHT == evt.getKeyCode() ){
+            if(KeyEvent.VK_RIGHT == evt.getKeyCode() ){
                 if(pintarMol.BoolEje[0]) pintarMol.move(-(new calculadora().calcular(Tdespl.getText())),0,0);
                 if(pintarMol.BoolEje[1]) pintarMol.move((new calculadora().calcular(Tdespl.getText())),0,0);
                 if(pintarMol.BoolEje[2]) pintarMol.move(0,-(new calculadora().calcular(Tdespl.getText())),0);
@@ -6605,7 +6605,7 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton39MousePressed
     
     private void path_projectKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_path_projectKeyPressed
-        if(evt.VK_ENTER == evt.getKeyCode())projectOpen();
+        if(KeyEvent.VK_ENTER == evt.getKeyCode())projectOpen();
     }//GEN-LAST:event_path_projectKeyPressed
     
     
@@ -6644,7 +6644,7 @@ public class xeo extends javax.swing.JFrame {
 //            pintarMol.babel.SORT();
             //          tipo.setText(pintarMol.babel.sort);
                 }
-        if(evt.getButton()==evt.BUTTON3) insertInTreeA();
+        if(evt.getButton()==MouseEvent.BUTTON3) insertInTreeA();
     }//GEN-LAST:event_ProjectTreeMouseClicked
     
     private void mol_seeIndexMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mol_seeIndexMouseClicked
@@ -6677,11 +6677,11 @@ public class xeo extends javax.swing.JFrame {
     
     private void Te44MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Te44MousePressed
         if(pintarMol.MOL_enable){
-            int atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.valueOf(atomo_1.getText()).doubleValue()-1);
+            int atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.parseDouble(atomo_1.getText())-1);
             Giro_centro.setText(pintarMol.babel.infBas.bas.get(atomo).R[0]+" "+pintarMol.babel.infBas.bas.get(atomo).R[1]+" "+pintarMol.babel.infBas.bas.get(atomo).R[2]);
-            atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.valueOf(atomo_2.getText()).doubleValue()-1);
+            atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.parseDouble(atomo_2.getText())-1);
             Giro_Z.setText(pintarMol.babel.infBas.bas.get(atomo).R[0]+" "+pintarMol.babel.infBas.bas.get(atomo).R[1]+" "+pintarMol.babel.infBas.bas.get(atomo).R[2]);
-            atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.valueOf(atomo_3.getText()).doubleValue()-1);
+            atomo = pintarMol.babel.infBas.givePos_fromBas((int) Double.parseDouble(atomo_3.getText())-1);
             Giro_X.setText(pintarMol.babel.infBas.bas.get(atomo).R[0]+" "+pintarMol.babel.infBas.bas.get(atomo).R[1]+" "+pintarMol.babel.infBas.bas.get(atomo).R[2]);
         }
     }//GEN-LAST:event_Te44MousePressed
@@ -6690,15 +6690,15 @@ public class xeo extends javax.swing.JFrame {
         if(pintarMol.MOL_enable){
             ini_mol();
             //-------- tomamos estos vectores de red !!
-            pintarMol.babel.infBas.lvs[0][0] = Double.valueOf(lvs_11.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[0][1] = Double.valueOf(lvs_12.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[0][2] = Double.valueOf(lvs_13.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[1][0] = Double.valueOf(lvs_21.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[1][1] = Double.valueOf(lvs_22.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[1][2] = Double.valueOf(lvs_23.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[2][0] = Double.valueOf(lvs_31.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[2][1] = Double.valueOf(lvs_32.getText()).doubleValue();
-            pintarMol.babel.infBas.lvs[2][2] = Double.valueOf(lvs_33.getText()).doubleValue();
+            pintarMol.babel.infBas.lvs[0][0] = Double.parseDouble(lvs_11.getText());
+            pintarMol.babel.infBas.lvs[0][1] = Double.parseDouble(lvs_12.getText());
+            pintarMol.babel.infBas.lvs[0][2] = Double.parseDouble(lvs_13.getText());
+            pintarMol.babel.infBas.lvs[1][0] = Double.parseDouble(lvs_21.getText());
+            pintarMol.babel.infBas.lvs[1][1] = Double.parseDouble(lvs_22.getText());
+            pintarMol.babel.infBas.lvs[1][2] = Double.parseDouble(lvs_23.getText());
+            pintarMol.babel.infBas.lvs[2][0] = Double.parseDouble(lvs_31.getText());
+            pintarMol.babel.infBas.lvs[2][1] = Double.parseDouble(lvs_32.getText());
+            pintarMol.babel.infBas.lvs[2][2] = Double.parseDouble(lvs_33.getText());
             //-----
             if(pintarMol.babel.sort.equals("xyz")) iniciarXYZ();
             else{
@@ -6722,20 +6722,21 @@ public class xeo extends javax.swing.JFrame {
     File [] fileList;
     private void openB_xyzMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openB_xyzMousePressed
         savePos.setEnabled(true);
-        if(evt.getButton()==evt.BUTTON1){
+        if(evt.getButton()==MouseEvent.BUTTON1){
             newFile=  new dialogo.chooser().fileChoose("Open file *.xyz","open",pintarMol.babel.path+SEP+".") ;
             iniciarXYZ();
             savePos.setEnabled(false);
         }
-        if(evt.getButton()==evt.BUTTON2){
+        if(evt.getButton()==MouseEvent.BUTTON2){
             fileList = new File(pintarMol.babel.path).listFiles();
             newFile=null;
-            for (int idx = 0; idx < fileList.length; idx++){
-                if(fileList[idx].getName().length()>4)
-                    if((fileList[idx].getName().substring(fileList[idx].getName().length()-4,fileList[idx].getName().length())).equals(".xyz")){
-                    newFile=fileList[idx];
+            for (File fileList1 : fileList) {
+                if (fileList1.getName().length() > 4) {
+                    if ((fileList1.getName().substring(fileList1.getName().length() - 4, fileList1.getName().length())).equals(".xyz")) {
+                        newFile = fileList1;
                     }
-                System.out.println(fileList[idx].getName()+" "+pintarMol.babel.path);
+                }
+                System.out.println(fileList1.getName() + " " + pintarMol.babel.path);
             }
             if(newFile!=null) iniciarXYZ();
         }
@@ -6750,7 +6751,7 @@ public class xeo extends javax.swing.JFrame {
             pintarMol.X_mouse_fin=evt.getX();
             pintarMol.Y_mouse_fin=evt.getY();
             if(pintarMol.verIcono) pintarMol.MOUSE_DRAG=false; //solo hace cosas cuando estan los iconos
-            if(evt.getButton()==evt.BUTTON2){
+            if(evt.getButton()==MouseEvent.BUTTON2){
                 natom = pintarMol.babel.infBas.giveAtom(evt.getX(),evt.getY());
                 //corregimos la posicion del mouse poniendola encima del atomo mas cercano
                 pintarMol.X_mouse_fin = pintarMol.babel.infBas.bas.get(natom).X;
@@ -6765,12 +6766,12 @@ public class xeo extends javax.swing.JFrame {
                 atom2=atom4;
                 atom1=atom3;
             }
-            if(evt.getButton()==evt.BUTTON3){
+            if(evt.getButton()==MouseEvent.BUTTON3){
                 pintarMol.selec=false;
                 pintarMol.selecAtoms();
             }
             if(pov_auto.isSelected()){
-                if(evt.getButton()==evt.BUTTON1) povray(false);  
+                if(evt.getButton()==MouseEvent.BUTTON1) povray(false);  
             }
             else ver3D_MOL(); //este else vale para todos :-)
         }
@@ -6839,7 +6840,7 @@ public class xeo extends javax.swing.JFrame {
     
     private void jButton35MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton35MousePressed
         if(pintarMol.MOL_enable) {
-            pintarMol.babel.infBas.changeCharge((int) Double.valueOf(Z_all.getText()).doubleValue());
+            pintarMol.babel.infBas.changeCharge((int) Double.parseDouble(Z_all.getText()));
             ver3D_MOL();
         }
     }//GEN-LAST:event_jButton35MousePressed
@@ -6848,7 +6849,7 @@ public class xeo extends javax.swing.JFrame {
     boolean dobleClick=false;
     private void screen5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_screen5MouseClicked
         if(pintarMol.imageBuffered!=null&& StopToPlay){
-            if(evt.BUTTON1==evt.getButton() && pintarMol.MOL_enable)
+            if(MouseEvent.BUTTON1==evt.getButton() && pintarMol.MOL_enable)
                 if(evt.getClickCount()==2) {
                 if(!dobleClick){
                     dobleClick=true;
@@ -6927,7 +6928,7 @@ public class xeo extends javax.swing.JFrame {
                 pintarMol.X_mouse_ini=evt.getX();
                 pintarMol.Y_mouse_ini=evt.getY();
             }
-            if(evt.getButton()==evt.BUTTON2){
+            if(evt.getButton()==MouseEvent.BUTTON2){
                 pintarMol.verdir=true;
                 natom = pintarMol.babel.infBas.giveAtom(evt.getX(),evt.getY()); //es carga con el bas
                 //corregimos la posicion del mouse poniendola encima del atomo mas cercano
@@ -6935,10 +6936,10 @@ public class xeo extends javax.swing.JFrame {
                 pintarMol.Y_mouse_ini =  pintarMol.babel.infBas.bas.get(natom).Y;
                 atom3=pintarMol.babel.infBas.bas.get(natom).posBas;
             }
-            if(evt.getButton()==evt.BUTTON3){
+            if(evt.getButton()==MouseEvent.BUTTON3){
                 pintarMol.selec=true;
             }
-            if(evt.getButton()==evt.BUTTON1 && pintarMol.babel.infBas.LoadingXYZ && StopToPlay){
+            if(evt.getButton()==MouseEvent.BUTTON1 && pintarMol.babel.infBas.LoadingXYZ && StopToPlay){
                 tiempo=System.currentTimeMillis();
                 ver3D_MOL();
             }
@@ -6946,6 +6947,7 @@ public class xeo extends javax.swing.JFrame {
         //give the focus
         
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 screen5.requestFocus();
             }
@@ -6962,15 +6964,15 @@ public class xeo extends javax.swing.JFrame {
     private void jMenuIPlotXNYMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuIPlotXNYMousePressed
         if(!TreeB.isSelectionEmpty())
             if(TreeB.getSelectionPath().getPathCount() > 1 )
-                new pintar2D().plotXNY(new File(pintarMol.babel.path.toString()+SEP+TreeB.getSelectionPath().getPathComponent(1).toString()));
+                new pintar2D().plotXNY(new File(pintarMol.babel.path+SEP+TreeB.getSelectionPath().getPathComponent(1).toString()));
     }//GEN-LAST:event_jMenuIPlotXNYMousePressed
     
     private void TreeBMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TreeBMousePressed
-        if(evt.getButton()==evt.BUTTON3)
+        if(evt.getButton()==MouseEvent.BUTTON3)
             if(modeTreeB)menuB.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
             else menuProject.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
         if(modeTreeB){
-            if((evt.getButton()==evt.BUTTON2||evt.getClickCount()==2)&&!TreeB.isSelectionEmpty()){
+            if((evt.getButton()==MouseEvent.BUTTON2||evt.getClickCount()==2)&&!TreeB.isSelectionEmpty()){
                 String file_name=TreeB.getSelectionPath().getPathComponent(1).toString();
                 newFile=new File(pintarMol.babel.path+SEP+file_name);
                 savePos.setEnabled(true);
@@ -7006,14 +7008,14 @@ public class xeo extends javax.swing.JFrame {
         javax.swing.tree.TreePath[] selections = TreeB.getSelectionPaths();
         File [] auxfile = new File[TreeB.getSelectionPaths().length] ;
         for(int T=0;T<TreeB.getSelectionPaths().length;T++)
-            auxfile[T]= new File(pintarMol.babel.path.toString()+SEP+selections[T].getPathComponent(1).toString());
+            auxfile[T]= new File(pintarMol.babel.path+SEP+selections[T].getPathComponent(1).toString());
         if(!TreeB.isSelectionEmpty())
             if(TreeB.getSelectionPath().getPathCount() > 1 )
                 new pintar2D().plotNY(auxfile);
     }//GEN-LAST:event_jMenuPlotNYMousePressed
     
     private void screen_outMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_screen_outMouseReleased
-        if(evt.getButton()==evt.BUTTON1 && screen_out.isEnabled()&&pintar2D_out.mouse){
+        if(evt.getButton()==MouseEvent.BUTTON1 && screen_out.isEnabled()&&pintar2D_out.mouse){
             pintar2D_out.lupa2D();
             if(pintar2D_out.opt.isVisible()) pintar2D_out.opt.ini();
             runProcess(8,false);
@@ -7029,8 +7031,8 @@ public class xeo extends javax.swing.JFrame {
     }//GEN-LAST:event_screen_outMouseDragged
     
     private void screen_outMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_screen_outMousePressed
-        if(evt.getButton()==evt.BUTTON1 && screen_out.isEnabled()) pintar2D_out.mouseIni(evt.getX(),evt.getY(),true);
-        if(evt.getButton()==evt.BUTTON3) jPopupMenuScript.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
+        if(evt.getButton()==MouseEvent.BUTTON1 && screen_out.isEnabled()) pintar2D_out.mouseIni(evt.getX(),evt.getY(),true);
+        if(evt.getButton()==MouseEvent.BUTTON3) jPopupMenuScript.show( evt.getComponent(), evt.getX(), evt.getY() ) ;
     }//GEN-LAST:event_screen_outMousePressed
     
     private void jButton17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MousePressed
@@ -7721,7 +7723,7 @@ public class xeo extends javax.swing.JFrame {
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
     
-    void setXeoFont(String fontDir ){
+    private void setXeoFont(String fontDir ){
         boolean ERFont=false;
         try{
             InputStream is = this.getClass().getResourceAsStream(fontDir);
@@ -7948,7 +7950,7 @@ public class xeo extends javax.swing.JFrame {
         saveVal();
     }
     
-    void readVal(){
+    private void readVal(){
         preLoad.clear();
         preLoad=cadena.readFileArrayList(new File(pintarMol.babel.xeorc+"xeo.ini"));
         if(new File(pintarMol.babel.xeorc+"xeo.ini").exists()){
@@ -8155,7 +8157,7 @@ public class xeo extends javax.swing.JFrame {
         }
     }
     
-    void loadBabelList(){
+    private void loadBabelList(){
         try{
             Runtime run = Runtime.getRuntime();
             Process proc = run.exec(pintarMol.babel.xeorc+"babel.sh "+pintarMol.babel.xeorc+"temp");
@@ -8460,12 +8462,12 @@ public class xeo extends javax.swing.JFrame {
     }
     
     void KEY_comun(java.awt.event.KeyEvent evt){
-        if(evt.VK_F5== evt.getKeyCode()) loadMOL();
-        if(evt.VK_F3== evt.getKeyCode()) {
+        if(KeyEvent.VK_F5== evt.getKeyCode()) loadMOL();
+        if(KeyEvent.VK_F3== evt.getKeyCode()) {
             newFile =  new dialogo.chooser().fileChoose("Open file","open",pintarMol.babel.path) ;
             load_file(newFile);
         }
-        if(evt.VK_F4== evt.getKeyCode()){
+        if(KeyEvent.VK_F4== evt.getKeyCode()){
             projectChooser.pack();
             projectChooser.setVisible(true);
             projectChooser.setLocation((int) (jSplitForm.getLocationOnScreen().getX() + jSplitForm.getDividerLocation()+jSplitForm.getDividerSize()),(int) jSplitForm.getLocationOnScreen().getY());
@@ -8473,11 +8475,11 @@ public class xeo extends javax.swing.JFrame {
             if(newFile.exists())path_project.setText(newFile.toString());
             projectOpen();
         }
-        if(evt.VK_F8 == evt.getKeyCode() ) {
+        if(KeyEvent.VK_F8 == evt.getKeyCode() ) {
             if(me4.isEnabled())  new dialogo.chooser().savePicture("Save file *.jpg","save",
                     new File(pintarMol.babel.path+SEP+"picture.jpg").toString(),pintarMol.imageBuffered);
         }
-        if(evt.VK_F9 == evt.getKeyCode() ) {
+        if(KeyEvent.VK_F9 == evt.getKeyCode() ) {
             if(pintarMol.MOL_enable)
                 new dialogo.show_picture(new File(pintarMol.babel.path+SEP+"picture.jpg").toString()).plot(screen5Buffered);
         }
@@ -8490,8 +8492,9 @@ public class xeo extends javax.swing.JFrame {
             if(ordenarBas)pintarMol.babel.infBas.orderBas();
             //limpiamos:
             ls= new File(write_tmp).listFiles();
-            for (int i=0; i<ls.length; i++)
-                ls[i].delete();
+            for (File l : ls) {
+                l.delete();
+            }
             if(pintarMol.babel.sort.equals("xyz")) {
                 pintarMol.babel.write("xyz",write_tmp+SEP+"step_"+xyz_step.getText()+".xyz");
                 new editor().openDirecory_tmp(new File( write_tmp) ,new File(pintarMol.babel.path));
@@ -8529,15 +8532,15 @@ public class xeo extends javax.swing.JFrame {
                 try{
                     proc = run.exec("chmod a+x "+pintarMol.babel.xeorc+"script/"+botones.get(i));
                     proc.waitFor(); //esperar hasta empezar el siguiente
-                } catch(Exception e){}
+                } catch(IOException | InterruptedException e){}
                 try{
                     proc = run.exec(pintarMol.babel.xeorc+"script/"+botones.get(i)+" "+outText.getText()+" "+parameters.getText());
                     proc.waitFor();
-                } catch(Exception e){}
+                } catch(IOException | InterruptedException e){}
                 try{
                     proc = run.exec("mv col.temp "+fileIN.getAbsolutePath());
                     proc.waitFor();
-                } catch(Exception e){}
+                } catch(IOException | InterruptedException e){}
                    /*
                     start = System.currentTimeMillis();// (milisegundos)
                     elapsed = System.currentTimeMillis() - start;
@@ -8571,18 +8574,19 @@ public class xeo extends javax.swing.JFrame {
         //  pintarMol.babel.pathxeo=pathxeo;
         pintarMol.babel.infBas.seeCell_Vol=mol_seeVol.isSelected();
         pintarMol.babel.infBas.seeCell_ijk=mol_seeIndex.isSelected();
-        pintarMol.babel.infBas.R_min[0]=Double.valueOf(mol_Xini.getText()).doubleValue();
-        pintarMol.babel.infBas.R_min[1]=Double.valueOf(mol_Yini.getText()).doubleValue();
-        pintarMol.babel.infBas.R_min[2]=Double.valueOf(mol_Zini.getText()).doubleValue();
-        pintarMol.babel.infBas.R_max[0]=Double.valueOf(mol_Xfin.getText()).doubleValue();
-        pintarMol.babel.infBas.R_max[1]=Double.valueOf(mol_Yfin.getText()).doubleValue();
-        pintarMol.babel.infBas.R_max[2]=Double.valueOf(mol_Zfin.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs_1=(int) Double.valueOf(mol_lvs_1.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs_2=(int) Double.valueOf(mol_lvs_2.getText()).doubleValue();
-        pintarMol.babel.infBas.lvs_3=(int) Double.valueOf(mol_lvs_3.getText()).doubleValue();
+        pintarMol.babel.infBas.R_min[0]=Double.parseDouble(mol_Xini.getText());
+        pintarMol.babel.infBas.R_min[1]=Double.parseDouble(mol_Yini.getText());
+        pintarMol.babel.infBas.R_min[2]=Double.parseDouble(mol_Zini.getText());
+        pintarMol.babel.infBas.R_max[0]=Double.parseDouble(mol_Xfin.getText());
+        pintarMol.babel.infBas.R_max[1]=Double.parseDouble(mol_Yfin.getText());
+        pintarMol.babel.infBas.R_max[2]=Double.parseDouble(mol_Zfin.getText());
+        pintarMol.babel.infBas.lvs_1=(int) Double.parseDouble(mol_lvs_1.getText());
+        pintarMol.babel.infBas.lvs_2=(int) Double.parseDouble(mol_lvs_2.getText());
+        pintarMol.babel.infBas.lvs_3=(int) Double.parseDouble(mol_lvs_3.getText());
         //----
     }
     
+    @SuppressWarnings("empty-statement")
     void mol_3d_enable(boolean ena ){
         copy.setEnabled(ena);
         paste.setEnabled(ena);
@@ -8592,7 +8596,7 @@ public class xeo extends javax.swing.JFrame {
         diffRadio.setEnabled(ena);
         PERS.setEnabled(ena);
         me4.setEnabled(ena);
-        me0.setEnabled(ena);;
+        me0.setEnabled(ena);
         seeBond.setEnabled(ena);
         TOL.setEnabled(ena);
         CheckFragments.setEnabled(ena);
@@ -8639,13 +8643,13 @@ public class xeo extends javax.swing.JFrame {
         pintarMol.atoms_xyzTr=xyztAtomsTr.getText();
         pintarMol.xyztFile=new File(xyztFile.getText());
         pintarMol.xyzt=xyzt.isSelected();
-        pintarMol.pixel=(int)Double.valueOf(pixel.getText()).doubleValue();
-        pintarMol.rescalateArrow=Double.valueOf(rescalateArrow.getText()).doubleValue();
+        pintarMol.pixel=(int)Double.parseDouble(pixel.getText());
+        pintarMol.rescalateArrow=Double.parseDouble(rescalateArrow.getText());
         pintarMol.seeArrows=seeArrows.isSelected();
         pintarMol.diffColorArrows=seeArrowsColor.isSelected();
         pintarMol.verRad=diffRadio.isSelected();
         pintarMol.C3D.perspectiva=(PERS.getValue()*1.0)/100;
-        pintarMol.rad= Double.valueOf(rad.getText()).doubleValue();
+        pintarMol.rad= Double.parseDouble(rad.getText());
         pintarMol.verPosiciones=seePos.isSelected();
         pintarMol.seeFrag=CheckFragments.isSelected();
         pintarMol.colorEjes=colorEjes.getBackground();
@@ -8656,10 +8660,10 @@ public class xeo extends javax.swing.JFrame {
         pintarMol.verEjes=verEjes.isSelected();
         pintarMol.babel.infBas.seeBond=seeBond.isSelected();
         pintarMol.babel.infBas.tol=TOL.getValue();
-        pintarMol.grosor=(int) Double.valueOf(grosor.getText()).doubleValue();
-        pintarMol.c_out[0]=Double.valueOf(jT_cx.getText()).doubleValue();
-        pintarMol.c_out[1]=Double.valueOf(jT_cy.getText()).doubleValue();
-        pintarMol.c_out[2]=Double.valueOf(jT_cz.getText()).doubleValue();
+        pintarMol.grosor=(int) Double.parseDouble(grosor.getText());
+        pintarMol.c_out[0]=Double.parseDouble(jT_cx.getText());
+        pintarMol.c_out[1]=Double.parseDouble(jT_cy.getText());
+        pintarMol.c_out[2]=Double.parseDouble(jT_cz.getText());
         screen5Buffered = new BufferedImage(screen5.getWidth()-dIc,screen5.getHeight()-dIc, BufferedImage.TYPE_INT_RGB);
         screen5Buffered = pintarMol.pintar3D(screen5Buffered);
         screen5.setIcon(new ImageIcon(screen5Buffered));
@@ -8756,6 +8760,7 @@ public class xeo extends javax.swing.JFrame {
         }
         
         class cleanXYZ extends Thread{
+            @Override
             public void run() {
                 if(pintarMol.babel.infBas.LoadingXYZ){
                     TThre=System.currentTimeMillis();
@@ -8785,6 +8790,7 @@ public class xeo extends javax.swing.JFrame {
     }
     
     class refrescoBarra_XYZ extends Thread{
+        @Override
         public void run() {
             long tiempoB=System.currentTimeMillis();
             while(pintarMol.babel.infBas.LoadingXYZ){
@@ -8801,13 +8807,14 @@ public class xeo extends javax.swing.JFrame {
     
     boolean StopToPlay=true;
     class Play extends Thread{
+        @Override
         public void run(){
             int pasos=0;
             long tiempoPlay=System.currentTimeMillis();
             v_instant_FRAME.setText("V_aver = 0");
             while(!StopToPlay){
                 OneStepForward();
-                while(System.currentTimeMillis()<tiempoPlay+(long)Double.valueOf(v_FRAMES.getText()).doubleValue()){}
+                while(System.currentTimeMillis()<tiempoPlay+(long)Double.parseDouble(v_FRAMES.getText())){}
                 if(options_XYZ.isVisible()){
                     v_instant_FRAME.setText("V_aver = "+((System.currentTimeMillis()-tiempoPlay)*pasos/(pasos+1) + ((long) cadena.readColDouble(3,v_instant_FRAME.getText()))/(pasos+1)));
                     pasos++;
@@ -8916,7 +8923,7 @@ public class xeo extends javax.swing.JFrame {
         pov.transparente=pov_transparente.isSelected();
         pov.Trans=pov_Trans.getText();
         pov.colorArrow=colorArrows.getBackground();
-        pov.res=Double.valueOf(rescalateArrow.getText()).doubleValue();
+        pov.res=Double.parseDouble(rescalateArrow.getText());
         pov.ver_flecha=seeArrows.isSelected();
         pov.ver_flechaDiffColor=seeArrowsColor.isSelected();
         //  pov.pathxeo=pathxeo;
@@ -8925,18 +8932,19 @@ public class xeo extends javax.swing.JFrame {
         pov.Height=pintarMol.C3D.oy;
         pov.Width=pintarMol.C3D.ox;
         pov.a=200/pintarMol.C3D.a;
-        pov.angle=Double.valueOf(angle.getText()).doubleValue();
-        pov.antialias=Double.valueOf(antialias.getText()).doubleValue();
+        pov.angle=Double.parseDouble(angle.getText());
+        pov.antialias=Double.parseDouble(antialias.getText());
         pov.use_radio=use_radio.isSelected();
-        pov.rad=Double.valueOf(radio.getText()).doubleValue();
+        pov.rad=Double.parseDouble(radio.getText());
         pov.use_radio_selected=pov_radio_selec.isSelected();
-        pov.radSelected=Double.valueOf(pov_radio_selecA.getText()).doubleValue();
-        pov.bonds=Double.valueOf(bonds.getText()).doubleValue();
+        pov.radSelected=Double.parseDouble(pov_radio_selecA.getText());
+        pov.bonds=Double.parseDouble(bonds.getText());
         pov.ver_enlaces=seeBond.isSelected();
         pov.ver_trayectoria=xyzTr.isSelected();
         if(pov.ver_trayectoria){          
-            for(int n = 0 ;n<pintarMol.trayectoria.size();n++)         
-               pov.loadTR(pintarMol.trayectoria.get(n).R[0],pintarMol.trayectoria.get(n).R[1],pintarMol.trayectoria.get(n).R[2],pintarMol.trayectoria.get(n).color,pintarMol.trayectoria.get(n).dOb);                            
+            for (mol.pixel trayectoria : pintarMol.trayectoria) {
+                pov.loadTR(trayectoria.R[0], trayectoria.R[1], trayectoria.R[2], trayectoria.color, trayectoria.dOb);                            
+            }
                                    
         }
         pov.colorfondo=pintarMol.colorFondo;
