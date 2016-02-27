@@ -47,6 +47,7 @@ public class plugin {
     
     
     abinit      abinit        = new abinit();
+    amber       amber         = new amber();
     espresso    espresso      = new espresso();
     bas         bas           = new bas();
     castep      castep        = new castep();
@@ -76,6 +77,11 @@ public class plugin {
         end_InputFile.add("");
         info.add("unknown");
         
+        //--------- Abinit ------------
+        type.add("amber");
+        end_InputFile.add(".inpcrd");
+        info.add("read (on process)"); 
+
         //--------- Abinit ------------
         type.add("abinit");
         end_InputFile.add(".in");
@@ -136,6 +142,7 @@ public class plugin {
     public String read(String sort, String inputFile){
         //  ret="ERROR :: There are some errors in the file : "+inputFile+" or loadValues it is not implemented in "+sort+"\n";
         
+        if(sort.equals("amber"))       ret =      amber.read(inputFile);
         if(sort.equals("abinit"))       ret =      abinit.read(inputFile);
         if(sort.equals("espresso"))       ret =      espresso.read(inputFile);
         if(sort.equals("castep"))       ret =      castep.read(inputFile);
