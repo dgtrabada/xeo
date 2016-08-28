@@ -31,7 +31,12 @@ public class stm {
     int ox=1,oy=1;
     int resolucion=100;    //parametro de orden tambien endN
     double x_max,x_min,y_max,y_min,z_max,z_min,x,y,z,ancho;
-    int [][] C;
+    double Kb;
+    double T;
+    boolean usar_exp=false; //else hace el promedio
+    int [][] C, Npuntos;
+    double [][] Z;
+    int [] H;
     boolean [][] up;
     double [][] lvs = new double[3][3];
     java.util.ArrayList<atomo> bas;
@@ -74,6 +79,7 @@ public class stm {
     
     /** Creates a new instance of stm */
     public stm() {
+        Kb =0.000086173 ; // eV/K
         x_max=0;
         x_min=1;
         y_max=0;
@@ -202,11 +208,15 @@ public class stm {
         ox=(int)ancho;
         C = new int[ox+1][oy+1];
         up= new boolean[ox+1][oy+1];
+        Npuntos = new int[ox+1][oy+1];
+        Z = new double[ox+1][oy+1];
         for(int lx=0;lx<ox;lx++)
             for(int ly=0;ly<oy;ly++){
             C[lx][ly]=255;  //inicializamos el color es decir fondo blanco
             //backgroundColor
             up[lx][ly]=false;
+            C[lx][ly]=0;
+            Z[lx][ly]=0.0;
             }
         
         //cargamos los colores del fichero
@@ -226,18 +236,66 @@ public class stm {
                             z= cadena.readColDouble(col3,str);
                         } catch(NumberFormatException ex) {error=true;}
                         if(!error){
-                            aux=255*(z-z_min)/(z_max-z_min);
-                            color=(int) aux;
                             intx=(int)(ox*(x-x_min)/(x_max-x_min));
                             inty=(int)(oy*(y-y_min)/(y_max-y_min));
                             //System.out.println(color);
-                            C[intx][inty]=color;
+                            Npuntos[intx][inty]++;
+                            if(!usar_exp){
+                                Z[intx][inty]=(Z[intx][inty]*(Npuntos[intx][inty]-1)+z)/Npuntos[intx][inty];
+                            }else{
+                                Z[intx][inty]+=Math.exp(-(z-z_min)/(Kb*T)); 
+                            }                             
                             up[intx][inty]=true; //los que salgan aui los damos de alta
+                            
                         }
                     }
                 }
                 inLines.close();
                 inFile.close();
+                
+                if(usar_exp)
+                for(int lx=0;lx<=ox;lx++)
+                    for(int ly=0;ly<=oy;ly++)
+                        if(up[lx][ly])
+                            Z[lx][ly]=-Kb*T*Math.log(Z[lx][ly]/Npuntos[lx][ly]);
+                
+                
+                
+                int maxp=0;
+                //rehacemos maximos en z por si usamos exp o promedio ....
+                boolean pvez=false;
+                for(int lx=0;lx<=ox;lx++)
+                    for(int ly=0;ly<=oy;ly++){
+                        if(Npuntos[lx][ly] > maxp) maxp=Npuntos[lx][ly]; 
+                        if(!pvez && up[lx][ly]){
+                            z_max= Z[lx][ly];
+                            z_min= Z[lx][ly];
+                            pvez=true;
+                        }else{
+                            if(up[lx][ly]){
+                                if ( Z[lx][ly]  > z_max) z_max=Z[lx][ly];
+                                if ( Z[lx][ly]  < z_min) z_min=Z[lx][ly];
+                            }
+                        }
+                    }
+                
+                H = new int[maxp+1];
+                for(int lx=0;lx<=ox;lx++)
+                   for(int ly=0;ly<=oy;ly++){
+                        if(up[lx][ly]){
+                            aux=255*(Z[lx][ly]-z_min)/(z_max-z_min);
+                            color=(int) aux;
+                            C[lx][ly]=color;  
+                            H[Npuntos[lx][ly]]++;
+                        }else{
+                            H[0]++; 
+                       }                       
+                    }
+               
+                System.out.println(z_max+" , "+z_min);
+                for(int lx=0;lx<=maxp;lx++)
+                    System.out.println(lx+" "+H[lx]);
+                
                 d_2 = new int[ox+1][oy+1];
                 if(borde){
                     for(int lx=0;lx<=ox;lx++)
@@ -337,6 +395,15 @@ public class stm {
         }
     }
     
+    String splot(){
+        String aux="";
+            for(int lx=0;lx<=ox;lx++){
+                for(int ly=0;ly<=oy;ly++){
+                        aux+=lx+" "+ly+" "+C[lx][ly]+"\n";
+                }aux+="\n";
+            }
+        return aux;
+    }
     void pintar_dibujo(){
         int azul=0,rojo=0,verde=0,C_aux=0;
         //---lo primero ajustar el marco-----//

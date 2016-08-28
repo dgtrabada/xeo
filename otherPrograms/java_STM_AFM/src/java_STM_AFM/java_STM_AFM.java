@@ -87,8 +87,9 @@ public class java_STM_AFM extends javax.swing.JFrame {
         }
     }
     
-    // <editor-fold defaultstate="collapsed" desc=" Código Generado ">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         jAtoms = new javax.swing.JFrame();
         jDesktopPane4 = new javax.swing.JDesktopPane();
         jDeskt5 = new javax.swing.JDesktopPane();
@@ -195,6 +196,10 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Col1 = new javax.swing.JSpinner();
         Col2 = new javax.swing.JSpinner();
         Col3 = new javax.swing.JSpinner();
+        jDesktopPane6 = new javax.swing.JDesktopPane();
+        usar_exp = new javax.swing.JCheckBox();
+        T = new javax.swing.JTextField();
+        lvs_17 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -202,6 +207,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         Me7 = new javax.swing.JMenu();
         me39 = new javax.swing.JMenuItem();
         me35 = new javax.swing.JMenuItem();
@@ -210,10 +216,10 @@ public class java_STM_AFM extends javax.swing.JFrame {
         me38 = new javax.swing.JMenuItem();
 
         jAtoms.setTitle("see atoms");
+
         Tdespl5.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         Tdespl5.setEditable(false);
         Tdespl5.setFont(fuente);
-        Tdespl5.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl5.setText("Repit unit cell");
         Tdespl5.setToolTipText("");
         Tdespl5.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
@@ -223,9 +229,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Tdespl5MousePressed(evt);
             }
         });
-
+        jDeskt5.add(Tdespl5);
         Tdespl5.setBounds(0, 0, 180, 18);
-        jDeskt5.add(Tdespl5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stm_seeVol1.setBackground(new java.awt.Color(255, 255, 255));
         stm_seeVol1.setFont(fuente);
@@ -240,9 +245,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 stm_seeVol1MouseClicked(evt);
             }
         });
-
+        jDeskt5.add(stm_seeVol1);
         stm_seeVol1.setBounds(0, 20, 18, 18);
-        jDeskt5.add(stm_seeVol1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl21.setEditable(false);
         Tdespl21.setFont(fuente);
@@ -250,8 +254,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl21.setToolTipText("");
         Tdespl21.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl21.setOpaque(false);
+        jDeskt5.add(Tdespl21);
         Tdespl21.setBounds(20, 20, 160, 18);
-        jDeskt5.add(Tdespl21, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmXini.setFont(fuente);
         stmXini.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -259,8 +263,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmXini.setToolTipText("");
         stmXini.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmXini.setOpaque(false);
+        jDeskt5.add(stmXini);
         stmXini.setBounds(20, 40, 60, 18);
-        jDeskt5.add(stmXini, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel41.setFont(new Font(fuente.getName(),Font.BOLD,fuente.getSize()-2));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -269,8 +273,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         jLabel41.setFocusable(false);
         jLabel41.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jDeskt5.add(jLabel41);
         jLabel41.setBounds(82, 40, 36, 18);
-        jDeskt5.add(jLabel41, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmXfin.setFont(fuente);
         stmXfin.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -278,8 +282,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmXfin.setToolTipText("");
         stmXfin.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmXfin.setOpaque(false);
+        jDeskt5.add(stmXfin);
         stmXfin.setBounds(120, 40, 60, 18);
-        jDeskt5.add(stmXfin, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmYfin.setFont(fuente);
         stmYfin.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -287,8 +291,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmYfin.setToolTipText("");
         stmYfin.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmYfin.setOpaque(false);
+        jDeskt5.add(stmYfin);
         stmYfin.setBounds(120, 60, 60, 18);
-        jDeskt5.add(stmYfin, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel45.setFont(new Font(fuente.getName(),Font.BOLD,fuente.getSize()-2));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -297,8 +301,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         jLabel45.setFocusable(false);
         jLabel45.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jDeskt5.add(jLabel45);
         jLabel45.setBounds(82, 60, 36, 18);
-        jDeskt5.add(jLabel45, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmYini.setFont(fuente);
         stmYini.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -306,8 +310,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmYini.setToolTipText("");
         stmYini.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmYini.setOpaque(false);
+        jDeskt5.add(stmYini);
         stmYini.setBounds(20, 60, 60, 18);
-        jDeskt5.add(stmYini, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmZini.setFont(fuente);
         stmZini.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -315,8 +319,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmZini.setToolTipText("");
         stmZini.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmZini.setOpaque(false);
+        jDeskt5.add(stmZini);
         stmZini.setBounds(20, 80, 60, 18);
-        jDeskt5.add(stmZini, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel46.setFont(new Font(fuente.getName(),Font.BOLD,fuente.getSize()-2));
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -325,8 +329,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         jLabel46.setFocusable(false);
         jLabel46.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jDeskt5.add(jLabel46);
         jLabel46.setBounds(82, 80, 36, 18);
-        jDeskt5.add(jLabel46, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stmZfin.setFont(fuente);
         stmZfin.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -334,8 +338,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         stmZfin.setToolTipText("");
         stmZfin.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         stmZfin.setOpaque(false);
+        jDeskt5.add(stmZfin);
         stmZfin.setBounds(120, 80, 60, 18);
-        jDeskt5.add(stmZfin, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl22.setEditable(false);
         Tdespl22.setFont(fuente);
@@ -343,8 +347,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl22.setToolTipText("");
         Tdespl22.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl22.setOpaque(false);
+        jDeskt5.add(Tdespl22);
         Tdespl22.setBounds(20, 100, 160, 18);
-        jDeskt5.add(Tdespl22, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mol_seeIndex.setFont(fuente);
         mol_seeIndex.setToolTipText("");
@@ -358,9 +362,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 mol_seeIndexMouseClicked(evt);
             }
         });
-
+        jDeskt5.add(mol_seeIndex);
         mol_seeIndex.setBounds(0, 100, 18, 18);
-        jDeskt5.add(mol_seeIndex, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton62.setFont(fuente);
         jButton62.setText("...");
@@ -371,9 +374,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jButton62MousePressed(evt);
             }
         });
-
+        jDeskt5.add(jButton62);
         jButton62.setBounds(20, 120, 18, 18);
-        jDeskt5.add(jButton62, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mol_lvs_1.setFont(fuente);
         mol_lvs_1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -381,8 +383,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         mol_lvs_1.setToolTipText("");
         mol_lvs_1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         mol_lvs_1.setOpaque(false);
+        jDeskt5.add(mol_lvs_1);
         mol_lvs_1.setBounds(40, 120, 44, 18);
-        jDeskt5.add(mol_lvs_1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mol_lvs_2.setFont(fuente);
         mol_lvs_2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -390,8 +392,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         mol_lvs_2.setToolTipText("");
         mol_lvs_2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         mol_lvs_2.setOpaque(false);
+        jDeskt5.add(mol_lvs_2);
         mol_lvs_2.setBounds(86, 120, 46, 18);
-        jDeskt5.add(mol_lvs_2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mol_lvs_3.setFont(fuente);
         mol_lvs_3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -399,16 +401,15 @@ public class java_STM_AFM extends javax.swing.JFrame {
         mol_lvs_3.setToolTipText("");
         mol_lvs_3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         mol_lvs_3.setOpaque(false);
+        jDeskt5.add(mol_lvs_3);
         mol_lvs_3.setBounds(134, 120, 46, 18);
-        jDeskt5.add(mol_lvs_3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane4.add(jDeskt5);
         jDeskt5.setBounds(2, 382, 180, 140);
-        jDesktopPane4.add(jDeskt5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl6.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         Tdespl6.setEditable(false);
         Tdespl6.setFont(fuente    );
-        Tdespl6.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl6.setText("Edit bonds and atoms");
         Tdespl6.setToolTipText("");
         Tdespl6.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
@@ -420,9 +421,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Tdespl6MousePressed(evt);
             }
         });
-
+        jDeskt6.add(Tdespl6);
         Tdespl6.setBounds(0, 0, 180, 18);
-        jDeskt6.add(Tdespl6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         TOL1.setBackground(new java.awt.Color(255, 255, 255));
         TOL1.setMaximum(8);
@@ -430,8 +430,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         TOL1.setToolTipText("");
         TOL1.setValue(4);
         TOL1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt6.add(TOL1);
         TOL1.setBounds(42, 20, 138, 18);
-        jDeskt6.add(TOL1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl15.setEditable(false);
         Tdespl15.setFont(fuente);
@@ -439,24 +439,24 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl15.setToolTipText("");
         Tdespl15.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl15.setOpaque(false);
+        jDeskt6.add(Tdespl15);
         Tdespl15.setBounds(20, 80, 100, 18);
-        jDeskt6.add(Tdespl15, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stm_grosor.setFont(fuente);
         stm_grosor.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         stm_grosor.setText("1");
         stm_grosor.setToolTipText("");
         stm_grosor.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt6.add(stm_grosor);
         stm_grosor.setBounds(122, 80, 58, 18);
-        jDeskt6.add(stm_grosor, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         D_Ratom.setFont(fuente);
         D_Ratom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         D_Ratom.setText("6");
         D_Ratom.setToolTipText("");
         D_Ratom.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt6.add(D_Ratom);
         D_Ratom.setBounds(0, 40, 40, 18);
-        jDeskt6.add(D_Ratom, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl16.setEditable(false);
         Tdespl16.setFont(fuente);
@@ -464,8 +464,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl16.setToolTipText("");
         Tdespl16.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl16.setOpaque(false);
+        jDeskt6.add(Tdespl16);
         Tdespl16.setBounds(42, 40, 138, 18);
-        jDeskt6.add(Tdespl16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         seeBond1.setBackground(new java.awt.Color(255, 255, 255));
         seeBond1.setFont(fuente
@@ -477,8 +477,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         seeBond1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         seeBond1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         seeBond1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jDeskt6.add(seeBond1);
         seeBond1.setBounds(0, 80, 18, 18);
-        jDeskt6.add(seeBond1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl17.setEditable(false);
         Tdespl17.setFont(fuente);
@@ -486,8 +486,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl17.setToolTipText("");
         Tdespl17.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl17.setOpaque(false);
+        jDeskt6.add(Tdespl17);
         Tdespl17.setBounds(0, 60, 40, 18);
-        jDeskt6.add(Tdespl17, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         D_alfa.setBackground(new java.awt.Color(255, 255, 255));
         D_alfa.setMaximum(255);
@@ -495,8 +495,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         D_alfa.setToolTipText("");
         D_alfa.setValue(255);
         D_alfa.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt6.add(D_alfa);
         D_alfa.setBounds(42, 60, 138, 18);
-        jDeskt6.add(D_alfa, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         verIconosAtomos.setBackground(new java.awt.Color(255, 255, 255));
         verIconosAtomos.setFont(fuente);
@@ -511,9 +511,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 verIconosAtomosMouseClicked(evt);
             }
         });
-
+        jDeskt6.add(verIconosAtomos);
         verIconosAtomos.setBounds(0, 100, 18, 18);
-        jDeskt6.add(verIconosAtomos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         stm_seeLabel.setBackground(new java.awt.Color(255, 255, 255));
         stm_seeLabel.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -526,9 +525,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 stm_seeLabelMouseClicked(evt);
             }
         });
-
+        jDeskt6.add(stm_seeLabel);
         stm_seeLabel.setBounds(0, 120, 18, 18);
-        jDeskt6.add(stm_seeLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         D_verAtomos.setBackground(new java.awt.Color(255, 255, 255));
         D_verAtomos.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -541,9 +539,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 D_verAtomosMouseClicked(evt);
             }
         });
-
+        jDeskt6.add(D_verAtomos);
         D_verAtomos.setBounds(0, 140, 18, 18);
-        jDeskt6.add(D_verAtomos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton53.setText("accept");
         jButton53.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -553,9 +550,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jButton53MousePressed(evt);
             }
         });
-
+        jDeskt6.add(jButton53);
         jButton53.setBounds(125, 160, 54, 18);
-        jDeskt6.add(jButton53, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl50.setEditable(false);
         Tdespl50.setFont(fuente);
@@ -563,8 +559,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl50.setToolTipText("");
         Tdespl50.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl50.setOpaque(false);
+        jDeskt6.add(Tdespl50);
         Tdespl50.setBounds(20, 120, 160, 18);
-        jDeskt6.add(Tdespl50, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl51.setEditable(false);
         Tdespl51.setFont(fuente);
@@ -572,8 +568,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl51.setToolTipText("");
         Tdespl51.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl51.setOpaque(false);
+        jDeskt6.add(Tdespl51);
         Tdespl51.setBounds(20, 100, 160, 18);
-        jDeskt6.add(Tdespl51, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl52.setEditable(false);
         Tdespl52.setFont(fuente);
@@ -581,8 +577,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl52.setToolTipText("");
         Tdespl52.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl52.setOpaque(false);
+        jDeskt6.add(Tdespl52);
         Tdespl52.setBounds(20, 140, 160, 18);
-        jDeskt6.add(Tdespl52, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl18.setEditable(false);
         Tdespl18.setFont(fuente);
@@ -590,11 +586,11 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl18.setToolTipText("");
         Tdespl18.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl18.setOpaque(false);
+        jDeskt6.add(Tdespl18);
         Tdespl18.setBounds(0, 20, 40, 18);
-        jDeskt6.add(Tdespl18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane4.add(jDeskt6);
         jDeskt6.setBounds(2, 62, 180, 180);
-        jDesktopPane4.add(jDeskt6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS2.setFont(fuente);
         changeLVS2.setText("...");
@@ -606,9 +602,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVS2MousePressed(evt);
             }
         });
-
+        jDesktopPane7.add(changeLVS2);
         changeLVS2.setBounds(0, 20, 18, 18);
-        jDesktopPane7.add(changeLVS2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS3.setFont(fuente);
         changeLVS3.setText("...");
@@ -620,9 +615,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVS3MousePressed(evt);
             }
         });
-
+        jDesktopPane7.add(changeLVS3);
         changeLVS3.setBounds(0, 40, 18, 18);
-        jDesktopPane7.add(changeLVS3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl48.setEditable(false);
         Tdespl48.setFont(fuente);
@@ -630,8 +624,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl48.setToolTipText("");
         Tdespl48.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl48.setOpaque(false);
+        jDesktopPane7.add(Tdespl48);
         Tdespl48.setBounds(20, 40, 98, 18);
-        jDesktopPane7.add(Tdespl48, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl49.setEditable(false);
         Tdespl49.setFont(fuente);
@@ -639,19 +633,18 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl49.setToolTipText("");
         Tdespl49.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl49.setOpaque(false);
+        jDesktopPane7.add(Tdespl49);
         Tdespl49.setBounds(20, 20, 98, 18);
-        jDesktopPane7.add(Tdespl49, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl8.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         Tdespl8.setEditable(false);
         Tdespl8.setFont(fuente);
-        Tdespl8.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl8.setText("Positions of the atoms");
         Tdespl8.setToolTipText("");
         Tdespl8.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl8.setFocusable(false);
+        jDesktopPane7.add(Tdespl8);
         Tdespl8.setBounds(0, 0, 180, 18);
-        jDesktopPane7.add(Tdespl8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS4.setFont(fuente);
         changeLVS4.setText("example");
@@ -663,9 +656,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVS4MousePressed(evt);
             }
         });
-
+        jDesktopPane7.add(changeLVS4);
         changeLVS4.setBounds(120, 20, 60, 18);
-        jDesktopPane7.add(changeLVS4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS5.setFont(fuente);
         changeLVS5.setText("example");
@@ -677,17 +669,15 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVS5MousePressed(evt);
             }
         });
-
+        jDesktopPane7.add(changeLVS5);
         changeLVS5.setBounds(120, 40, 60, 18);
-        jDesktopPane7.add(changeLVS5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane4.add(jDesktopPane7);
         jDesktopPane7.setBounds(2, 2, 180, 60);
-        jDesktopPane4.add(jDesktopPane7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl4.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         Tdespl4.setEditable(false);
         Tdespl4.setFont(fuente);
-        Tdespl4.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl4.setText("Periodicity");
         Tdespl4.setToolTipText("");
         Tdespl4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
@@ -696,9 +686,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Tdespl4MousePressed(evt);
             }
         });
-
+        jDeskt4.add(Tdespl4);
         Tdespl4.setBounds(0, 0, 180, 18);
-        jDeskt4.add(Tdespl4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS.setFont(fuente);
         changeLVS.setText("...");
@@ -711,9 +700,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVSMousePressed(evt);
             }
         });
-
+        jDeskt4.add(changeLVS);
         changeLVS.setBounds(0, 80, 18, 18);
-        jDeskt4.add(changeLVS, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl45.setEditable(false);
         Tdespl45.setFont(fuente);
@@ -721,80 +709,80 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl45.setToolTipText("");
         Tdespl45.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl45.setOpaque(false);
+        jDeskt4.add(Tdespl45);
         Tdespl45.setBounds(20, 80, 160, 18);
-        jDeskt4.add(Tdespl45, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_11.setFont(fuente);
         lvs_11.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_11.setText("99.0");
         lvs_11.setToolTipText("");
         lvs_11.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_11);
         lvs_11.setBounds(0, 20, 58, 18);
-        jDeskt4.add(lvs_11, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_21.setFont(fuente);
         lvs_21.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_21.setText("0.0");
         lvs_21.setToolTipText("");
         lvs_21.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_21);
         lvs_21.setBounds(0, 40, 58, 18);
-        jDeskt4.add(lvs_21, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_31.setFont(fuente);
         lvs_31.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_31.setText("0.0");
         lvs_31.setToolTipText("");
         lvs_31.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_31);
         lvs_31.setBounds(0, 60, 58, 18);
-        jDeskt4.add(lvs_31, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_12.setFont(fuente);
         lvs_12.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_12.setText("0.0");
         lvs_12.setToolTipText("");
         lvs_12.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_12);
         lvs_12.setBounds(60, 20, 59, 18);
-        jDeskt4.add(lvs_12, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_22.setFont(fuente);
         lvs_22.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_22.setText("99.0");
         lvs_22.setToolTipText("");
         lvs_22.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_22);
         lvs_22.setBounds(60, 40, 59, 18);
-        jDeskt4.add(lvs_22, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_32.setFont(fuente);
         lvs_32.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_32.setText("0.0");
         lvs_32.setToolTipText("");
         lvs_32.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_32);
         lvs_32.setBounds(60, 60, 59, 18);
-        jDeskt4.add(lvs_32, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_13.setFont(fuente);
         lvs_13.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_13.setText("0.0");
         lvs_13.setToolTipText("");
         lvs_13.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_13);
         lvs_13.setBounds(121, 20, 59, 18);
-        jDeskt4.add(lvs_13, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_23.setFont(fuente);
         lvs_23.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_23.setText("0.0");
         lvs_23.setToolTipText("");
         lvs_23.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_23);
         lvs_23.setBounds(121, 40, 59, 18);
-        jDeskt4.add(lvs_23, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_33.setFont(fuente);
         lvs_33.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_33.setText("99.0");
         lvs_33.setToolTipText("");
         lvs_33.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDeskt4.add(lvs_33);
         lvs_33.setBounds(121, 60, 59, 18);
-        jDeskt4.add(lvs_33, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         changeLVS1.setFont(fuente);
         changeLVS1.setText("...");
@@ -807,9 +795,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 changeLVS1MousePressed(evt);
             }
         });
-
+        jDeskt4.add(changeLVS1);
         changeLVS1.setBounds(0, 100, 18, 18);
-        jDeskt4.add(changeLVS1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl46.setEditable(false);
         Tdespl46.setFont(fuente);
@@ -817,8 +804,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl46.setToolTipText("");
         Tdespl46.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl46.setOpaque(false);
+        jDeskt4.add(Tdespl46);
         Tdespl46.setBounds(20, 100, 160, 18);
-        jDeskt4.add(Tdespl46, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Border.setBackground(new java.awt.Color(255, 255, 255));
         Border.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -827,8 +814,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Border.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Border.setMargin(new java.awt.Insets(0, 0, 0, 0));
         Border.setOpaque(false);
+        jDeskt4.add(Border);
         Border.setBounds(0, 120, 18, 18);
-        jDeskt4.add(Border, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl47.setEditable(false);
         Tdespl47.setFont(fuente);
@@ -836,11 +823,11 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl47.setToolTipText("");
         Tdespl47.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl47.setOpaque(false);
+        jDeskt4.add(Tdespl47);
         Tdespl47.setBounds(20, 120, 160, 18);
-        jDeskt4.add(Tdespl47, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane4.add(jDeskt4);
         jDeskt4.setBounds(2, 242, 180, 140);
-        jDesktopPane4.add(jDeskt4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         org.jdesktop.layout.GroupLayout jAtomsLayout = new org.jdesktop.layout.GroupLayout(jAtoms.getContentPane());
         jAtoms.getContentPane().setLayout(jAtomsLayout);
@@ -852,9 +839,12 @@ public class java_STM_AFM extends javax.swing.JFrame {
             jAtomsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 522, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         );
+
         moreFiles.setTitle("multiple files");
         moreFiles.setBackground(new java.awt.Color(255, 255, 255));
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         path_project.setFont(fuente);
         path_project.setToolTipText("");
         path_project.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -867,6 +857,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
         });
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         ProjectTree.setFont(fuente);
         ProjectTree.setToolTipText("");
         ProjectTree.setExpandsSelectedPaths(false);
@@ -876,13 +867,12 @@ public class java_STM_AFM extends javax.swing.JFrame {
             }
         });
         ProjectTree.addTreeWillExpandListener(new javax.swing.event.TreeWillExpandListener() {
-            public void treeWillCollapse(javax.swing.event.TreeExpansionEvent evt)throws javax.swing.tree.ExpandVetoException {
-            }
             public void treeWillExpand(javax.swing.event.TreeExpansionEvent evt)throws javax.swing.tree.ExpandVetoException {
                 ProjectTreeTreeWillExpand(evt);
             }
+            public void treeWillCollapse(javax.swing.event.TreeExpansionEvent evt)throws javax.swing.tree.ExpandVetoException {
+            }
         });
-
         jScrollPane1.setViewportView(ProjectTree);
 
         OpenProject.setFont(fuente);
@@ -903,6 +893,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
         Tdespl53.setOpaque(false);
 
         jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         jTextfiles.setColumns(20);
         jTextfiles.setFont(fuente);
         jTextfiles.setRows(5);
@@ -966,10 +957,15 @@ public class java_STM_AFM extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java_STM_AFM");
+
         TAB_STM.setBackground(new java.awt.Color(255, 255, 255));
-        TAB_STM.setFont(new java.awt.Font("Monospaced", 0, 12));
+        TAB_STM.setAlignmentX(0.0F);
+        TAB_STM.setAlignmentY(0.0F);
+        TAB_STM.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+
         jScrollPane8.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane8.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         screen_stm.setBackground(new java.awt.Color(255, 255, 255));
         screen_stm.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         screen_stm.setEnabled(false);
@@ -984,10 +980,10 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 screen_stmMousePressed(evt);
             }
         });
-
         jScrollPane8.setViewportView(screen_stm);
 
         jDesktopPane1.setEnabled(false);
+
         color_inter_2.setBackground(new java.awt.Color(255, 255, 255));
         color_inter_2.setForeground(new java.awt.Color(153, 153, 255));
         color_inter_2.setText("...");
@@ -997,9 +993,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 color_inter_2MousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(color_inter_2);
         color_inter_2.setBounds(142, 22, 18, 18);
-        jDesktopPane1.add(color_inter_2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         color_ini.setBackground(new java.awt.Color(255, 255, 255));
         color_ini.setForeground(new java.awt.Color(153, 153, 255));
@@ -1010,9 +1005,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 color_iniMousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(color_ini);
         color_ini.setBounds(0, 22, 18, 18);
-        jDesktopPane1.add(color_ini, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         color_inter_1.setBackground(new java.awt.Color(255, 255, 255));
         color_inter_1.setForeground(new java.awt.Color(153, 153, 255));
@@ -1023,9 +1017,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 color_inter_1MousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(color_inter_1);
         color_inter_1.setBounds(20, 22, 18, 18);
-        jDesktopPane1.add(color_inter_1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         color_fin.setBackground(new java.awt.Color(255, 255, 255));
         color_fin.setForeground(new java.awt.Color(153, 153, 255));
@@ -1036,9 +1029,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 color_finMousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(color_fin);
         color_fin.setBounds(162, 22, 18, 18);
-        jDesktopPane1.add(color_fin, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Sinter1.setBackground(new java.awt.Color(255, 255, 255));
         Sinter1.setValue(20);
@@ -1049,14 +1041,13 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Sinter1MouseDragged(evt);
             }
         });
-
+        jDesktopPane1.add(Sinter1);
         Sinter1.setBounds(0, 42, 180, 20);
-        jDesktopPane1.add(Sinter1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Clabel.setBackground(new java.awt.Color(255, 255, 255));
         Clabel.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane1.add(Clabel);
         Clabel.setBounds(0, 64, 180, 20);
-        jDesktopPane1.add(Clabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Sinter2.setBackground(new java.awt.Color(255, 255, 255));
         Sinter2.setValue(80);
@@ -1067,9 +1058,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Sinter2MouseDragged(evt);
             }
         });
-
+        jDesktopPane1.add(Sinter2);
         Sinter2.setBounds(0, 86, 180, 20);
-        jDesktopPane1.add(Sinter2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton49.setFont(fuente);
         jButton49.setText("accept");
@@ -1080,9 +1070,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jButton49MousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(jButton49);
         jButton49.setBounds(120, 108, 60, 18);
-        jDesktopPane1.add(jButton49, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton60.setFont(fuente);
         jButton60.setText("difumi.");
@@ -1093,9 +1082,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jButton60MousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(jButton60);
         jButton60.setBounds(48, 108, 69, 18);
-        jDesktopPane1.add(jButton60, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         color_Fondo.setBackground(new java.awt.Color(255, 255, 255));
         color_Fondo.setForeground(new java.awt.Color(153, 153, 255));
@@ -1106,21 +1094,19 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 color_FondoMousePressed(evt);
             }
         });
-
+        jDesktopPane1.add(color_Fondo);
         color_Fondo.setBounds(0, 108, 18, 18);
-        jDesktopPane1.add(color_Fondo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl1.setEditable(false);
         Tdespl1.setFont(fuente);
-        Tdespl1.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl1.setText("Color");
         Tdespl1.setToolTipText("the step to move the atoms selected");
         Tdespl1.setAutoscrolls(false);
         Tdespl1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl1.setFocusable(false);
         Tdespl1.setRequestFocusEnabled(false);
+        jDesktopPane1.add(Tdespl1);
         Tdespl1.setBounds(0, 0, 180, 20);
-        jDesktopPane1.add(Tdespl1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         verEjesSTM.setBackground(new java.awt.Color(255, 255, 255));
         verEjesSTM.setFont(fuente);
@@ -1129,8 +1115,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         verEjesSTM.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         verEjesSTM.setBorderPainted(true);
         verEjesSTM.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jDesktopPane1.add(verEjesSTM);
         verEjesSTM.setBounds(0, 128, 180, 18);
-        jDesktopPane1.add(verEjesSTM, javax.swing.JLayeredPane.DEFAULT_LAYER);
         verEjesSTM.getAccessibleContext().setAccessibleName("");
 
         verBarra.setBackground(new java.awt.Color(255, 255, 255));
@@ -1140,8 +1126,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         verBarra.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         verBarra.setBorderPainted(true);
         verBarra.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jDesktopPane1.add(verBarra);
         verBarra.setBounds(0, 148, 180, 18);
-        jDesktopPane1.add(verBarra, javax.swing.JLayeredPane.DEFAULT_LAYER);
         verBarra.getAccessibleContext().setAccessibleName("");
 
         verCamino.setBackground(new java.awt.Color(255, 255, 255));
@@ -1150,12 +1136,12 @@ public class java_STM_AFM extends javax.swing.JFrame {
         verCamino.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         verCamino.setBorderPainted(true);
         verCamino.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jDesktopPane1.add(verCamino);
         verCamino.setBounds(0, 168, 180, 18);
-        jDesktopPane1.add(verCamino, javax.swing.JLayeredPane.DEFAULT_LAYER);
         verCamino.getAccessibleContext().setAccessibleName("");
 
+        jDesktopPane3.add(jDesktopPane1);
         jDesktopPane1.setBounds(2, 2, 180, 186);
-        jDesktopPane3.add(jDesktopPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         resol_Y.setFont(fuente);
         resol_Y.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1163,8 +1149,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         resol_Y.setAlignmentY(0.0F);
         resol_Y.setAutoscrolls(false);
         resol_Y.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane2.add(resol_Y);
         resol_Y.setBounds(91, 20, 89, 18);
-        jDesktopPane2.add(resol_Y, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton48.setFont(fuente);
         jButton48.setText("accept");
@@ -1175,9 +1161,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jButton48MousePressed(evt);
             }
         });
-
+        jDesktopPane2.add(jButton48);
         jButton48.setBounds(0, 40, 180, 18);
-        jDesktopPane2.add(jButton48, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         resol_X.setEditable(false);
         resol_X.setFont(fuente);
@@ -1185,28 +1170,25 @@ public class java_STM_AFM extends javax.swing.JFrame {
         resol_X.setAlignmentY(0.0F);
         resol_X.setAutoscrolls(false);
         resol_X.setEnabled(false);
+        jDesktopPane2.add(resol_X);
         resol_X.setBounds(0, 20, 89, 18);
-        jDesktopPane2.add(resol_X, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Tdespl2.setEditable(false);
         Tdespl2.setFont(fuente);
-        Tdespl2.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl2.setText("Size (pixels)");
         Tdespl2.setToolTipText("the step to move the atoms selected");
         Tdespl2.setAutoscrolls(false);
         Tdespl2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl2.setFocusable(false);
         Tdespl2.setRequestFocusEnabled(false);
+        jDesktopPane2.add(Tdespl2);
         Tdespl2.setBounds(0, 0, 180, 18);
-        jDesktopPane2.add(Tdespl2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane3.add(jDesktopPane2);
         jDesktopPane2.setBounds(2, 190, 180, 60);
-        jDesktopPane3.add(jDesktopPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        Tdespl7.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         Tdespl7.setEditable(false);
         Tdespl7.setFont(fuente);
-        Tdespl7.setForeground(java.awt.SystemColor.controlShadow);
         Tdespl7.setText("use the columns (input file)");
         Tdespl7.setToolTipText("");
         Tdespl7.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
@@ -1215,9 +1197,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 Tdespl7MousePressed(evt);
             }
         });
-
+        jDesktopPane5.add(Tdespl7);
         Tdespl7.setBounds(0, 0, 180, 18);
-        jDesktopPane5.add(Tdespl7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_14.setEditable(false);
         lvs_14.setFont(fuente);
@@ -1225,8 +1206,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         lvs_14.setText("set X");
         lvs_14.setToolTipText("");
         lvs_14.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDesktopPane5.add(lvs_14);
         lvs_14.setBounds(0, 20, 58, 18);
-        jDesktopPane5.add(lvs_14, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_15.setEditable(false);
         lvs_15.setFont(fuente);
@@ -1234,8 +1215,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
         lvs_15.setText("set Y");
         lvs_15.setToolTipText("");
         lvs_15.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDesktopPane5.add(lvs_15);
         lvs_15.setBounds(60, 20, 59, 18);
-        jDesktopPane5.add(lvs_15, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_16.setEditable(false);
         lvs_16.setFont(fuente);
@@ -1243,78 +1224,109 @@ public class java_STM_AFM extends javax.swing.JFrame {
         lvs_16.setText("set Z");
         lvs_16.setToolTipText("");
         lvs_16.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDesktopPane5.add(lvs_16);
         lvs_16.setBounds(121, 20, 59, 18);
-        jDesktopPane5.add(lvs_16, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        Col1.setBackground(new java.awt.Color(255, 255, 255));
         Col1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(Col1);
         Col1.setBounds(0, 40, 59, 18);
-        jDesktopPane5.add(Col1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Col2.setBackground(new java.awt.Color(255, 255, 255));
         Col2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(Col2);
         Col2.setBounds(61, 40, 59, 18);
-        jDesktopPane5.add(Col2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Col3.setBackground(new java.awt.Color(255, 255, 255));
         Col3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(Col3);
         Col3.setBounds(121, 40, 59, 18);
-        jDesktopPane5.add(Col3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane3.add(jDesktopPane5);
         jDesktopPane5.setBounds(2, 250, 180, 60);
-        jDesktopPane3.add(jDesktopPane5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        usar_exp.setBackground(new java.awt.Color(255, 255, 255));
+        usar_exp.setFont(fuente);
+        usar_exp.setText("use ln(sum(exp(-(z-zmin)/KT))");
+        usar_exp.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        usar_exp.setBorderPainted(true);
+        usar_exp.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        usar_exp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usar_expActionPerformed(evt);
+            }
+        });
+        jDesktopPane6.add(usar_exp);
+        usar_exp.setBounds(0, 0, 180, 18);
+
+        T.setFont(fuente);
+        T.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        T.setText("300");
+        T.setAlignmentY(0.0F);
+        T.setAutoscrolls(false);
+        T.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        T.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TActionPerformed(evt);
+            }
+        });
+        jDesktopPane6.add(T);
+        T.setBounds(80, 20, 100, 18);
+
+        lvs_17.setEditable(false);
+        lvs_17.setFont(fuente);
+        lvs_17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lvs_17.setText("set T (K)");
+        lvs_17.setToolTipText("");
+        lvs_17.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
+        jDesktopPane6.add(lvs_17);
+        lvs_17.setBounds(0, 20, 80, 18);
+
+        jDesktopPane3.add(jDesktopPane6);
+        jDesktopPane6.setBounds(0, 310, 184, 63);
 
         org.jdesktop.layout.GroupLayout TAB_STMLayout = new org.jdesktop.layout.GroupLayout(TAB_STM);
         TAB_STM.setLayout(TAB_STMLayout);
         TAB_STMLayout.setHorizontalGroup(
             TAB_STMLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, TAB_STMLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jDesktopPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 184, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .add(jDesktopPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 184, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
         TAB_STMLayout.setVerticalGroup(
             TAB_STMLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(TAB_STMLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(TAB_STMLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jDesktopPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 309, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
-                .addContainerGap())
+            .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+            .add(jDesktopPane3)
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/open.gif")));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/open.gif"))); // NOI18N
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jMenu1MousePressed(evt);
             }
         });
-
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/save.gif")));
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/save.gif"))); // NOI18N
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jMenu2MousePressed(evt);
             }
         });
-
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reload.gif")));
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reload.gif"))); // NOI18N
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jMenu3MousePressed(evt);
             }
         });
-
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Tools");
         jMenu4.setFont(fuente
         );
+
         jMenuItem1.setFont(fuente
         );
         jMenuItem1.setText("insert atoms");
@@ -1323,7 +1335,6 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jMenuItem1MousePressed(evt);
             }
         });
-
         jMenu4.add(jMenuItem1);
 
         jMenuItem2.setFont(fuente
@@ -1334,13 +1345,22 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 jMenuItem2MousePressed(evt);
             }
         });
-
         jMenu4.add(jMenuItem2);
+
+        jMenuItem3.setFont(fuente);
+        jMenuItem3.setText("gnuplot");
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem3MousePressed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem3);
 
         jMenuBar1.add(jMenu4);
 
         Me7.setText("About/Help");
         Me7.setFont(fuente);
+
         me39.setBackground(new java.awt.Color(255, 255, 255));
         me39.setFont(fuente);
         me39.setText("help");
@@ -1351,7 +1371,6 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 me39MousePressed(evt);
             }
         });
-
         Me7.add(me39);
 
         me35.setBackground(new java.awt.Color(255, 255, 255));
@@ -1364,12 +1383,11 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 me35MousePressed(evt);
             }
         });
-
         Me7.add(me35);
 
         me36.setBackground(new java.awt.Color(255, 255, 255));
         me36.setFont(fuente);
-        me36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gplv3.gif")));
+        me36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gplv3.gif"))); // NOI18N
         me36.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         me36.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         me36.setIconTextGap(0);
@@ -1380,7 +1398,6 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 me36MousePressed(evt);
             }
         });
-
         Me7.add(me36);
 
         me37.setBackground(new java.awt.Color(255, 255, 255));
@@ -1393,7 +1410,6 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 me37MousePressed(evt);
             }
         });
-
         Me7.add(me37);
 
         me38.setBackground(new java.awt.Color(255, 255, 255));
@@ -1404,7 +1420,6 @@ public class java_STM_AFM extends javax.swing.JFrame {
                 me38MousePressed(evt);
             }
         });
-
         Me7.add(me38);
 
         jMenuBar1.add(Me7);
@@ -1419,8 +1434,11 @@ public class java_STM_AFM extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(TAB_STM, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+            .add(layout.createSequentialGroup()
+                .addContainerGap()
+                .add(TAB_STM, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
@@ -1766,9 +1784,25 @@ public class java_STM_AFM extends javax.swing.JFrame {
         color_Fondo.setBackground(javax.swing.JColorChooser.showDialog( this , "color final", color_inter_2.getBackground() ));
         dialogo_color();
     }//GEN-LAST:event_color_FondoMousePressed
+
+    private void TActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TActionPerformed
+
+    private void usar_expActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usar_expActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usar_expActionPerformed
+
+    private void jMenuItem3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MousePressed
+       new edt().start();
+    }//GEN-LAST:event_jMenuItem3MousePressed
+    class edt extends Thread {
+         public void run() {
+         new editor("splot.dat").LoadString(stm.splot());
+         }
+    }
     
-    
-    // Declaración de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox Border;
     private javax.swing.JLabel Clabel;
     private javax.swing.JSpinner Col1;
@@ -1783,6 +1817,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
     private javax.swing.JTree ProjectTree;
     private javax.swing.JSlider Sinter1;
     private javax.swing.JSlider Sinter2;
+    private javax.swing.JTextField T;
     private javax.swing.JPanel TAB_STM;
     private javax.swing.JSlider TOL1;
     private javax.swing.JTextField Tdespl1;
@@ -1832,6 +1867,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane3;
     private javax.swing.JDesktopPane jDesktopPane4;
     private javax.swing.JDesktopPane jDesktopPane5;
+    private javax.swing.JDesktopPane jDesktopPane6;
     private javax.swing.JDesktopPane jDesktopPane7;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel45;
@@ -1843,6 +1879,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1854,6 +1891,7 @@ public class java_STM_AFM extends javax.swing.JFrame {
     private javax.swing.JTextField lvs_14;
     private javax.swing.JTextField lvs_15;
     private javax.swing.JTextField lvs_16;
+    private javax.swing.JTextField lvs_17;
     private javax.swing.JTextField lvs_21;
     private javax.swing.JTextField lvs_22;
     private javax.swing.JTextField lvs_23;
@@ -1884,11 +1922,12 @@ public class java_STM_AFM extends javax.swing.JFrame {
     private javax.swing.JTextField stm_grosor;
     private javax.swing.JCheckBox stm_seeLabel;
     private javax.swing.JCheckBox stm_seeVol1;
+    private javax.swing.JCheckBox usar_exp;
     private javax.swing.JCheckBox verBarra;
     private javax.swing.JCheckBox verCamino;
     private javax.swing.JCheckBox verEjesSTM;
     private javax.swing.JCheckBox verIconosAtomos;
-    // Fin de declaración de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
     
     //--------STM------------------------
     
@@ -1950,6 +1989,8 @@ public class java_STM_AFM extends javax.swing.JFrame {
     
     void drawSTM(boolean calcular){
         if(enableSTM){
+            stm.T=(Double.valueOf(T.getText()).doubleValue());
+            stm.usar_exp=usar_exp.isSelected();
             stm.alfa=D_alfa.getValue();
             stm.verAtomos=D_verAtomos.isSelected();
             stm.radio = (int) (Double.valueOf(D_Ratom.getText()).doubleValue());
