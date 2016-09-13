@@ -1,0 +1,9 @@
+cd almacen/
+cp -r ../xeoBabel/ .
+cp -r ../help/xeoBabel/ xeoBabel/help
+rm -fr xeoBabel.tar.gz
+tar -cf xeoBabel.tar xeoBabel
+rm -fr xeoBabel
+gzip xeoBabel.tar
+cd ..
+

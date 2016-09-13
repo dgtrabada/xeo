@@ -1,0 +1,87 @@
+here=$(pwd)
+
+rm -fr *~
+rm -fr almacen/XEO.tar.gz
+rm -fr almacen/SRC.NEW.tar.gz
+
+cd almacen/
+rm -fr src
+mkdir src
+cd src
+cp -r ../../src/ .
+cp -r ../../src/gpl-3.0.txt .
+cp -r ../../nbproject/ .
+mkdir librerias
+for i in calculadora  calc_xyz  dialogo  editor  jCalc  language  pintar2D  reader  xeoKtps
+do 
+mkdir $i; 
+cp -r ../../librerias/${i}/src/ ${i}/ 
+cp -r ../../librerias/${i}/nbproject/ ${i}/
+cp -r ../../librerias/${i}/configure ${i}/  
+done
+
+for j in fireball java_STM_AFM
+do
+mkdir $j
+cp -r ../../otherPrograms/${j}/src ${j}/
+cp -r ../../otherPrograms/${j}/nbproject ${j}/
+done
+mkdir xeoBabel
+cp ../../xeoBabel/configure xeoBabel/
+cp -r ../../xeoBabel/src xeoBabel/
+cp -r ../../xeoBabel/gpl-3.0.txt xeoBabel/
+
+
+cd ..
+rm -fr SRC.NEW.tar.gz
+tar -cf  SRC.NEW.tar src
+gzip SRC.NEW.tar
+rm -fr src
+
+#ahora el programa
+
+cd $here
+
+mkdir XEO-TEMP
+mkdir XEO-TEMP/temp
+mkdir XEO-TEMP/write_tmp/
+cp -r iconos/ XEO-TEMP/
+cp -r .xeorc/script/ XEO-TEMP/
+cp -r .xeorc/.local XEO-TEMP/
+cp -r .xeorc/xeo.ini XEO-TEMP/
+cp -r .xeorc/babel.sh XEO-TEMP/
+cp -r help XEO-TEMP/
+cp profile-xeo.win_0 XEO-TEMP/profile-xeo_0
+cp profile-xeo.win_1 XEO-TEMP/profile-xeo_1
+cp inspector.win XEO-TEMP/inspector
+
+cd almacen/
+
+mkdir xeo
+cd xeo/
+mv ../../XEO-TEMP .xeorc       
+cp -r ../../dist/* .
+cp -r ../../xeoBabel .
+mkdir examples
+cp -r ../../examples/example_benceno/ examples/
+cp -r ../../examples/example_Castep/ examples/
+cp -r ../../examples/example_java_STM_AFM_0/ examples/
+cp -r ../../examples/example_java_STM_AFM_1/ examples/
+cp -r ../../examples/example_Vol/ examples/
+cp -r ../../examples/example_C5H10/ examples/
+cp -r ../../examples/example_spin/ examples/
+cp -r ../../examples/example_fireballTG/ examples/
+cp -r ../../examples/example_vasp_benceno/  examples/
+cp -r ../../examples/example_XEO examples/
+cp -r ../../examples/example_sic examples/
+cp -r ../../examples/example_abinit examples/
+cp ../../xeo.gif examples/ 
+cp ../../xeo_ico.gif examples/
+cp ../../gpl-3.0.txt .  
+rm -fr README.TXT
+cp ../../install .
+cd ..
+tar -cf XEO.tar  xeo/
+rm -fr xeo
+gzip XEO.tar
+cd ..

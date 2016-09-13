@@ -1,0 +1,321 @@
+@startuml
+class calc_xyz.Calc_bas
+class calc_xyz.Calc_diff_xyz
+class calc_xyz.JAverage
+class calc_xyz.JCalc_xyz
+class calc_xyz.Main
+class calc_xyz.SustCalculator
+class calculadora.calculadora
+class dialogo.Main
+class dialogo.chooser
+class dialogo.help
+class dialogo.helpURL
+class dialogo.openFiles
+class dialogo.show_picture
+class editor.Main
+class editor.editor
+class fireball.Dos_bands
+class fireball.Jbegin
+class fireball.Jhopping
+class fireball.begin
+class fireball.fireball
+class fireball.hopping
+class fireball.info_bas
+class fireball.morse
+class fireball.toyModel
+class jCalc.Main
+class jCalc.jCalc
+class jCalc.statistic
+class java.awt.AWTEvent
+class java.awt.Color
+class java.awt.Component
+class java.awt.Font
+class java.awt.FontFormatException
+class java.awt.Graphics
+class java.awt.Image
+class java.awt.PopupMenu
+class java.awt.event.ActionEvent
+class java.awt.event.ActionListener
+class java.awt.event.KeyEvent
+class java.awt.image.BufferedImage
+class java.io.BufferedReader
+class java.io.DataOutputStream
+class java.io.File
+class java.io.FileOutputStream
+class java.io.FileReader
+class java.io.IOException
+class java.io.InputStream
+class java.io.LineNumberReader
+class java.lang.Thread
+class java.util.ArrayList
+class java.util.Vector
+class java_STM_AFM.Main
+class java_STM_AFM.atomo
+class java_STM_AFM.gpl
+class java_STM_AFM.java_STM_AFM
+class java_STM_AFM.periodicTable
+class java_STM_AFM.stm
+class javax.imageio.ImageIO
+class javax.swing.Icon
+class javax.swing.ImageIcon
+class javax.swing.JColorChooser
+class javax.swing.JFileChooser
+class javax.swing.JFrame
+class javax.swing.JMenuItem
+class javax.swing.JPanel
+class javax.swing.JScrollBar
+class javax.swing.JScrollPane
+class javax.swing.JTextField
+class javax.swing.filechooser.FileFilter
+class javax.swing.filechooser.FileNameExtensionFilter
+class language.language
+class main
+class pintar2D.Main
+class pintar2D.Options2DPlot
+class pintar2D.pintar2D
+class pintar2D.pizarra
+class reader.reader
+class xeo.C3D
+class xeo.Main
+class xeo.atom
+class xeo.bulk
+class xeo.calcStructure
+class xeo.gpl
+class xeo.info_bas
+class xeo.mol
+class xeo.plugBabel
+class xeo.povray
+class xeo.xeo
+class xeoBabel.abinit
+class xeoBabel.bas
+class xeoBabel.castep
+class xeoBabel.espresso
+class xeoBabel.fireball
+class xeoBabel.fireball_TG
+class xeoBabel.format
+class xeoBabel.gpl
+class xeoBabel.more
+class xeoBabel.periodicTable
+class xeoBabel.plugin
+class xeoBabel.vasp
+class xeoBabel.xeo
+class xeoBabel.xeoBabel
+class xeoBabel.xyz
+class xeokpts.Main
+class xeokpts.jKpts
+class xeokpts.recorrido
+class xeokpts.rectangle
+calc_xyz.Calc_bas ..> java.util.ArrayList
+calc_xyz.Calc_diff_xyz ..> java.io.File
+calc_xyz.Calc_diff_xyz --|> javax.swing.JFrame
+calc_xyz.JAverage ..> editor.editor
+calc_xyz.JAverage --|> javax.swing.JFrame
+calc_xyz.JCalc_xyz ..> java.io.File
+calc_xyz.JCalc_xyz ..> java.io.IOException
+calc_xyz.JCalc_xyz --|> javax.swing.JFrame
+calc_xyz.SustCalculator ..> java.util.ArrayList
+calculadora.calculadora ..> java.util.ArrayList
+dialogo.chooser ..> java.io.File
+dialogo.chooser ..> javax.swing.JFileChooser
+dialogo.chooser --|> javax.swing.JFrame
+dialogo.chooser ..> javax.swing.filechooser.FileFilter
+dialogo.chooser ..> javax.swing.filechooser.FileNameExtensionFilter
+dialogo.help --|> javax.swing.JFrame
+dialogo.helpURL --|> javax.swing.JFrame
+dialogo.openFiles ..> java.awt.Font
+dialogo.openFiles ..> java.io.File
+dialogo.openFiles --|> javax.swing.JFrame
+dialogo.show_picture ..> java.awt.Image
+dialogo.show_picture ..> java.awt.image.BufferedImage
+dialogo.show_picture ..> java.io.File
+dialogo.show_picture ..> javax.swing.Icon
+dialogo.show_picture ..> javax.swing.ImageIcon
+dialogo.show_picture --|> javax.swing.JFrame
+editor.editor ..> java.awt.Color
+editor.editor ..> java.awt.Font
+editor.editor ..> java.awt.FontFormatException
+editor.editor ..> java.io.File
+editor.editor ..> java.io.IOException
+editor.editor ..> java.util.ArrayList
+editor.editor ..> java.util.Vector
+editor.editor --|> javax.swing.JFrame
+fireball.Dos_bands ..> java.io.BufferedReader
+fireball.Dos_bands ..> java.io.File
+fireball.Dos_bands ..> java.io.FileReader
+fireball.Dos_bands ..> java.io.IOException
+fireball.Dos_bands ..> java.io.LineNumberReader
+fireball.Dos_bands --|> javax.swing.JFrame
+fireball.Jbegin ..> java.awt.Font
+fireball.Jbegin ..> java.io.File
+fireball.Jbegin ..> java.io.IOException
+fireball.Jbegin ..> java.util.ArrayList
+fireball.Jbegin --|> javax.swing.JFrame
+fireball.Jhopping ..> java.awt.Font
+fireball.Jhopping ..> java.io.File
+fireball.Jhopping ..> java.io.IOException
+fireball.Jhopping --|> javax.swing.JFrame
+fireball.begin ..> java.io.File
+fireball.begin ..> java.io.IOException
+fireball.begin ..> java.util.ArrayList
+fireball.hopping ..> java.awt.Color
+fireball.hopping ..> java.awt.image.BufferedImage
+fireball.hopping ..> java.io.File
+fireball.hopping ..> java.io.IOException
+fireball.hopping ..> java.util.Vector
+fireball.info_bas ..> java.util.ArrayList
+fireball.info_bas ..> java.util.Vector
+fireball.morse --|> java.lang.Thread
+fireball.toyModel --|> java.lang.Thread
+jCalc.jCalc ..> java.awt.AWTEvent
+jCalc.jCalc ..> java.util.ArrayList
+jCalc.jCalc --|> javax.swing.JFrame
+jCalc.jCalc ..> javax.swing.JMenuItem
+jCalc.statistic ..> java.util.Vector
+java_STM_AFM.java_STM_AFM ..> editor.editor
+java_STM_AFM.java_STM_AFM ..> java.awt.Font
+java_STM_AFM.java_STM_AFM ..> java.io.File
+java_STM_AFM.java_STM_AFM --|> javax.swing.JFrame
+java_STM_AFM.java_STM_AFM ..> reader.reader
+java_STM_AFM.periodicTable ..> java.awt.Color
+java_STM_AFM.stm ..> java.awt.Color
+java_STM_AFM.stm ..> java.awt.Font
+java_STM_AFM.stm ..> reader.reader
+pintar2D.Options2DPlot ..> java.awt.Color
+pintar2D.Options2DPlot ..> java.awt.Font
+pintar2D.Options2DPlot ..> javax.swing.JColorChooser
+pintar2D.Options2DPlot --|> javax.swing.JFrame
+pintar2D.Options2DPlot ..> javax.swing.JTextField
+pintar2D.pintar2D ..> java.awt.Color
+pintar2D.pintar2D ..> java.awt.image.BufferedImage
+pintar2D.pintar2D ..> java.io.BufferedReader
+pintar2D.pintar2D ..> java.io.DataOutputStream
+pintar2D.pintar2D ..> java.io.File
+pintar2D.pintar2D ..> java.io.FileOutputStream
+pintar2D.pintar2D ..> java.io.FileReader
+pintar2D.pintar2D ..> java.io.IOException
+pintar2D.pintar2D ..> java.util.ArrayList
+pintar2D.pintar2D ..> reader.reader
+pintar2D.pizarra ..> java.awt.image.BufferedImage
+pintar2D.pizarra ..> java.io.File
+pintar2D.pizarra ..> java.io.IOException
+pintar2D.pizarra ..> java.util.ArrayList
+pintar2D.pizarra --|> javax.swing.JFrame
+reader.reader ..> java.io.BufferedReader
+reader.reader ..> java.io.File
+reader.reader ..> java.io.FileReader
+reader.reader ..> java.io.IOException
+reader.reader ..> java.util.ArrayList
+reader.reader ..> java.util.Vector
+xeo.Main ..> calculadora.calculadora
+xeo.Main ..> editor.editor
+xeo.Main ..> java.io.File
+xeo.Main ..> java.io.IOException
+xeo.Main ..> pintar2D.pintar2D
+xeo.atom ..> java.util.ArrayList
+xeo.bulk ..> jCalc.statistic
+xeo.bulk ..> java.io.File
+xeo.bulk ..> java.io.IOException
+xeo.calcStructure ..> java.io.File
+xeo.calcStructure ..> java.io.IOException
+xeo.calcStructure ..> java.util.ArrayList
+xeo.info_bas ..> java.io.File
+xeo.info_bas ..> java.io.IOException
+xeo.info_bas ..> java.util.ArrayList
+xeo.info_bas ..> java.util.Vector
+xeo.mol ..> java.awt.Color
+xeo.mol ..> java.awt.Font
+xeo.mol ..> java.awt.Graphics
+xeo.mol ..> java.awt.image.BufferedImage
+xeo.mol ..> java.io.File
+xeo.mol ..> java.util.ArrayList
+xeo.mol ..> xeoBabel.periodicTable
+xeo.plugBabel ..> java.io.File
+xeo.plugBabel ..> xeoBabel.periodicTable
+xeo.plugBabel ..> xeoBabel.plugin
+xeo.povray ..> java.awt.Color
+xeo.povray ..> java.io.File
+xeo.povray ..> java.io.IOException
+xeo.povray ..> java.util.ArrayList
+xeo.xeo ..> calculadora.calculadora
+xeo.xeo ..> editor.editor
+xeo.xeo ..> fireball.fireball
+xeo.xeo ..> jCalc.jCalc
+xeo.xeo ..> java.awt.AWTEvent
+xeo.xeo ..> java.awt.Color
+xeo.xeo ..> java.awt.Component
+xeo.xeo ..> java.awt.Font
+xeo.xeo ..> java.awt.FontFormatException
+xeo.xeo ..> java.awt.Graphics
+xeo.xeo ..> java.awt.PopupMenu
+xeo.xeo ..> java.awt.event.ActionEvent
+xeo.xeo ..> java.awt.event.ActionListener
+xeo.xeo ..> java.awt.event.KeyEvent
+xeo.xeo ..> java.awt.image.BufferedImage
+xeo.xeo ..> java.io.File
+xeo.xeo ..> java.io.IOException
+xeo.xeo ..> java.io.InputStream
+xeo.xeo ..> java.util.ArrayList
+xeo.xeo ..> java_STM_AFM.java_STM_AFM
+xeo.xeo ..> javax.imageio.ImageIO
+xeo.xeo ..> javax.swing.ImageIcon
+xeo.xeo ..> javax.swing.JColorChooser
+xeo.xeo --|> javax.swing.JFrame
+xeo.xeo ..> javax.swing.JMenuItem
+xeo.xeo ..> javax.swing.JPanel
+xeo.xeo ..> javax.swing.JScrollBar
+xeo.xeo ..> javax.swing.JScrollPane
+xeo.xeo ..> language.language
+xeo.xeo ..> pintar2D.pintar2D
+xeo.xeo ..> reader.reader
+xeo.xeo ..> xeo.bulk
+xeo.xeo ..> xeo.mol
+xeo.xeo ..> xeo.povray
+xeoBabel.abinit ..> java.io.BufferedReader
+xeoBabel.abinit ..> java.io.File
+xeoBabel.abinit ..> java.io.FileReader
+xeoBabel.abinit ..> java.io.IOException
+xeoBabel.abinit ..> java.util.ArrayList
+xeoBabel.bas ..> java.io.BufferedReader
+xeoBabel.bas ..> java.io.File
+xeoBabel.bas ..> java.io.FileReader
+xeoBabel.bas ..> java.io.IOException
+xeoBabel.castep ..> java.io.BufferedReader
+xeoBabel.castep ..> java.io.File
+xeoBabel.castep ..> java.io.FileReader
+xeoBabel.castep ..> java.io.IOException
+xeoBabel.castep ..> java.util.ArrayList
+xeoBabel.espresso ..> java.io.BufferedReader
+xeoBabel.espresso ..> java.io.File
+xeoBabel.espresso ..> java.io.FileReader
+xeoBabel.espresso ..> java.io.IOException
+xeoBabel.espresso ..> java.util.ArrayList
+xeoBabel.fireball ..> java.io.BufferedReader
+xeoBabel.fireball ..> java.io.File
+xeoBabel.fireball ..> java.io.FileReader
+xeoBabel.fireball ..> java.io.IOException
+xeoBabel.fireball_TG ..> java.io.BufferedReader
+xeoBabel.fireball_TG ..> java.io.File
+xeoBabel.fireball_TG ..> java.io.FileReader
+xeoBabel.fireball_TG ..> java.io.IOException
+xeoBabel.more ..> java.io.BufferedReader
+xeoBabel.more ..> java.io.File
+xeoBabel.more ..> java.io.FileReader
+xeoBabel.more ..> java.io.IOException
+xeoBabel.more ..> java.util.ArrayList
+xeoBabel.periodicTable ..> java.awt.Color
+xeoBabel.vasp ..> java.io.BufferedReader
+xeoBabel.vasp ..> java.io.File
+xeoBabel.vasp ..> java.io.FileReader
+xeoBabel.vasp ..> java.io.IOException
+xeoBabel.vasp ..> java.util.ArrayList
+xeoBabel.xeo ..> java.io.BufferedReader
+xeoBabel.xeo ..> java.io.File
+xeoBabel.xeo ..> java.io.FileReader
+xeoBabel.xeo ..> java.io.IOException
+xeoBabel.xyz ..> java.io.BufferedReader
+xeoBabel.xyz ..> java.io.File
+xeoBabel.xyz ..> java.io.FileReader
+xeoBabel.xyz ..> java.io.IOException
+xeokpts.jKpts --|> javax.swing.JFrame
+xeokpts.rectangle ..> java.util.ArrayList
+@enduml

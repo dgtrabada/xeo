@@ -1,0 +1,42 @@
+==Las pruebas, en esta sección==
+
+{{Infobox Software
+| name                   = xeo
+| logo                   = [[Image:xeojpg|124px]]
+| screenshot             = [[Image:xeo1.png|thumb]]
+| caption                = xeo is a free (GPL) open project management for nanostructures using Java 
+| developer              = dgtrabada 
+| released               = ?
+| frequently_updated     = 
+| programming language   = [[Java (programming language)|Java]]
+| operating system       = [[Cross-platform]]
+| language               = [[English language|English]]
+| genre                  = [[management for nanostructures]]
+| license                = [[General Public License|GPL]]
+| website                = [http://sourceforge.net/projects/xeo/]
+}}
+xeo is a free (GPL) open project management for nanostructures using Java 
+
+
+Version 1.00
+
+__toc__
+<br clear="all"/>
+==Screenshots==
+
+<gallery>
+Image:xeo1.jpg|Screenshots1
+Image:xeo2.png|Screenshots2
+</gallery>
+
+==See also==
+
+{{portal|Free software}}
+
+* [[CDK]]
+* [[Molecular graphics]]
+
+==External links==
+* [http://sourceforge.net/projects/xeo/ xeo web site]
+
+

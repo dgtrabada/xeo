@@ -1,0 +1,297 @@
+#
+#  SCF calculation of a Pt3 cluster  by the LDA
+#  and the cluster method
+#
+
+#
+# File Name      
+#
+
+System.CurrrentDirectory         ./    # default=./
+System.Name                      output
+level.of.stdout                   1    # default=1 (1-3)
+level.of.fileout                  1    # default=1 (0-2)
+
+#
+# Definition of Atomic Species
+#
+
+Species.Number       1
+<Definition.of.Atomic.Species
+ C   C_c60B-s2p3   C_TM_PCC
+Definition.of.Atomic.Species>
+
+#
+# Atoms
+#
+
+Atoms.Number       60
+Atoms.SpeciesAndCoordinates.Unit   Ang # Ang|AU
+<Atoms.SpeciesAndCoordinates           # Unit=Ang.
+   1    C    0.02505009148334    0.72035426527282    3.46576618033541     2.0     2.0
+   2    C    0.00149781155949    0.70472606044691   -3.49203418751639     2.0     2.0
+   3    C    0.03617042181344   -0.68328431265851    3.44077128021811     2.0     2.0
+   4    C    0.00678175586963   -0.69223878619963   -3.49736934485089     2.0     2.0
+   5    C    0.70682042751888    3.48822492660554   -0.01419932514701     2.0     2.0
+   6    C    0.72989942020650   -3.45562436877570   -0.03675923859200     2.0     2.0
+   7    C   -0.69319860997162    3.48106326532066   -0.00568131316308     2.0     2.0
+   8    C   -0.66750019680595   -3.44964370645953   -0.01253951297786     2.0     2.0
+   9    C    3.50449709270636    0.02287899602422    0.68239779126696     2.0     2.0
+  10    C    3.49232962057405    0.02381723884494   -0.71752162257505     2.0     2.0
+  11    C   -3.47149569416468   -0.00499740461990    0.69163895797576     2.0     2.0
+  12    C   -3.47500368145298   -0.00095859926631   -0.71458070464265     2.0     2.0
+  13    C    1.43671816544085    3.04482069020115    1.15711826185052     2.0     2.0
+  14    C    1.43253723559875    3.04600143500429   -1.18452765774470     2.0     2.0
+  15    C    1.44814526541240   -2.99582980861444    1.13997261346591     2.0     2.0
+  16    C    1.44911525330322   -3.02092647184064   -1.19765581914876     2.0     2.0
+  17    C   -1.41179627914328    3.03322159274807    1.16396207041486     2.0     2.0
+  18    C   -1.42205920022084    3.03044726565583   -1.17846579543721     2.0     2.0
+  19    C   -1.38711416936059   -2.99971744213950    1.14069193177449     2.0     2.0
+  20    C   -1.40827933819781   -3.02573657693878   -1.19027755309345     2.0     2.0
+  21    C    3.05407683179958    1.19269325147293    1.40870628598964     2.0     2.0
+  22    C    3.03838592405177    1.18637676090422   -1.44088416162359     2.0     2.0
+  23    C    3.06520394797102   -1.14776703348440    1.41141629197675     2.0     2.0
+  24    C    3.04392007530680   -1.15237563993308   -1.44342787797354     2.0     2.0
+  25    C   -3.03040392008652    1.16745029366401   -1.43602949072704     2.0     2.0
+  26    C   -3.01132838329383   -1.16320684712181    1.40502711822694     2.0     2.0
+  27    C   -3.01964199836286   -1.17125906303321   -1.43722432951116     2.0     2.0
+  28    C    1.17356821033337    1.43548964804146   -3.04543559050018     2.0     2.0
+  29    C    1.19737795419614   -1.39624295194493    2.99575339576791     2.0     2.0
+  30    C    1.18058713053784   -1.41944005876202   -3.05511019846274     2.0     2.0
+  31    C   -1.14704421899041    1.43745115713320    3.02924913098616     2.0     2.0
+  32    C   -1.16860497744251    1.42734599622898   -3.04073725056096     2.0     2.0
+  33    C   -1.12074106315724   -1.39268860295415    2.97445894866702     2.0     2.0
+  34    C   -1.16209769580488   -1.42144358300417   -3.04902903404565     2.0     2.0
+  35    C    0.74374526934040    2.61608083355694    2.28944412778665     2.0     2.0
+  36    C    0.72802691997378    2.60783734200918   -2.31453801514813     2.0     2.0
+  37    C    0.75146770791440   -2.53159494041443    2.24517008230485     2.0     2.0
+  38    C    0.74346198487702   -2.59513280489270   -2.33624817151484     2.0     2.0
+  39    C   -0.70887815941043    2.61032956298128    2.29751561967986     2.0     2.0
+  40    C   -0.71971535336439    2.60247583591717   -2.30727873094250     2.0     2.0
+  41    C   -0.70845741576214   -2.59662207335636   -2.32189076548274     2.0     2.0
+  42    C    2.61359312071116    2.31783464846990    0.70917690159961     2.0     2.0
+  43    C    2.60665159129242    2.31832658663161   -0.74198297980411     2.0     2.0
+  44    C    2.62811907716433   -2.28028117403189    0.70845505320647     2.0     2.0
+  45    C    2.61986725762439   -2.27989820771094   -0.74352397728739     2.0     2.0
+  46    C   -2.58433722879115    2.29190696506963    0.71683080679922     2.0     2.0
+  47    C   -2.59340766690840    2.29838130573278   -0.73356428690387     2.0     2.0
+  48    C   -2.55326721844861   -2.28561276574266    0.71225888448999     2.0     2.0
+  49    C   -2.57682577917843   -2.30035883078362   -0.74272149113093     2.0     2.0
+  50    C    2.33390014419430    0.74694866141680    2.58976989244655     2.0     2.0
+  51    C    2.30175590522089    0.73425878084116   -2.61526293407243     2.0     2.0
+  52    C    2.34639749840535   -0.70499022082112    2.58175303374710     2.0     2.0
+  53    C    2.31050181167433   -0.71217101154742   -2.62006644827534     2.0     2.0
+  54    C   -2.27827395171236    0.72742822186527    2.59529572690117     2.0     2.0
+  55    C   -2.29686313724060    0.72589010862708   -2.61130155545935     2.0     2.0
+  56    C   -2.26351172142632   -0.71585574205156    2.57079245264663     2.0     2.0
+  57    C   -2.29199783345013   -0.72528380179642   -2.61504270248816     2.0     2.0     
+  58    C   -3.01608399680013    1.16726466546986    1.41955481159431     2.0     2.0
+  59    C    1.19795854635226    1.44146484407969    3.01790030649957     2.0     2.0
+  60    C   -0.67983252630690   -2.56805120524926    2.28260605889406     2.0     2.0
+Atoms.SpeciesAndCoordinates>		
+#Atoms.UnitVectors.Unit             Ang #  Ang|AU
+#<Atoms.UnitVectors                     # unit=Ang.
+#   13.887930870    0.000000000    0.000000000
+#    6.943965435   12.027300835    0.000000000
+#    0.000000000    0.000000000   26.0000000000
+#Atoms.UnitVectors>
+
+<MD.Fixed.XYZ
+ 1 0 0 0
+ 2 0 0 0
+ 3 0 0 0
+ 4 0 0 0
+ 5 0 0 0
+ 6 0 0 0
+ 7 0 0 0
+ 8 0 0 0
+ 9 0 0 0
+ 10 0 0 0
+ 11 0 0 0
+ 12 0 0 0
+ 13 0 0 0
+ 14 0 0 0
+ 15 0 0 0
+ 16 0 0 0
+ 17 0 0 0
+ 18 0 0 0
+ 19 0 0 0
+ 20 0 0 0
+ 21 0 0 0
+ 22 0 0 0
+ 23 0 0 0
+ 24 0 0 0
+ 25 0 0 0
+ 26 0 0 0
+ 27 0 0 0
+ 28 0 0 0
+ 29 0 0 0
+ 30 0 0 0
+ 31 0 0 0
+ 32 0 0 0
+ 33 0 0 0
+ 34 0 0 0
+ 35 0 0 0
+ 36 0 0 0
+ 37 0 0 0
+ 38 0 0 0
+ 39 0 0 0
+ 40 0 0 0
+ 41 0 0 0
+ 42 0 0 0
+ 43 0 0 0
+ 44 0 0 0
+ 45 0 0 0
+ 46 0 0 0
+ 47 0 0 0
+ 48 0 0 0
+ 49 0 0 0
+ 50 0 0 0
+ 51 0 0 0
+ 52 0 0 0
+ 53 0 0 0
+ 54 0 0 0
+ 55 0 0 0
+ 56 0 0 0
+ 57 0 0 0
+ 58 0 0 0
+ 59 0 0 0
+ 60 0 0 0
+MD.Fixed.XYZ>
+
+
+#
+# SCF or Electronic System
+#
+
+scf.XcType                   GGA-PBE     # LDA|LSDA-CA|LSDA-PW|GGA-PBE
+scf.SpinPolarization        on        # On|Off|NC
+scf.partialCoreCorrection  On         # On|Off
+scf.ElectronicTemperature  100.0       # default=300 (K)
+scf.energycutoff           150.0       # default=150 (Ry)
+scf.maxIter                1000         # default=40
+scf.EigenvalueSolver       Cluster      # DC|GDC|Cluster|Band
+scf.lapack.dste            dstevx      # dstegr|dstedc|dstevx, default=dstegr
+scf.Kgrid                  1 1 1       # means n1 x n2 x n3
+scf.Mixing.Type            Rmm-Diisk   # Simple|Rmm-Diis|Gr-Pulay|Kerker|Rmm-Diisk
+scf.Init.Mixing.Weight     0.010       # default=0.30 
+scf.Min.Mixing.Weight      0.010       # default=0.001 
+scf.Max.Mixing.Weight      0.100       # default=0.40 
+scf.Kerker.factor          17.0         # default=1.0  
+scf.Mixing.History         35          # default=5
+scf.Mixing.StartPulay       4          # default=6
+scf.Mixing.EveryPulay       1          # default=5
+scf.criterion             1.0e-9       # default=1.0e-6 (Hartree)
+
+#
+# 1D FFT
+#
+
+1DFFT.NumGridK             900         # default=900
+1DFFT.NumGridR             900         # default=900
+1DFFT.EnergyCutoff        2500.0       # default=3600(Ry)
+
+#
+# Orbital Optimization
+#
+
+orbitalOpt.Method           off        # Off|Unrestricted|Restricted
+orbitalOpt.InitCoes     Symmetrical    # Symmetrical|Free
+orbitalOpt.initPrefactor   0.1         # default=0.1
+orbitalOpt.scf.maxIter      15         # default=12
+orbitalOpt.MD.maxIter        7         # default=5
+orbitalOpt.per.MDIter       20         # default=1000000
+orbitalOpt.criterion      1.0e-4       # default=1.0e-4 (Hartree/borh)^2
+
+# 
+# output of contracted orbitals
+#
+
+CntOrb.fileout               off       # on|off, default=off
+Num.CntOrb.Atoms             1         # default=1
+<Atoms.Cont.Orbitals
+ 1
+Atoms.Cont.Orbitals>
+ 
+#
+# SCF Order-N
+#
+
+orderN.HoppingRanges        6.0        # default=5.0 (Ang) 
+orderN.NumHoppings           2         # default=2
+
+#
+# MD or Geometry Optimization
+#
+
+MD.Type                     EF         # Nomd|Opt|DIIS|NVE|NVT_VS|NVT_NH
+MD.maxIter                  1000       # default=1
+MD.Opt.DIIS.History          5         # default=4
+MD.Opt.StartDIIS             3         # default=5
+MD.TimeStep                 1.0        # default=0.5 (fs)
+MD.Opt.criterion         2.0e-4        # default=1.0e-4 (Hartree/bohr)
+
+#
+# restart using a restart file, *.rst  
+#
+
+scf.restart    on
+
+#
+# Band dispersion
+#
+
+Band dispersion            off         # on|off, default=off
+#<Band.KPath.UnitCell
+#3.56   0.00   0.00
+#0.00   3.56   0.00
+#0.00   0.00   3.56
+#Band.KPath.UnitCell>
+# if <Band.KPath.UnitCell does not exit
+#     the reciprical lattice vector is employed
+Band.Nkpath                5
+<Band.kpath
+ 15   0.0  0.0  0.0    1.0  0.0  0.0  g X
+ 15   1.0  0.0  0.0    1.0  0.5  0.0  X W
+ 15   1.0  0.5  0.0    0.5  0.5  0.5  W L 
+ 15   0.5  0.5  0.5    0.0  0.0  0.0  L g 
+ 15   0.0  0.0  0.0    1.0  0.5  0.0  g X
+Band.kpath>
+  
+#
+# MO output
+#
+
+MO.fileout                   off       # on|off
+num.HOMOs                     1        # default=1
+num.LUMOs                     1        # default=1
+MO.Nkpoint                    1        # default=1 
+<MO.kpoint
+  0.0  0.0  0.0
+MO.kpoint>
+
+#
+# DOS and PDOS
+#
+
+Dos.fileout                  on       # on|off, default=off
+Dos.Erange               -10.0  10.0   # default = -20 20 
+Dos.Kgrid                  1  1  1     # default = Kgrid1 Kgrid2 Kgrid3
+
+#
+# output Hamiltonian and overlap
+#  
+
+HS.fileout                   off       # on|off, default=off 
+
+
+
+
+
+
+
+
+
+
+
+scf.fixed.grid   -12.66317433481818  -12.67327841260088  -12.73025413049749

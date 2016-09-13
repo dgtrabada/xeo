@@ -1,0 +1,45 @@
+here=$(pwd)
+
+rm -fr *~
+rm -fr almacen/java_STM_AFM.tar.gz
+rm -fr almacen/java_src_STM_AFM.tar.gz
+rm -fr almacen/java_STM_AFM
+rm -fr almacen/java_src_STM_AFM
+
+cd almacen
+mkdir java_src_STM_AFM
+cd java_src_STM_AFM
+cp ../../gpl-3.0.txt .
+cp -r ../../otherPrograms/java_STM_AFM/src/ .
+cp -r ../../otherPrograms/java_STM_AFM/nbproject/ .
+mkdir librerias
+mkdir librerias/dialogo
+mkdir librerias/reader
+mkdir librerias/editor
+cp -r ../../librerias/dialogo/src/ librerias/dialogo/
+cp -r ../../librerias/dialogo/nbproject librerias/dialogo/
+cp -r ../../librerias/editor/src/ librerias/editor/
+cp -r ../../librerias/editor/nbproject librerias/editor/
+cp -r ../../librerias/reader/src/ librerias/reader/
+cd ..
+tar -cf java_src_STM_AFM.tar java_src_STM_AFM/
+gzip java_src_STM_AFM.tar
+rm -fr java_src_STM_AFM/
+mv java_src_STM_AFM.tar.gz  SRC.java_src_STM_AFM.tar.gz
+
+# ahora el programa
+
+mkdir java_STM_AFM
+cp -r ../otherPrograms/java_STM_AFM/iconos/ java_STM_AFM/
+cp -r ../otherPrograms/java_STM_AFM/dist/java_STM_AFM.jar java_STM_AFM/
+cp -r ../otherPrograms/java_STM_AFM/dist/lib java_STM_AFM/
+cp -r ../otherPrograms/java_STM_AFM/README java_STM_AFM/
+cp -r ../examples/example_java_STM_AFM_0 java_STM_AFM/
+cp -r ../examples/example_java_STM_AFM_1 java_STM_AFM/
+cp ../gpl-3.0.txt java_STM_AFM/
+
+tar -cf java_STM_AFM.tar java_STM_AFM/
+gzip java_STM_AFM.tar
+rm -fr java_STM_AFM/
+mv java_STM_AFM.tar.gz JAVA.java_STM_AFM.tar.gz
+

@@ -1,0 +1,11 @@
+#  estamos en la carpeta ../fireball-GUI/
+cd ..
+rm -fr fireball-GUI/
+# Te bajas de la pagina http://sourceforge.net/projects/fireball-gui/ la ultima version y lo desentaras
+tar -xvf (donde lo hayas bajado)/fireball-GUI-v8.2.tar.gz
+d fireball-GUI/
+./install
+
+#si lo haces por primera vez tendras que hacer el alias que te ponga el ./install
+#si ya lo tienes, no hace falta pero si lo mueves de sitio vuelve a correr ./install y cambia el alias
+

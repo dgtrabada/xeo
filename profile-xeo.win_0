@@ -1,0 +1,11 @@
+examples\example_benceno\script.input fireball xeoBabel
+examples\example_C5H10\answer.xyz xyz xeoBabel
+examples\example_sic\script.input fireball xeoBabel
+examples\example_Vol\script.input fireball xeoBabel
+examples\example_Castep\sic_3x2.cell castep xeoBabel
+examples\example_fireballTG\fireball.in fireball_TG xeoBabel
+examples\example_java_STM_AFM_0\struc_b.xeo xeo xeoBabel
+examples\example_java_STM_AFM_1\struc.xeo xeo xeoBabel
+examples\example_spin\spin.xyz xyz xeoBabel
+examples\example_abinit\t98.in abinit xeoBabel
+examples\example_vasp_benceno\POSCAR vasp xeoBabel
