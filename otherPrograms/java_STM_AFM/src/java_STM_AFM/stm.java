@@ -77,7 +77,7 @@ public class stm {
     int grosor;
     boolean seeLabel;
     
-    /** Creates a new instance of stm */
+    /** Creates a new instance of */
     public stm() {
         Kb =0.000086173 ; // eV/K
         x_max=0;
@@ -397,11 +397,15 @@ public class stm {
     
     String splot(){
         String aux="";
+        double x,y;
             for(int lx=0;lx<=ox;lx++){
                 for(int ly=0;ly<=oy;ly++){
-                        aux+=lx+" "+ly+" "+C[lx][ly]+"\n";
-                }aux+="\n";
+                        x= x_min + lx*(-x_min+x_max)/ox;
+                        y= y_min + ly*(-y_min+y_max)/oy;
+                        if(up[lx][ly])aux+=x+" "+y+" "+Z[lx][ly]+" "+"\n";
+                } aux+="\n";
             }
+
         return aux;
     }
     void pintar_dibujo(){
