@@ -48,6 +48,7 @@ public class plugin {
     
     abinit      abinit        = new abinit();
     amber       amber         = new amber();
+    pdb         pdb           = new pdb();
     espresso    espresso      = new espresso();
     bas         bas           = new bas();
     castep      castep        = new castep();
@@ -80,6 +81,11 @@ public class plugin {
         //--------- Abinit ------------
         type.add("amber");
         end_InputFile.add(".inpcrd");
+        info.add("read (on process)"); 
+        
+        //--------- pdb ------------
+        type.add("pdb");
+        end_InputFile.add(".pdb");
         info.add("read (on process)"); 
 
         //--------- Abinit ------------
@@ -143,8 +149,9 @@ public class plugin {
         //  ret="ERROR :: There are some errors in the file : "+inputFile+" or loadValues it is not implemented in "+sort+"\n";
         
         if(sort.equals("amber"))       ret =      amber.read(inputFile);
-        if(sort.equals("abinit"))       ret =      abinit.read(inputFile);
-        if(sort.equals("espresso"))       ret =      espresso.read(inputFile);
+        if(sort.equals("pdb"))         ret =      pdb.read(inputFile);
+        if(sort.equals("abinit"))      ret =      abinit.read(inputFile);
+        if(sort.equals("espresso"))    ret =      espresso.read(inputFile);
         if(sort.equals("castep"))       ret =      castep.read(inputFile);
         if(sort.equals("fireball"))     ret =    fireball.read(inputFile);
         if(sort.equals("fireball_TG"))  ret = fireball_TG.read(inputFile);
@@ -162,6 +169,7 @@ public class plugin {
     public void write(String sort,String outputFile, String xeoFormat){
         
         if(sort.equals("castep"))            castep.write(outputFile,xeoFormat);
+        if(sort.equals("amber"))            amber.write(outputFile,xeoFormat);
         if(sort.equals("espresso"))            espresso.write(outputFile,xeoFormat);
         if(sort.equals("fireball"))        fireball.write(outputFile,xeoFormat);
         if(sort.equals("fireball_TG"))  fireball_TG.write(outputFile,xeoFormat);

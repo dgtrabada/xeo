@@ -153,7 +153,7 @@ public class periodicTable {
     public String getSymbol(int z) {return (z<1||z>z_max)? "?" : symbol[z];}
     public int getZ(String sy) {
         int aux=0;
-        for(int i=1;i<=z_max;i++) if(sy.trim().equals(symbol[i].trim())) aux=i;
+        for(int i=1;i<=z_max;i++) if(sy.trim().toLowerCase().equals(symbol[i].trim().toLowerCase())) aux=i;
         return aux;
     }
     public Color getColor(int z)  {return (z<1||z>z_max)? Color.RED : color[z];}
