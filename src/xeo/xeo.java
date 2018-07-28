@@ -83,7 +83,7 @@ public class xeo extends javax.swing.JFrame {
     String write_tmp;
     //----------------------------
     fireball fireball = new fireball();
-    //--ordago---
+    //----------------------------
     int dIc=5;
     long tiempo;
     String SEP;
