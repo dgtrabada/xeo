@@ -20,6 +20,7 @@
 
 package xeokpts;
 
+
 public class jKpts extends javax.swing.JFrame {
     reader.reader cadena = new reader.reader();
     
@@ -72,8 +73,9 @@ public class jKpts extends javax.swing.JFrame {
     }
     
     
-    // <editor-fold defaultstate="collapsed" desc=" Código Generado ">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         buttonGroupLVS = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jDesktopPane2 = new javax.swing.JDesktopPane();
@@ -137,6 +139,28 @@ public class jKpts extends javax.swing.JFrame {
         kpts_N1 = new javax.swing.JTextField();
         jLabel74 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
+        jDesktopPane9 = new javax.swing.JDesktopPane();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        lvs_a3 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        lvs_b3 = new javax.swing.JTextField();
+        jButton30 = new javax.swing.JButton();
+        jLabel76 = new javax.swing.JLabel();
+        lvs_a4 = new javax.swing.JTextField();
+        lvs_b4 = new javax.swing.JTextField();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        Rlvs_a3 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        Rlvs_b3 = new javax.swing.JTextField();
+        Rlvs_b4 = new javax.swing.JTextField();
+        Rlvs_a4 = new javax.swing.JTextField();
+        kpts_A2 = new javax.swing.JTextField();
+        kpts_N2 = new javax.swing.JTextField();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
         jDesktopPane4 = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
@@ -151,34 +175,37 @@ public class jKpts extends javax.swing.JFrame {
 
         setTitle("Jkpoints");
         setResizable(false);
+
         jTabbedPane1.setFont(fuente);
-        jTabbedPane1.setName("path");
+        jTabbedPane1.setName("path"); // NOI18N
+
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/kpts.gif")));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/kpts.gif"))); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane2.add(jLabel3);
         jLabel3.setBounds(10, 180, 680, 253);
-        jDesktopPane2.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jDesktopPane5.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         jLabel41.setFont(fuente);
         jLabel41.setText("a =");
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(jLabel41);
         jLabel41.setBounds(10, 10, 30, 18);
-        jDesktopPane5.add(jLabel41, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         a_par.setFont(fuente);
         a_par.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         a_par.setText("4.00");
         a_par.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(a_par);
         a_par.setBounds(42, 10, 50, 18);
-        jDesktopPane5.add(a_par, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel62.setFont(fuente);
         jLabel62.setText("lattice parameter");
         jLabel62.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(jLabel62);
         jLabel62.setBounds(94, 10, 116, 18);
-        jDesktopPane5.add(jLabel62, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButtonCubic.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupLVS.add(jRadioButtonCubic);
@@ -193,9 +220,8 @@ public class jKpts extends javax.swing.JFrame {
                 jRadioButtonCubicMouseClicked(evt);
             }
         });
-
+        jDesktopPane5.add(jRadioButtonCubic);
         jRadioButtonCubic.setBounds(10, 40, 200, 18);
-        jDesktopPane5.add(jRadioButtonCubic, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButtonFCC.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupLVS.add(jRadioButtonFCC);
@@ -209,9 +235,8 @@ public class jKpts extends javax.swing.JFrame {
                 jRadioButtonFCCMouseClicked(evt);
             }
         });
-
+        jDesktopPane5.add(jRadioButtonFCC);
         jRadioButtonFCC.setBounds(10, 60, 200, 18);
-        jDesktopPane5.add(jRadioButtonFCC, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButtonBCC.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupLVS.add(jRadioButtonBCC);
@@ -225,9 +250,8 @@ public class jKpts extends javax.swing.JFrame {
                 jRadioButtonBCCMouseClicked(evt);
             }
         });
-
+        jDesktopPane5.add(jRadioButtonBCC);
         jRadioButtonBCC.setBounds(10, 80, 200, 18);
-        jDesktopPane5.add(jRadioButtonBCC, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jRadioButtonDIA.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupLVS.add(jRadioButtonDIA);
@@ -241,9 +265,8 @@ public class jKpts extends javax.swing.JFrame {
                 jRadioButtonDIAMousePressed(evt);
             }
         });
-
+        jDesktopPane5.add(jRadioButtonDIA);
         jRadioButtonDIA.setBounds(10, 100, 200, 18);
-        jDesktopPane5.add(jRadioButtonDIA, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton39.setFont(fuente);
         jButton39.setText("...");
@@ -253,33 +276,33 @@ public class jKpts extends javax.swing.JFrame {
                 jButton39MousePressed(evt);
             }
         });
-
+        jDesktopPane5.add(jButton39);
         jButton39.setBounds(10, 130, 18, 18);
-        jDesktopPane5.add(jButton39, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel69.setFont(fuente);
         jLabel69.setText("load lattice vector from file");
         jLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane5.add(jLabel69);
         jLabel69.setBounds(30, 130, 180, 18);
-        jDesktopPane5.add(jLabel69, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane2.add(jDesktopPane5);
         jDesktopPane5.setBounds(10, 10, 220, 160);
-        jDesktopPane2.add(jDesktopPane5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jDesktopPane8.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Checkbox.select")));
+
         jLabel63.setFont(fuente);
         jLabel63.setText("lattice vector ");
         jLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane8.add(jLabel63);
         jLabel63.setBounds(10, 10, 200, 18);
-        jDesktopPane8.add(jLabel63, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTableLVS.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jTableLVS.setFont(fuente);
         jTableLVS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {new Double(99.0), new Double(0.0), new Double(0.0)},
-                {new Double(0.0), new Double(99.0), new Double(0.0)},
-                {new Double(0.0), new Double(0.0), new Double(99.0)}
+                { new Double(99.0),  new Double(0.0),  new Double(0.0)},
+                { new Double(0.0),  new Double(99.0),  new Double(0.0)},
+                { new Double(0.0),  new Double(0.0),  new Double(99.0)}
             },
             new String [] {
                 "Título 1", "Título 2", "Título 3"
@@ -293,16 +316,16 @@ public class jKpts extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jDesktopPane8.add(jTableLVS);
         jTableLVS.setBounds(10, 30, 200, 48);
-        jDesktopPane8.add(jTableLVS, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTableRLVS.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jTableRLVS.setFont(fuente);
         jTableRLVS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {new Double(99.0), new Double(0.0), new Double(0.0)},
-                {new Double(0.0), new Double(99.0), new Double(0.0)},
-                {new Double(0.0), new Double(0.0), new Double(99.0)}
+                { new Double(99.0),  new Double(0.0),  new Double(0.0)},
+                { new Double(0.0),  new Double(99.0),  new Double(0.0)},
+                { new Double(0.0),  new Double(0.0),  new Double(99.0)}
             },
             new String [] {
                 "Título 1", "Título 2", "Título 3"
@@ -316,14 +339,14 @@ public class jKpts extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jDesktopPane8.add(jTableRLVS);
         jTableRLVS.setBounds(10, 100, 200, 48);
-        jDesktopPane8.add(jTableRLVS, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel72.setFont(fuente);
         jLabel72.setText("reciprocal lattice vector ");
         jLabel72.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane8.add(jLabel72);
         jLabel72.setBounds(10, 80, 150, 18);
-        jDesktopPane8.add(jLabel72, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton40.setFont(fuente);
         jButton40.setText("load");
@@ -333,61 +356,61 @@ public class jKpts extends javax.swing.JFrame {
                 jButton40MousePressed(evt);
             }
         });
-
+        jDesktopPane8.add(jButton40);
         jButton40.setBounds(162, 80, 48, 18);
-        jDesktopPane8.add(jButton40, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane2.add(jDesktopPane8);
         jDesktopPane8.setBounds(240, 10, 220, 160);
-        jDesktopPane2.add(jDesktopPane8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jDesktopPane7.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         jLabel42.setFont(fuente);
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText(" up ");
         jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(jLabel42);
         jLabel42.setBounds(150, 50, 60, 18);
-        jDesktopPane7.add(jLabel42, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kptsX.setFont(fuente);
         kptsX.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         kptsX.setText("2");
         kptsX.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(kptsX);
         kptsX.setBounds(10, 70, 60, 18);
-        jDesktopPane7.add(kptsX, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel43.setFont(fuente);
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("ur");
         jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(jLabel43);
         jLabel43.setBounds(80, 50, 60, 18);
-        jDesktopPane7.add(jLabel43, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kptsY.setFont(fuente);
         kptsY.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         kptsY.setText("2");
         kptsY.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(kptsY);
         kptsY.setBounds(80, 70, 60, 18);
-        jDesktopPane7.add(kptsY, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel44.setFont(fuente);
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText(" us ");
         jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(jLabel44);
         jLabel44.setBounds(10, 50, 60, 18);
-        jDesktopPane7.add(jLabel44, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kptsZ.setFont(fuente);
         kptsZ.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         kptsZ.setText("2");
         kptsZ.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(kptsZ);
         kptsZ.setBounds(150, 70, 60, 18);
-        jDesktopPane7.add(kptsZ, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel64.setFont(fuente);
         jLabel64.setText("lattice vector Monkhorst-Pack");
         jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane7.add(jLabel64);
         jLabel64.setBounds(10, 10, 200, 18);
-        jDesktopPane7.add(jLabel64, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         sim.setBackground(new java.awt.Color(255, 255, 255));
         sim.setFont(fuente);
@@ -405,9 +428,8 @@ public class jKpts extends javax.swing.JFrame {
                 simMouseClicked(evt);
             }
         });
-
+        jDesktopPane7.add(sim);
         sim.setBounds(10, 100, 200, 18);
-        jDesktopPane7.add(sim, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton29.setFont(fuente);
         jButton29.setText("get File");
@@ -417,12 +439,11 @@ public class jKpts extends javax.swing.JFrame {
                 jButton29MousePressed(evt);
             }
         });
-
+        jDesktopPane7.add(jButton29);
         jButton29.setBounds(10, 130, 200, 18);
-        jDesktopPane7.add(jButton29, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane2.add(jDesktopPane7);
         jDesktopPane7.setBounds(470, 10, 220, 160);
-        jDesktopPane2.add(jDesktopPane7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTabbedPane1.addTab("kpoints Monkhorst-Path", jDesktopPane2);
 
@@ -433,22 +454,23 @@ public class jKpts extends javax.swing.JFrame {
         jTextAreaInput.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jScrollPane1.setViewportView(jTextAreaInput);
 
+        jDesktopPane1.add(jScrollPane1);
         jScrollPane1.setBounds(10, 10, 430, 350);
-        jDesktopPane1.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jDesktopPane6.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+
         jLabel61.setFont(fuente);
         jLabel61.setText("points ");
         jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane6.add(jLabel61);
         jLabel61.setBounds(202, 42, 108, 18);
-        jDesktopPane6.add(jLabel61, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kpts_N3.setFont(fuente);
         kpts_N3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         kpts_N3.setText("30");
         kpts_N3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane6.add(kpts_N3);
         kpts_N3.setBounds(134, 42, 66, 18);
-        jDesktopPane6.add(kpts_N3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton36.setFont(fuente);
         jButton36.setText("Auto adjust with");
@@ -458,9 +480,8 @@ public class jKpts extends javax.swing.JFrame {
                 jButton36MousePressed(evt);
             }
         });
-
+        jDesktopPane6.add(jButton36);
         jButton36.setBounds(2, 42, 130, 18);
-        jDesktopPane6.add(jButton36, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton35.setFont(fuente);
         jButton35.setText("plot");
@@ -470,9 +491,8 @@ public class jKpts extends javax.swing.JFrame {
                 jButton35MousePressed(evt);
             }
         });
-
+        jDesktopPane6.add(jButton35);
         jButton35.setBounds(244, 22, 66, 18);
-        jDesktopPane6.add(jButton35, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton32.setFont(fuente);
         jButton32.setText("special points ( format )");
@@ -482,61 +502,62 @@ public class jKpts extends javax.swing.JFrame {
                 jButton32MousePressed(evt);
             }
         });
-
+        jDesktopPane6.add(jButton32);
         jButton32.setBounds(2, 22, 240, 18);
-        jDesktopPane6.add(jButton32, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel70.setFont(fuente);
         jLabel70.setText("Interpolates :");
         jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane6.add(jLabel70);
         jLabel70.setBounds(2, 2, 308, 18);
-        jDesktopPane6.add(jLabel70, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jDesktopPane1.add(jDesktopPane6);
         jDesktopPane6.setBounds(70, 370, 312, 62);
-        jDesktopPane1.add(jDesktopPane6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTabbedPane2.setFont(fuente);
+
         jDesktopPane3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane3.setFont(fuente);
+
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/recorrido2d.gif")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/recorrido2d.gif"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel1);
         jLabel1.setBounds(2, 22, 230, 106);
-        jDesktopPane3.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel65.setFont(fuente);
         jLabel65.setText("case 2 dim.  ( lattice vectors)");
         jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel65);
         jLabel65.setBounds(2, 130, 230, 18);
-        jDesktopPane3.add(jLabel65, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel39.setFont(fuente);
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel39.setText("vector a =");
         jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel39);
         jLabel39.setBounds(2, 150, 106, 18);
-        jDesktopPane3.add(jLabel39, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_a1.setFont(fuente);
         lvs_a1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_a1.setText("6.2254");
         lvs_a1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(lvs_a1);
         lvs_a1.setBounds(110, 150, 60, 18);
-        jDesktopPane3.add(lvs_a1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel45.setFont(fuente);
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel45.setText("vector b =");
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel45);
         jLabel45.setBounds(2, 170, 106, 18);
-        jDesktopPane3.add(jLabel45, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_b2.setFont(fuente);
         lvs_b2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_b2.setText("12.445");
         lvs_b2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(lvs_b2);
         lvs_b2.setBounds(172, 170, 60, 18);
-        jDesktopPane3.add(lvs_b2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton28.setFont(fuente);
         jButton28.setText("LOAD EXAMPLE");
@@ -546,141 +567,294 @@ public class jKpts extends javax.swing.JFrame {
                 jButton28MousePressed(evt);
             }
         });
-
+        jDesktopPane3.add(jButton28);
         jButton28.setBounds(2, 290, 230, 18);
-        jDesktopPane3.add(jButton28, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel68.setFont(fuente);
-        jLabel68.setText("EXAMPLE ( 2D )");
+        jLabel68.setText("EXAMPLE ( 2D ) 90º");
         jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel68);
         jLabel68.setBounds(2, 2, 230, 18);
-        jDesktopPane3.add(jLabel68, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_a2.setFont(fuente);
         lvs_a2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_a2.setText("0.0");
         lvs_a2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(lvs_a2);
         lvs_a2.setBounds(172, 150, 60, 18);
-        jDesktopPane3.add(lvs_a2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         lvs_b1.setFont(fuente);
         lvs_b1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         lvs_b1.setText("0.0");
         lvs_b1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(lvs_b1);
         lvs_b1.setBounds(110, 170, 60, 18);
-        jDesktopPane3.add(lvs_b1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel66.setFont(fuente);
         jLabel66.setText("reciprocal lattice vectors");
         jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel66);
         jLabel66.setBounds(2, 190, 230, 18);
-        jDesktopPane3.add(jLabel66, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel40.setFont(fuente);
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel40.setText("  a =");
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel40);
         jLabel40.setBounds(2, 210, 78, 18);
-        jDesktopPane3.add(jLabel40, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Rlvs_a1.setFont(fuente);
         Rlvs_a1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Rlvs_a1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         Rlvs_a1.setEnabled(false);
+        jDesktopPane3.add(Rlvs_a1);
         Rlvs_a1.setBounds(82, 210, 74, 18);
-        jDesktopPane3.add(Rlvs_a1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel47.setFont(fuente);
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel47.setText(" b =");
         jLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel47);
         jLabel47.setBounds(2, 230, 78, 18);
-        jDesktopPane3.add(jLabel47, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Rlvs_b1.setFont(fuente);
         Rlvs_b1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Rlvs_b1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         Rlvs_b1.setEnabled(false);
+        jDesktopPane3.add(Rlvs_b1);
         Rlvs_b1.setBounds(82, 230, 74, 18);
-        jDesktopPane3.add(Rlvs_b1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Rlvs_b2.setFont(fuente);
         Rlvs_b2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Rlvs_b2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         Rlvs_b2.setEnabled(false);
+        jDesktopPane3.add(Rlvs_b2);
         Rlvs_b2.setBounds(158, 230, 74, 18);
-        jDesktopPane3.add(Rlvs_b2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Rlvs_a2.setFont(fuente);
         Rlvs_a2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Rlvs_a2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         Rlvs_a2.setEnabled(false);
+        jDesktopPane3.add(Rlvs_a2);
         Rlvs_a2.setBounds(158, 210, 74, 18);
-        jDesktopPane3.add(Rlvs_a2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kpts_A1.setFont(fuente);
         kpts_A1.setText("4.42");
         kpts_A1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(kpts_A1);
         kpts_A1.setBounds(172, 250, 60, 18);
-        jDesktopPane3.add(kpts_A1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kpts_N1.setFont(fuente);
         kpts_N1.setText("32");
         kpts_N1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(kpts_N1);
         kpts_N1.setBounds(172, 270, 60, 18);
-        jDesktopPane3.add(kpts_N1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel74.setFont(fuente);
         jLabel74.setText("number of points");
         jLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel74);
         jLabel74.setBounds(2, 270, 168, 18);
-        jDesktopPane3.add(jLabel74, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel67.setFont(fuente);
         jLabel67.setText("lattice parameter");
         jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane3.add(jLabel67);
         jLabel67.setBounds(2, 250, 168, 18);
-        jDesktopPane3.add(jLabel67, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jTabbedPane2.addTab("example 2D", jDesktopPane3);
+        jTabbedPane2.addTab("Example 2D 90º", jDesktopPane3);
+
+        jDesktopPane9.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.setFont(fuente);
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/recorrido2d.gif"))); // NOI18N
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel4);
+        jLabel4.setBounds(2, 22, 230, 106);
+
+        jLabel75.setFont(fuente);
+        jLabel75.setText("case 2 dim.  ( lattice vectors)");
+        jLabel75.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel75);
+        jLabel75.setBounds(2, 130, 230, 18);
+
+        jLabel49.setFont(fuente);
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel49.setText("vector a =");
+        jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel49);
+        jLabel49.setBounds(2, 150, 106, 18);
+
+        lvs_a3.setFont(fuente);
+        lvs_a3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lvs_a3.setText("6.7481");
+        lvs_a3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        lvs_a3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lvs_a3ActionPerformed(evt);
+            }
+        });
+        jDesktopPane9.add(lvs_a3);
+        lvs_a3.setBounds(110, 150, 60, 18);
+
+        jLabel50.setFont(fuente);
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel50.setText("vector b =");
+        jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel50);
+        jLabel50.setBounds(2, 170, 106, 18);
+
+        lvs_b3.setFont(fuente);
+        lvs_b3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lvs_b3.setText("11.6879");
+        lvs_b3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(lvs_b3);
+        lvs_b3.setBounds(172, 170, 60, 18);
+
+        jButton30.setFont(fuente);
+        jButton30.setText("LOAD EXAMPLE");
+        jButton30.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton30MousePressed(evt);
+            }
+        });
+        jDesktopPane9.add(jButton30);
+        jButton30.setBounds(2, 290, 230, 18);
+
+        jLabel76.setFont(fuente);
+        jLabel76.setText("EXAMPLE ( 2D ) 90º");
+        jLabel76.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel76);
+        jLabel76.setBounds(2, 2, 230, 18);
+
+        lvs_a4.setFont(fuente);
+        lvs_a4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lvs_a4.setText("11.6879");
+        lvs_a4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(lvs_a4);
+        lvs_a4.setBounds(172, 150, 60, 18);
+
+        lvs_b4.setFont(fuente);
+        lvs_b4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lvs_b4.setText("-6.7481");
+        lvs_b4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(lvs_b4);
+        lvs_b4.setBounds(110, 170, 60, 18);
+
+        jLabel78.setFont(fuente);
+        jLabel78.setText("reciprocal lattice vectors");
+        jLabel78.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel78);
+        jLabel78.setBounds(2, 190, 230, 18);
+
+        jLabel51.setFont(fuente);
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel51.setText("  a =");
+        jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel51);
+        jLabel51.setBounds(2, 210, 78, 18);
+
+        Rlvs_a3.setFont(fuente);
+        Rlvs_a3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Rlvs_a3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        Rlvs_a3.setEnabled(false);
+        jDesktopPane9.add(Rlvs_a3);
+        Rlvs_a3.setBounds(82, 210, 74, 18);
+
+        jLabel52.setFont(fuente);
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel52.setText(" b =");
+        jLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel52);
+        jLabel52.setBounds(2, 230, 78, 18);
+
+        Rlvs_b3.setFont(fuente);
+        Rlvs_b3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Rlvs_b3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        Rlvs_b3.setEnabled(false);
+        jDesktopPane9.add(Rlvs_b3);
+        Rlvs_b3.setBounds(82, 230, 74, 18);
+
+        Rlvs_b4.setFont(fuente);
+        Rlvs_b4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Rlvs_b4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        Rlvs_b4.setEnabled(false);
+        jDesktopPane9.add(Rlvs_b4);
+        Rlvs_b4.setBounds(158, 230, 74, 18);
+
+        Rlvs_a4.setFont(fuente);
+        Rlvs_a4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Rlvs_a4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        Rlvs_a4.setEnabled(false);
+        jDesktopPane9.add(Rlvs_a4);
+        Rlvs_a4.setBounds(158, 210, 74, 18);
+
+        kpts_A2.setFont(fuente);
+        kpts_A2.setText("4.42");
+        kpts_A2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(kpts_A2);
+        kpts_A2.setBounds(172, 250, 60, 18);
+
+        kpts_N2.setFont(fuente);
+        kpts_N2.setText("32");
+        kpts_N2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(kpts_N2);
+        kpts_N2.setBounds(172, 270, 60, 18);
+
+        jLabel79.setFont(fuente);
+        jLabel79.setText("number of points");
+        jLabel79.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel79);
+        jLabel79.setBounds(2, 270, 168, 18);
+
+        jLabel80.setFont(fuente);
+        jLabel80.setText("lattice parameter");
+        jLabel80.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jLabel80);
+        jLabel80.setBounds(2, 250, 168, 18);
+
+        jTabbedPane2.addTab("2D", jDesktopPane9);
 
         jDesktopPane4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane4.setFont(fuente);
+
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/fcc.jpg")));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/fcc.jpg"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel2);
         jLabel2.setBounds(2, 22, 230, 206);
-        jDesktopPane4.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel46.setFont(fuente);
         jLabel46.setText("a =");
         jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel46);
         jLabel46.setBounds(2, 230, 40, 18);
-        jDesktopPane4.add(jLabel46, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kpts_A.setFont(fuente);
         kpts_A.setText("4.42");
         kpts_A.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(kpts_A);
         kpts_A.setBounds(44, 230, 50, 18);
-        jDesktopPane4.add(kpts_A, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel59.setFont(fuente);
         jLabel59.setText("lattice parameter");
         jLabel59.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel59);
         jLabel59.setBounds(96, 230, 136, 18);
-        jDesktopPane4.add(jLabel59, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel71.setFont(fuente);
         jLabel71.setText("number of points");
         jLabel71.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel71);
         jLabel71.setBounds(96, 250, 136, 18);
-        jDesktopPane4.add(jLabel71, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         kpts_N.setFont(fuente);
         kpts_N.setText("255");
         kpts_N.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(kpts_N);
         kpts_N.setBounds(44, 250, 50, 18);
-        jDesktopPane4.add(kpts_N, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton31.setFont(fuente);
         jButton31.setText("LOAD EXAMPLE ( fcc )");
@@ -690,36 +864,34 @@ public class jKpts extends javax.swing.JFrame {
                 jButton31MousePressed(evt);
             }
         });
-
+        jDesktopPane4.add(jButton31);
         jButton31.setBounds(2, 290, 230, 18);
-        jDesktopPane4.add(jButton31, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel77.setFont(fuente);
         jLabel77.setText("EXAMPLE ( fcc )");
         jLabel77.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel77);
         jLabel77.setBounds(2, 2, 230, 18);
-        jDesktopPane4.add(jLabel77, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel48.setFont(fuente);
         jLabel48.setText("n =");
         jLabel48.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel48);
         jLabel48.setBounds(2, 250, 40, 18);
-        jDesktopPane4.add(jLabel48, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel73.setFont(fuente);
         jLabel73.setText(" path G , X , W , L , G, K");
         jLabel73.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane4.add(jLabel73);
         jLabel73.setBounds(2, 270, 230, 18);
-        jDesktopPane4.add(jLabel73, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jTabbedPane2.addTab("example 3D", jDesktopPane4);
+        jTabbedPane2.addTab("3D", jDesktopPane4);
 
+        jDesktopPane1.add(jTabbedPane2);
         jTabbedPane2.setBounds(450, 20, 240, 334);
-        jDesktopPane1.add(jTabbedPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jTabbedPane2.getAccessibleContext().setAccessibleName("example");
 
         jTabbedPane1.addTab("path", jDesktopPane1);
-
-        jTabbedPane1.getAccessibleContext().setAccessibleName("path");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -731,6 +903,9 @@ public class jKpts extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("path");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
@@ -790,6 +965,8 @@ public class jKpts extends javax.swing.JFrame {
         kpts.entrada=jTextAreaInput.getText();
         kpts.hacerRecorrido();
         new editor.editor("temp.dat").LoadString(kpts.salida);
+        new editor.editor("r1.dat").LoadString("0.00000    0.00000"+"\n"+Rlvs_1[1]+" "+Rlvs_1[2]);
+        new editor.editor("r2.dat").LoadString("0.00000    0.00000"+"\n"+Rlvs_2[1]+" "+Rlvs_2[2]);
     }//GEN-LAST:event_jButton35MousePressed
     
     private void jButton32MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton32MousePressed
@@ -900,18 +1077,71 @@ public class jKpts extends javax.swing.JFrame {
         jTextAreaInput.setText(aux);
         jTextAreaInput.setText(kpts.generarPuntos(cadena.readColInt(1,kpts_N1.getText()),jTextAreaInput.getText()));
     }//GEN-LAST:event_jButton28MousePressed
+
+    private void jButton30MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton30MousePressed
+        lvs_1[1]=cadena.readColDouble(1,lvs_a3.getText());
+        lvs_1[2]=cadena.readColDouble(1,lvs_a4.getText());
+        lvs_2[1]=cadena.readColDouble(1,lvs_b3.getText());
+        lvs_2[2]=cadena.readColDouble(1,lvs_b4.getText());
+        
+        Rlvs_1[1]=2*Math.PI*lvs_2[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
+        Rlvs_1[2]=-2*Math.PI*lvs_2[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
+        Rlvs_2[1]=-2*Math.PI*lvs_1[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
+        Rlvs_2[2]=2*Math.PI*lvs_1[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
+        
+        Rlvs_a3.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[1]));
+        Rlvs_a4.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[2]));
+        Rlvs_b3.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[1]));
+        Rlvs_b4.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[2]));
+        
+        String aux="0 0 0"+"\n";
+        aux+="2\n";
+        aux+=Rlvs_1[1]/2+" "+ Rlvs_1[2]/2+" 0.0"+"\n";
+        aux+="2\n";
+        double x1,x2,y1,y2,auxx,auxy;
+        x1=Rlvs_1[1];
+        y1=Rlvs_1[2];
+        x2=Rlvs_2[1];
+        y2=Rlvs_2[2];
+        auxx=0;
+        System.out.println(auxx+" "+x2+" "+(100-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2)));
+        auxx=(-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2));
+        auxy=-x1/y1*auxx+y1/2+Math.pow(x1,2)/2/y1;
+        aux+=auxx+" "+ auxy+" 0.00"+"\n";
+        aux+="2\n";
+        auxx=(-(y1+y2)*(Math.pow(x2,2)-y1*y2)+y2*Math.pow(x1+x2,2))/(2*(-y1*x2+x1*y2));
+        auxy=-x2/y2*auxx+y2/2+Math.pow(x2,2)/2/y2;
+        aux+=auxx+" "+ auxy+" 0.000"+"\n";
+        aux+="2\n";
+        aux+=(Rlvs_1[1]/2+Rlvs_2[1]/2)+" "+(Rlvs_1[2]/2+Rlvs_2[2]/2)+" 0.0"+"\n";
+        aux+="2\n";
+        aux+="0.0 0.0 0.0"+"\n";
+        aux+="2\n";
+        aux+=Rlvs_2[1]/2+" "+ Rlvs_2[2]/2+" 0.0"+"\n";
+        jTextAreaInput.setText(aux);
+        jTextAreaInput.setText(kpts.generarPuntos(cadena.readColInt(1,kpts_N1.getText()),jTextAreaInput.getText()));
+    }//GEN-LAST:event_jButton30MousePressed
+
+    private void lvs_a3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lvs_a3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lvs_a3ActionPerformed
     
     
     
-    // Declaración de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Rlvs_a1;
     private javax.swing.JTextField Rlvs_a2;
+    private javax.swing.JTextField Rlvs_a3;
+    private javax.swing.JTextField Rlvs_a4;
     private javax.swing.JTextField Rlvs_b1;
     private javax.swing.JTextField Rlvs_b2;
+    private javax.swing.JTextField Rlvs_b3;
+    private javax.swing.JTextField Rlvs_b4;
     private javax.swing.JTextField a_par;
     private javax.swing.ButtonGroup buttonGroupLVS;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton35;
@@ -926,10 +1156,12 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane6;
     private javax.swing.JDesktopPane jDesktopPane7;
     private javax.swing.JDesktopPane jDesktopPane8;
+    private javax.swing.JDesktopPane jDesktopPane9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -939,6 +1171,10 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
@@ -954,7 +1190,12 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel80;
     private javax.swing.JRadioButton jRadioButtonBCC;
     private javax.swing.JRadioButton jRadioButtonCubic;
     private javax.swing.JRadioButton jRadioButtonDIA;
@@ -970,15 +1211,21 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JTextField kptsZ;
     private javax.swing.JTextField kpts_A;
     private javax.swing.JTextField kpts_A1;
+    private javax.swing.JTextField kpts_A2;
     private javax.swing.JTextField kpts_N;
     private javax.swing.JTextField kpts_N1;
+    private javax.swing.JTextField kpts_N2;
     private javax.swing.JTextField kpts_N3;
     private javax.swing.JTextField lvs_a1;
     private javax.swing.JTextField lvs_a2;
+    private javax.swing.JTextField lvs_a3;
+    private javax.swing.JTextField lvs_a4;
     private javax.swing.JTextField lvs_b1;
     private javax.swing.JTextField lvs_b2;
+    private javax.swing.JTextField lvs_b3;
+    private javax.swing.JTextField lvs_b4;
     private javax.swing.JCheckBox sim;
-    // Fin de declaración de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
     
     void loadTabla(double [] a1, double [] a2,double [] a3 ){
         for(int i=1;i<4;i++){
