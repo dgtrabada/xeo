@@ -36,6 +36,7 @@ public class jKpts extends javax.swing.JFrame {
     double [] Rlvs_2 = new double[4];
     double [] Rlvs_3 = new double[4];
     int [] q = new int[4];
+    double x1,x2,y1,y2,Xx,Xy,Kx,Ky,Lx,Ly; //2d x1=Rlvs_1[1]
     
     /** Creates new form jKpts */
     public jKpts() {
@@ -965,8 +966,19 @@ public class jKpts extends javax.swing.JFrame {
         kpts.entrada=jTextAreaInput.getText();
         kpts.hacerRecorrido();
         new editor.editor("temp.dat").LoadString(kpts.salida);
-        new editor.editor("r1.dat").LoadString("0.00000    0.00000"+"\n"+Rlvs_1[1]+" "+Rlvs_1[2]);
-        new editor.editor("r2.dat").LoadString("0.00000    0.00000"+"\n"+Rlvs_2[1]+" "+Rlvs_2[2]);
+        new editor.editor("V_red.dat").LoadString(Rlvs_1[1]+" "+Rlvs_1[2]+"\n"+"0.00000    0.00000"+"\n"+Rlvs_2[1]+" "+Rlvs_2[2] );
+        new editor.editor("Wigner-Seitz.dat").LoadString(
+                Rlvs_1[1]/2+" "+Rlvs_1[2]/2+"\n"+
+                Xx+" "+Xy+"\n"+ 
+                Kx+" "+Ky+"\n"+                                 
+                Rlvs_2[1]/2+" "+Rlvs_2[2]/2+"\n"+
+                -Lx+" "+-Ly+"\n"+
+                -Rlvs_1[1]/2+" "+-Rlvs_1[2]/2+"\n"+
+                -Xx+" "+-Xy+"\n"+
+                -Kx+" "+-Ky+"\n"+
+                Lx+" "+Ly+"\n"+
+                Rlvs_1[1]/2+" "+Rlvs_1[2]/2+"\n"
+                        );
     }//GEN-LAST:event_jButton35MousePressed
     
     private void jButton32MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton32MousePressed
@@ -1098,20 +1110,21 @@ public class jKpts extends javax.swing.JFrame {
         aux+="2\n";
         aux+=Rlvs_1[1]/2+" "+ Rlvs_1[2]/2+" 0.0"+"\n";
         aux+="2\n";
-        double x1,x2,y1,y2,auxx,auxy;
         x1=Rlvs_1[1];
         y1=Rlvs_1[2];
         x2=Rlvs_2[1];
         y2=Rlvs_2[2];
-        auxx=0;
-        System.out.println(auxx+" "+x2+" "+(100-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2)));
-        auxx=(-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2));
-        auxy=-x1/y1*auxx+y1/2+Math.pow(x1,2)/2/y1;
-        aux+=auxx+" "+ auxy+" 0.00"+"\n";
+        Xx=(-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2));
+        Xy=-x1/y1*Xx+y1/2+Math.pow(x1,2)/2/y1;
+        aux+=Xx+" "+ Xy+" 0.00"+"\n";
         aux+="2\n";
-        auxx=(-(y1+y2)*(Math.pow(x2,2)-y1*y2)+y2*Math.pow(x1+x2,2))/(2*(-y1*x2+x1*y2));
-        auxy=-x2/y2*auxx+y2/2+Math.pow(x2,2)/2/y2;
-        aux+=auxx+" "+ auxy+" 0.000"+"\n";
+        Kx=(-(y1+y2)*(Math.pow(x2,2)-y1*y2)+y2*Math.pow(x1+x2,2))/(2*(-y1*x2+x1*y2));
+        Ky=-x2/y2*Kx+y2/2+Math.pow(x2,2)/2/y2;
+        aux+=Kx+" "+ Ky+" 0.000"+"\n";
+       
+        Lx=(y2*y2*y1+y1*x2*x2+y1*y1*y2+y2*x1*x1)/2/(x1*y2-x2*y1);
+        Ly=-x2/y2*Lx-y2/2-x2*x2/2/y2;
+     
         aux+="2\n";
         aux+=(Rlvs_1[1]/2+Rlvs_2[1]/2)+" "+(Rlvs_1[2]/2+Rlvs_2[2]/2)+" 0.0"+"\n";
         aux+="2\n";
