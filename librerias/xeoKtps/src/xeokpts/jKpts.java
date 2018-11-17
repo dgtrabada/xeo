@@ -556,7 +556,7 @@ public class jKpts extends javax.swing.JFrame {
         jButton30.setBounds(0, 270, 230, 18);
 
         jLabel76.setFont(fuente);
-        jLabel76.setText("EXAMPLE ( 2D ) 90º");
+        jLabel76.setText("EXAMPLE ( 2D )");
         jLabel76.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel76);
         jLabel76.setBounds(2, 2, 230, 18);
@@ -890,34 +890,33 @@ public class jKpts extends javax.swing.JFrame {
         b2y=2*Math.PI*a1x/(a1x*a2y-a1y*a2x);
 
         // bi⋅aj=2πδij
-    
-        
+            
         JTb1x.setText(cadena.formatFortran(0, 10, 5,b1x));
         JTb1y.setText(cadena.formatFortran(0, 10, 5,b1y));
         JTb2x.setText(cadena.formatFortran(0, 10, 5,b2x));
         JTb2y.setText(cadena.formatFortran(0, 10, 5,b2y));
 
-        String aux="0 0 0"+"\n";
-        aux+="2\n";
-        aux+=b1x/2+" "+ b1y/2+" 0.0"+"\n";
-        aux+="2\n";
+
+        
         x1=b1x;
         y1=b1y;
         x2=b2x;
         y2=b2y;
         Xx=(-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2));
         Xy=-x1/y1*Xx+y1/2+Math.pow(x1,2)/2/y1;
-        aux+=Xx+" "+ Xy+" 0.00"+"\n";
-        aux+="2\n";
         Kx=(-(y1+y2)*(Math.pow(x2,2)-y1*y2)+y2*Math.pow(x1+x2,2))/(2*(-y1*x2+x1*y2));
         Ky=-x2/y2*Kx+y2/2+Math.pow(x2,2)/2/y2;
-        aux+=Kx+" "+ Ky+" 0.000"+"\n";
-
         Lx=(y2*y2*y1+y1*x2*x2+y1*y1*y2+y2*x1*x1)/2/(x1*y2-x2*y1);
         Ly=-x2/y2*Lx-y2/2-x2*x2/2/y2;
-
+        String aux="0 0 0"+"\n";
         aux+="2\n";
-        aux+=(b1x/2+b2x/2)+" "+(b1y/2+b2y/2)+" 0.0"+"\n";
+        aux+=b1x/2+" "+ b1y/2+" 0.0"+"\n"; //M
+        aux+="2\n";
+        aux+=Xx+" "+ Xy+" 0.00"+"\n"; //K
+        aux+="2\n";        
+        aux+=(Kx+Xx)/2+" "+ (Ky+Xy)/2+" 0.0"+"\n"; //J
+        aux+="2\n";
+        aux+=Kx+" "+ Ky+" 0.000"+"\n";
         aux+="2\n";
         aux+="0.0 0.0 0.0"+"\n";
         aux+="2\n";
@@ -931,11 +930,12 @@ public class jKpts extends javax.swing.JFrame {
     }//GEN-LAST:event_JTa1xActionPerformed
 
     private void jButton33MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton33MousePressed
-                new editor.editor("V_red.dat").LoadString(b1x+" "+b1y+"\n"+"0.00000    0.00000"+"\n"+b2x+" "+b2y );
+        new editor.editor("V_red.dat").LoadString(b1x+" "+b1y+"\n"+"0.00000    0.00000"+"\n"+b2x+" "+b2y );
         new editor.editor("Wigner-Seitz.dat").LoadString(
                 b1x/2+" "+b1y/2+"\n"+
                 Xx+" "+Xy+"\n"+ 
-                Kx+" "+Ky+"\n"+                                 
+                (Xx+Kx)/2+" "+(Xy+Ky)/2+"\n"+        
+                Kx+" "+Ky+"\n"+   
                 b2x/2+" "+b2y/2+"\n"+
                 -Lx+" "+-Ly+"\n"+
                 -b1x/2+" "+-b1y/2+"\n"+
