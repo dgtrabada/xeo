@@ -36,6 +36,8 @@ public class jKpts extends javax.swing.JFrame {
     double [] Rlvs_2 = new double[4];
     double [] Rlvs_3 = new double[4];
     int [] q = new int[4];
+    //2D CASE
+    double a1x,a1y,a2x,a2y,b1x,b1y,b2x,b2y;
     double x1,x2,y1,y2,Xx,Xy,Kx,Ky,Lx,Ly; //2d x1=Rlvs_1[1]
     
     /** Creates new form jKpts */
@@ -118,50 +120,27 @@ public class jKpts extends javax.swing.JFrame {
         jButton32 = new javax.swing.JButton();
         jLabel70 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jDesktopPane3 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        lvs_a1 = new javax.swing.JTextField();
-        jLabel45 = new javax.swing.JLabel();
-        lvs_b2 = new javax.swing.JTextField();
-        jButton28 = new javax.swing.JButton();
-        jLabel68 = new javax.swing.JLabel();
-        lvs_a2 = new javax.swing.JTextField();
-        lvs_b1 = new javax.swing.JTextField();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        Rlvs_a1 = new javax.swing.JTextField();
-        jLabel47 = new javax.swing.JLabel();
-        Rlvs_b1 = new javax.swing.JTextField();
-        Rlvs_b2 = new javax.swing.JTextField();
-        Rlvs_a2 = new javax.swing.JTextField();
-        kpts_A1 = new javax.swing.JTextField();
-        kpts_N1 = new javax.swing.JTextField();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
         jDesktopPane9 = new javax.swing.JDesktopPane();
         jLabel4 = new javax.swing.JLabel();
         jLabel75 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
-        lvs_a3 = new javax.swing.JTextField();
+        JTa1x = new javax.swing.JTextField();
         jLabel50 = new javax.swing.JLabel();
-        lvs_b3 = new javax.swing.JTextField();
+        JTa2y = new javax.swing.JTextField();
         jButton30 = new javax.swing.JButton();
         jLabel76 = new javax.swing.JLabel();
-        lvs_a4 = new javax.swing.JTextField();
-        lvs_b4 = new javax.swing.JTextField();
+        jTa1y = new javax.swing.JTextField();
+        JTa2x = new javax.swing.JTextField();
         jLabel78 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
-        Rlvs_a3 = new javax.swing.JTextField();
+        JTb1x = new javax.swing.JTextField();
         jLabel52 = new javax.swing.JLabel();
-        Rlvs_b3 = new javax.swing.JTextField();
-        Rlvs_b4 = new javax.swing.JTextField();
-        Rlvs_a4 = new javax.swing.JTextField();
-        kpts_A2 = new javax.swing.JTextField();
+        JTb2x = new javax.swing.JTextField();
+        JTb2y = new javax.swing.JTextField();
+        JTb1y = new javax.swing.JTextField();
         kpts_N2 = new javax.swing.JTextField();
         jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
+        jButton33 = new javax.swing.JButton();
         jDesktopPane4 = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
@@ -517,154 +496,6 @@ public class jKpts extends javax.swing.JFrame {
 
         jTabbedPane2.setFont(fuente);
 
-        jDesktopPane3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.setFont(fuente);
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/recorrido2d.gif"))); // NOI18N
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel1);
-        jLabel1.setBounds(2, 22, 230, 106);
-
-        jLabel65.setFont(fuente);
-        jLabel65.setText("case 2 dim.  ( lattice vectors)");
-        jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel65);
-        jLabel65.setBounds(2, 130, 230, 18);
-
-        jLabel39.setFont(fuente);
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel39.setText("vector a =");
-        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel39);
-        jLabel39.setBounds(2, 150, 106, 18);
-
-        lvs_a1.setFont(fuente);
-        lvs_a1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_a1.setText("6.2254");
-        lvs_a1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(lvs_a1);
-        lvs_a1.setBounds(110, 150, 60, 18);
-
-        jLabel45.setFont(fuente);
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel45.setText("vector b =");
-        jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel45);
-        jLabel45.setBounds(2, 170, 106, 18);
-
-        lvs_b2.setFont(fuente);
-        lvs_b2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_b2.setText("12.445");
-        lvs_b2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(lvs_b2);
-        lvs_b2.setBounds(172, 170, 60, 18);
-
-        jButton28.setFont(fuente);
-        jButton28.setText("LOAD EXAMPLE");
-        jButton28.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButton28MousePressed(evt);
-            }
-        });
-        jDesktopPane3.add(jButton28);
-        jButton28.setBounds(2, 290, 230, 18);
-
-        jLabel68.setFont(fuente);
-        jLabel68.setText("EXAMPLE ( 2D ) 90º");
-        jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel68);
-        jLabel68.setBounds(2, 2, 230, 18);
-
-        lvs_a2.setFont(fuente);
-        lvs_a2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_a2.setText("0.0");
-        lvs_a2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(lvs_a2);
-        lvs_a2.setBounds(172, 150, 60, 18);
-
-        lvs_b1.setFont(fuente);
-        lvs_b1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_b1.setText("0.0");
-        lvs_b1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(lvs_b1);
-        lvs_b1.setBounds(110, 170, 60, 18);
-
-        jLabel66.setFont(fuente);
-        jLabel66.setText("reciprocal lattice vectors");
-        jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel66);
-        jLabel66.setBounds(2, 190, 230, 18);
-
-        jLabel40.setFont(fuente);
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel40.setText("  a =");
-        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel40);
-        jLabel40.setBounds(2, 210, 78, 18);
-
-        Rlvs_a1.setFont(fuente);
-        Rlvs_a1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_a1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_a1.setEnabled(false);
-        jDesktopPane3.add(Rlvs_a1);
-        Rlvs_a1.setBounds(82, 210, 74, 18);
-
-        jLabel47.setFont(fuente);
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel47.setText(" b =");
-        jLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel47);
-        jLabel47.setBounds(2, 230, 78, 18);
-
-        Rlvs_b1.setFont(fuente);
-        Rlvs_b1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_b1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_b1.setEnabled(false);
-        jDesktopPane3.add(Rlvs_b1);
-        Rlvs_b1.setBounds(82, 230, 74, 18);
-
-        Rlvs_b2.setFont(fuente);
-        Rlvs_b2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_b2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_b2.setEnabled(false);
-        jDesktopPane3.add(Rlvs_b2);
-        Rlvs_b2.setBounds(158, 230, 74, 18);
-
-        Rlvs_a2.setFont(fuente);
-        Rlvs_a2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_a2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_a2.setEnabled(false);
-        jDesktopPane3.add(Rlvs_a2);
-        Rlvs_a2.setBounds(158, 210, 74, 18);
-
-        kpts_A1.setFont(fuente);
-        kpts_A1.setText("4.42");
-        kpts_A1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(kpts_A1);
-        kpts_A1.setBounds(172, 250, 60, 18);
-
-        kpts_N1.setFont(fuente);
-        kpts_N1.setText("32");
-        kpts_N1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(kpts_N1);
-        kpts_N1.setBounds(172, 270, 60, 18);
-
-        jLabel74.setFont(fuente);
-        jLabel74.setText("number of points");
-        jLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel74);
-        jLabel74.setBounds(2, 270, 168, 18);
-
-        jLabel67.setFont(fuente);
-        jLabel67.setText("lattice parameter");
-        jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane3.add(jLabel67);
-        jLabel67.setBounds(2, 250, 168, 18);
-
-        jTabbedPane2.addTab("Example 2D 90º", jDesktopPane3);
-
         jDesktopPane9.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.setFont(fuente);
 
@@ -682,39 +513,39 @@ public class jKpts extends javax.swing.JFrame {
 
         jLabel49.setFont(fuente);
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel49.setText("vector a =");
+        jLabel49.setText("vector a1 =");
         jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel49);
         jLabel49.setBounds(2, 150, 106, 18);
 
-        lvs_a3.setFont(fuente);
-        lvs_a3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_a3.setText("6.7481");
-        lvs_a3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        lvs_a3.addActionListener(new java.awt.event.ActionListener() {
+        JTa1x.setFont(fuente);
+        JTa1x.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTa1x.setText("6.7481");
+        JTa1x.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        JTa1x.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lvs_a3ActionPerformed(evt);
+                JTa1xActionPerformed(evt);
             }
         });
-        jDesktopPane9.add(lvs_a3);
-        lvs_a3.setBounds(110, 150, 60, 18);
+        jDesktopPane9.add(JTa1x);
+        JTa1x.setBounds(110, 150, 60, 18);
 
         jLabel50.setFont(fuente);
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel50.setText("vector b =");
+        jLabel50.setText("vector a2 =");
         jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel50);
         jLabel50.setBounds(2, 170, 106, 18);
 
-        lvs_b3.setFont(fuente);
-        lvs_b3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_b3.setText("11.6879");
-        lvs_b3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane9.add(lvs_b3);
-        lvs_b3.setBounds(172, 170, 60, 18);
+        JTa2y.setFont(fuente);
+        JTa2y.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTa2y.setText("11.6879");
+        JTa2y.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(JTa2y);
+        JTa2y.setBounds(172, 170, 60, 18);
 
         jButton30.setFont(fuente);
-        jButton30.setText("LOAD EXAMPLE");
+        jButton30.setText("Load G-M-K");
         jButton30.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -722,7 +553,7 @@ public class jKpts extends javax.swing.JFrame {
             }
         });
         jDesktopPane9.add(jButton30);
-        jButton30.setBounds(2, 290, 230, 18);
+        jButton30.setBounds(0, 270, 230, 18);
 
         jLabel76.setFont(fuente);
         jLabel76.setText("EXAMPLE ( 2D ) 90º");
@@ -730,19 +561,19 @@ public class jKpts extends javax.swing.JFrame {
         jDesktopPane9.add(jLabel76);
         jLabel76.setBounds(2, 2, 230, 18);
 
-        lvs_a4.setFont(fuente);
-        lvs_a4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_a4.setText("11.6879");
-        lvs_a4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane9.add(lvs_a4);
-        lvs_a4.setBounds(172, 150, 60, 18);
+        jTa1y.setFont(fuente);
+        jTa1y.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTa1y.setText("11.6879");
+        jTa1y.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(jTa1y);
+        jTa1y.setBounds(172, 150, 60, 18);
 
-        lvs_b4.setFont(fuente);
-        lvs_b4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        lvs_b4.setText("-6.7481");
-        lvs_b4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane9.add(lvs_b4);
-        lvs_b4.setBounds(110, 170, 60, 18);
+        JTa2x.setFont(fuente);
+        JTa2x.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTa2x.setText("-6.7481");
+        JTa2x.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jDesktopPane9.add(JTa2x);
+        JTa2x.setBounds(110, 170, 60, 18);
 
         jLabel78.setFont(fuente);
         jLabel78.setText("reciprocal lattice vectors");
@@ -752,69 +583,68 @@ public class jKpts extends javax.swing.JFrame {
 
         jLabel51.setFont(fuente);
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel51.setText("  a =");
+        jLabel51.setText("  b1 =");
         jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel51);
         jLabel51.setBounds(2, 210, 78, 18);
 
-        Rlvs_a3.setFont(fuente);
-        Rlvs_a3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_a3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_a3.setEnabled(false);
-        jDesktopPane9.add(Rlvs_a3);
-        Rlvs_a3.setBounds(82, 210, 74, 18);
+        JTb1x.setFont(fuente);
+        JTb1x.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTb1x.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        JTb1x.setEnabled(false);
+        jDesktopPane9.add(JTb1x);
+        JTb1x.setBounds(82, 210, 74, 18);
 
         jLabel52.setFont(fuente);
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel52.setText(" b =");
+        jLabel52.setText(" b2 =");
         jLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel52);
         jLabel52.setBounds(2, 230, 78, 18);
 
-        Rlvs_b3.setFont(fuente);
-        Rlvs_b3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_b3.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_b3.setEnabled(false);
-        jDesktopPane9.add(Rlvs_b3);
-        Rlvs_b3.setBounds(82, 230, 74, 18);
+        JTb2x.setFont(fuente);
+        JTb2x.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTb2x.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        JTb2x.setEnabled(false);
+        jDesktopPane9.add(JTb2x);
+        JTb2x.setBounds(82, 230, 74, 18);
 
-        Rlvs_b4.setFont(fuente);
-        Rlvs_b4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_b4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_b4.setEnabled(false);
-        jDesktopPane9.add(Rlvs_b4);
-        Rlvs_b4.setBounds(158, 230, 74, 18);
+        JTb2y.setFont(fuente);
+        JTb2y.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTb2y.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        JTb2y.setEnabled(false);
+        jDesktopPane9.add(JTb2y);
+        JTb2y.setBounds(158, 230, 74, 18);
 
-        Rlvs_a4.setFont(fuente);
-        Rlvs_a4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Rlvs_a4.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        Rlvs_a4.setEnabled(false);
-        jDesktopPane9.add(Rlvs_a4);
-        Rlvs_a4.setBounds(158, 210, 74, 18);
-
-        kpts_A2.setFont(fuente);
-        kpts_A2.setText("4.42");
-        kpts_A2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane9.add(kpts_A2);
-        kpts_A2.setBounds(172, 250, 60, 18);
+        JTb1y.setFont(fuente);
+        JTb1y.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        JTb1y.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        JTb1y.setEnabled(false);
+        jDesktopPane9.add(JTb1y);
+        JTb1y.setBounds(158, 210, 74, 18);
 
         kpts_N2.setFont(fuente);
         kpts_N2.setText("32");
         kpts_N2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(kpts_N2);
-        kpts_N2.setBounds(172, 270, 60, 18);
+        kpts_N2.setBounds(170, 250, 60, 18);
 
         jLabel79.setFont(fuente);
         jLabel79.setText("number of points");
         jLabel79.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jDesktopPane9.add(jLabel79);
-        jLabel79.setBounds(2, 270, 168, 18);
+        jLabel79.setBounds(0, 250, 168, 18);
 
-        jLabel80.setFont(fuente);
-        jLabel80.setText("lattice parameter");
-        jLabel80.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        jDesktopPane9.add(jLabel80);
-        jLabel80.setBounds(2, 250, 168, 18);
+        jButton33.setFont(fuente);
+        jButton33.setText("Wigner-Seitz");
+        jButton33.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
+        jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton33MousePressed(evt);
+            }
+        });
+        jDesktopPane9.add(jButton33);
+        jButton33.setBounds(2, 290, 230, 18);
 
         jTabbedPane2.addTab("2D", jDesktopPane9);
 
@@ -966,19 +796,6 @@ public class jKpts extends javax.swing.JFrame {
         kpts.entrada=jTextAreaInput.getText();
         kpts.hacerRecorrido();
         new editor.editor("temp.dat").LoadString(kpts.salida);
-        new editor.editor("V_red.dat").LoadString(Rlvs_1[1]+" "+Rlvs_1[2]+"\n"+"0.00000    0.00000"+"\n"+Rlvs_2[1]+" "+Rlvs_2[2] );
-        new editor.editor("Wigner-Seitz.dat").LoadString(
-                Rlvs_1[1]/2+" "+Rlvs_1[2]/2+"\n"+
-                Xx+" "+Xy+"\n"+ 
-                Kx+" "+Ky+"\n"+                                 
-                Rlvs_2[1]/2+" "+Rlvs_2[2]/2+"\n"+
-                -Lx+" "+-Ly+"\n"+
-                -Rlvs_1[1]/2+" "+-Rlvs_1[2]/2+"\n"+
-                -Xx+" "+-Xy+"\n"+
-                -Kx+" "+-Ky+"\n"+
-                Lx+" "+Ly+"\n"+
-                Rlvs_1[1]/2+" "+Rlvs_1[2]/2+"\n"
-                        );
     }//GEN-LAST:event_jButton35MousePressed
     
     private void jButton32MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton32MousePressed
@@ -986,26 +803,7 @@ public class jKpts extends javax.swing.JFrame {
         kpts.hacerRecorrido();
         new editor.editor("temp.kpts").LoadString(kpts.formatoKPTS());
     }//GEN-LAST:event_jButton32MousePressed
-    
-    private void jButton31MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton31MousePressed
-        double a=cadena.readColDouble(1,kpts_A.getText());
-        String aux="";
-        aux="0 0 0 \n"; //G
-        aux+="1 \n";
-        aux+=(2*Math.PI/a)+" 0 0 \n"; //X
-        aux+="1 \n";
-        aux+=(2*Math.PI/a)+" "+(Math.PI/a)+"0 0 \n"; //W
-        aux+="1 \n";
-        aux+=(Math.PI/a)+" "+(Math.PI/a)+" "+(Math.PI/a)+" \n";  //L
-        aux+="1 \n";
-        aux+="0 0 0 \n"; //G
-        aux+="1 \n";
-        aux+=(3*Math.PI/a/2)+" "+(3*Math.PI/a/2)+" 0 \n";  //K
-        aux=kpts.generarPuntos(cadena.readColInt(1,kpts_N.getText()),aux);
-        jTextAreaInput.setText(aux);
         
-    }//GEN-LAST:event_jButton31MousePressed
-    
     
     private void jButton29MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton29MousePressed
         int i,j,k,n;
@@ -1060,60 +858,53 @@ public class jKpts extends javax.swing.JFrame {
             new editor.editor("temp.kpts").LoadString(ret);
         }else  new editor.editor("temp.kpts").LoadString(salida);
     }//GEN-LAST:event_jButton29MousePressed
-    
-    private void jButton28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton28MousePressed
-        lvs_1[1]=cadena.readColDouble(1,lvs_a1.getText());
-        lvs_1[2]=cadena.readColDouble(1,lvs_a2.getText());
-        lvs_2[1]=cadena.readColDouble(1,lvs_b1.getText());
-        lvs_2[2]=cadena.readColDouble(1,lvs_b2.getText());
-        
-        Rlvs_1[1]=2*Math.PI*lvs_2[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_1[2]=-2*Math.PI*lvs_2[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_2[1]=-2*Math.PI*lvs_1[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_2[2]=2*Math.PI*lvs_1[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        
-        Rlvs_a1.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[1]));
-        Rlvs_a2.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[2]));
-        Rlvs_b1.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[1]));
-        Rlvs_b2.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[2]));
-        
-        String aux="0 0 0"+"\n";
-        aux+="2\n";
-        aux+=Rlvs_1[1]/2+" "+ Rlvs_1[2]/2+" 0.0"+"\n";
-        aux+="2\n";
-        aux+=(Rlvs_1[1]/2+Rlvs_2[1]/2)+" "+(Rlvs_1[2]/2+Rlvs_2[2]/2)+" 0.0"+"\n";
-        aux+="2\n";
-        aux+="0.0 0.0 0.0"+"\n";
-        aux+="2\n";
-        aux+=Rlvs_2[1]/2+" "+ Rlvs_2[2]/2+" 0.0"+"\n";
+
+    private void jButton31MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton31MousePressed
+        double a=cadena.readColDouble(1,kpts_A.getText());
+        String aux="";
+        aux="0 0 0 \n"; //G
+        aux+="1 \n";
+        aux+=(2*Math.PI/a)+" 0 0 \n"; //X
+        aux+="1 \n";
+        aux+=(2*Math.PI/a)+" "+(Math.PI/a)+"0 0 \n"; //W
+        aux+="1 \n";
+        aux+=(Math.PI/a)+" "+(Math.PI/a)+" "+(Math.PI/a)+" \n";  //L
+        aux+="1 \n";
+        aux+="0 0 0 \n"; //G
+        aux+="1 \n";
+        aux+=(3*Math.PI/a/2)+" "+(3*Math.PI/a/2)+" 0 \n";  //K
+        aux=kpts.generarPuntos(cadena.readColInt(1,kpts_N.getText()),aux);
         jTextAreaInput.setText(aux);
-        jTextAreaInput.setText(kpts.generarPuntos(cadena.readColInt(1,kpts_N1.getText()),jTextAreaInput.getText()));
-    }//GEN-LAST:event_jButton28MousePressed
+
+    }//GEN-LAST:event_jButton31MousePressed
 
     private void jButton30MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton30MousePressed
-        lvs_1[1]=cadena.readColDouble(1,lvs_a3.getText());
-        lvs_1[2]=cadena.readColDouble(1,lvs_a4.getText());
-        lvs_2[1]=cadena.readColDouble(1,lvs_b3.getText());
-        lvs_2[2]=cadena.readColDouble(1,lvs_b4.getText());
+        a1x=cadena.readColDouble(1,JTa1x.getText());
+        a1y=cadena.readColDouble(1,jTa1y.getText());
+        a2y=cadena.readColDouble(1,JTa2y.getText());
+        a2x=cadena.readColDouble(1,JTa2x.getText());
+
+        b1x=2*Math.PI*a2y/(a1x*a2y-a1y*a2x);
+        b2x=-2*Math.PI*a1y/(a1x*a2y-a1y*a2x);
+        b1y=-2*Math.PI*a2x/(a1x*a2y-a1y*a2x);
+        b2y=2*Math.PI*a1x/(a1x*a2y-a1y*a2x);
+
+        // bi⋅aj=2πδij
+    
         
-        Rlvs_1[1]=2*Math.PI*lvs_2[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_1[2]=-2*Math.PI*lvs_2[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_2[1]=-2*Math.PI*lvs_1[2]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        Rlvs_2[2]=2*Math.PI*lvs_1[1]/(lvs_1[1]*lvs_2[2]-lvs_1[2]*lvs_2[1]);
-        
-        Rlvs_a3.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[1]));
-        Rlvs_a4.setText(cadena.formatFortran(0, 10, 5,Rlvs_1[2]));
-        Rlvs_b3.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[1]));
-        Rlvs_b4.setText(cadena.formatFortran(0, 10, 5,Rlvs_2[2]));
-        
+        JTb1x.setText(cadena.formatFortran(0, 10, 5,b1x));
+        JTb1y.setText(cadena.formatFortran(0, 10, 5,b1y));
+        JTb2x.setText(cadena.formatFortran(0, 10, 5,b2x));
+        JTb2y.setText(cadena.formatFortran(0, 10, 5,b2y));
+
         String aux="0 0 0"+"\n";
         aux+="2\n";
-        aux+=Rlvs_1[1]/2+" "+ Rlvs_1[2]/2+" 0.0"+"\n";
+        aux+=b1x/2+" "+ b1y/2+" 0.0"+"\n";
         aux+="2\n";
-        x1=Rlvs_1[1];
-        y1=Rlvs_1[2];
-        x2=Rlvs_2[1];
-        y2=Rlvs_2[2];
+        x1=b1x;
+        y1=b1y;
+        x2=b2x;
+        y2=b2y;
         Xx=(-(y1+y2)*(Math.pow(x1,2)-y1*y2)+y1*Math.pow(x1+x2,2))/(2*(y1*x2-x1*y2));
         Xy=-x1/y1*Xx+y1/2+Math.pow(x1,2)/2/y1;
         aux+=Xx+" "+ Xy+" 0.00"+"\n";
@@ -1121,68 +912,77 @@ public class jKpts extends javax.swing.JFrame {
         Kx=(-(y1+y2)*(Math.pow(x2,2)-y1*y2)+y2*Math.pow(x1+x2,2))/(2*(-y1*x2+x1*y2));
         Ky=-x2/y2*Kx+y2/2+Math.pow(x2,2)/2/y2;
         aux+=Kx+" "+ Ky+" 0.000"+"\n";
-       
+
         Lx=(y2*y2*y1+y1*x2*x2+y1*y1*y2+y2*x1*x1)/2/(x1*y2-x2*y1);
         Ly=-x2/y2*Lx-y2/2-x2*x2/2/y2;
-     
+
         aux+="2\n";
-        aux+=(Rlvs_1[1]/2+Rlvs_2[1]/2)+" "+(Rlvs_1[2]/2+Rlvs_2[2]/2)+" 0.0"+"\n";
+        aux+=(b1x/2+b2x/2)+" "+(b1y/2+b2y/2)+" 0.0"+"\n";
         aux+="2\n";
         aux+="0.0 0.0 0.0"+"\n";
         aux+="2\n";
-        aux+=Rlvs_2[1]/2+" "+ Rlvs_2[2]/2+" 0.0"+"\n";
+        aux+=b2x/2+" "+ b2y/2+" 0.0"+"\n";
         jTextAreaInput.setText(aux);
-        jTextAreaInput.setText(kpts.generarPuntos(cadena.readColInt(1,kpts_N1.getText()),jTextAreaInput.getText()));
+        jTextAreaInput.setText(kpts.generarPuntos(cadena.readColInt(1,kpts_N2.getText()),jTextAreaInput.getText()));
     }//GEN-LAST:event_jButton30MousePressed
 
-    private void lvs_a3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lvs_a3ActionPerformed
+    private void JTa1xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTa1xActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lvs_a3ActionPerformed
-    
+    }//GEN-LAST:event_JTa1xActionPerformed
+
+    private void jButton33MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton33MousePressed
+                new editor.editor("V_red.dat").LoadString(b1x+" "+b1y+"\n"+"0.00000    0.00000"+"\n"+b2x+" "+b2y );
+        new editor.editor("Wigner-Seitz.dat").LoadString(
+                b1x/2+" "+b1y/2+"\n"+
+                Xx+" "+Xy+"\n"+ 
+                Kx+" "+Ky+"\n"+                                 
+                b2x/2+" "+b2y/2+"\n"+
+                -Lx+" "+-Ly+"\n"+
+                -b1x/2+" "+-b1y/2+"\n"+
+                -Xx+" "+-Xy+"\n"+
+                -Kx+" "+-Ky+"\n"+
+                Lx+" "+Ly+"\n"+
+                b1x/2+" "+b1y/2+"\n"
+                        );
+    }//GEN-LAST:event_jButton33MousePressed
+        
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Rlvs_a1;
-    private javax.swing.JTextField Rlvs_a2;
-    private javax.swing.JTextField Rlvs_a3;
-    private javax.swing.JTextField Rlvs_a4;
-    private javax.swing.JTextField Rlvs_b1;
-    private javax.swing.JTextField Rlvs_b2;
-    private javax.swing.JTextField Rlvs_b3;
-    private javax.swing.JTextField Rlvs_b4;
+    private javax.swing.JTextField JTa1x;
+    private javax.swing.JTextField JTa2x;
+    private javax.swing.JTextField JTa2y;
+    private javax.swing.JTextField JTb1x;
+    private javax.swing.JTextField JTb1y;
+    private javax.swing.JTextField JTb2x;
+    private javax.swing.JTextField JTb2y;
     private javax.swing.JTextField a_par;
     private javax.swing.ButtonGroup buttonGroupLVS;
-    private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton40;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
-    private javax.swing.JDesktopPane jDesktopPane3;
     private javax.swing.JDesktopPane jDesktopPane4;
     private javax.swing.JDesktopPane jDesktopPane5;
     private javax.swing.JDesktopPane jDesktopPane6;
     private javax.swing.JDesktopPane jDesktopPane7;
     private javax.swing.JDesktopPane jDesktopPane8;
     private javax.swing.JDesktopPane jDesktopPane9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
@@ -1193,27 +993,22 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel80;
     private javax.swing.JRadioButton jRadioButtonBCC;
     private javax.swing.JRadioButton jRadioButtonCubic;
     private javax.swing.JRadioButton jRadioButtonDIA;
     private javax.swing.JRadioButton jRadioButtonFCC;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTa1y;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTableLVS;
@@ -1223,20 +1018,9 @@ public class jKpts extends javax.swing.JFrame {
     private javax.swing.JTextField kptsY;
     private javax.swing.JTextField kptsZ;
     private javax.swing.JTextField kpts_A;
-    private javax.swing.JTextField kpts_A1;
-    private javax.swing.JTextField kpts_A2;
     private javax.swing.JTextField kpts_N;
-    private javax.swing.JTextField kpts_N1;
     private javax.swing.JTextField kpts_N2;
     private javax.swing.JTextField kpts_N3;
-    private javax.swing.JTextField lvs_a1;
-    private javax.swing.JTextField lvs_a2;
-    private javax.swing.JTextField lvs_a3;
-    private javax.swing.JTextField lvs_a4;
-    private javax.swing.JTextField lvs_b1;
-    private javax.swing.JTextField lvs_b2;
-    private javax.swing.JTextField lvs_b3;
-    private javax.swing.JTextField lvs_b4;
     private javax.swing.JCheckBox sim;
     // End of variables declaration//GEN-END:variables
     
