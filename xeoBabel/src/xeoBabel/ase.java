@@ -45,20 +45,27 @@ public class ase {
             java.io.DataOutputStream out = new java.io.DataOutputStream(archivo);
             String ret="";
             String str="";
+            String FRAGMENTS="";
+            boolean primer_atomo_frag=true;
             int natoms=(int) Double.valueOf(cadena.getLine(1,xeoFormat)).doubleValue();
-
+            int salto=0;
             ret+="atoms = Atoms(symbols=[";
             for(int i=3;i<natoms+3;i++){
+               salto++;
+               if(salto>5){
+                   ret+="\n                       ";
+                   salto=0;
+               }
                str=cadena.getLine(i,xeoFormat);
                ret+="'"+cadena.readColString(1,str)+"'";
                if (i<natoms+2){
 	         ret+=",";
 	       }else{
                  ret+="],\n        positions=[";
-	       }
-               	       
+	       }               	   
             }		     
-		     
+            FRAGMENTS="FRAGMENTS = FixAtoms(indices=[";
+            int indice_atomo=0;     
             for(int i=3;i<natoms+3;i++){
                 str=cadena.getLine(i,xeoFormat);
 		if(i==3){
@@ -75,25 +82,37 @@ public class ase {
 	       }else{
                  ret+="])\n";
 	       }
+            if(cadena.readColInt(5, str) == 1 && cadena.readColInt(6, str) == 1 && cadena.readColInt(7, str) == 1 ){
+                if(primer_atomo_frag){
+                    FRAGMENTS+=indice_atomo; 
+                    primer_atomo_frag=false;
+                }else{ 
+                    FRAGMENTS+=","+indice_atomo; 
+                }
+            }
+            indice_atomo++;
             }
             ret+="atoms.set_cell([";
 	    for(int i=cadena.getNLine(xeoFormat)-2;i<=cadena.getNLine(xeoFormat);i++){
-            str=cadena.getLine(i,xeoFormat);
-            if(i==cadena.getNLine(xeoFormat)-2){
+                str=cadena.getLine(i,xeoFormat);
+                 if(i==cadena.getNLine(xeoFormat)-2){
                    ret=ret+"(";
-            }else{
+                 }else{
                    ret=ret+"                  (";
-            }
-            ret+=cadena.formatFortran(2,14,8,cadena.readColDouble(1,str))+","
-            +cadena.formatFortran(2,14,8,cadena.readColDouble(2,str))+","
-            +cadena.formatFortran(2,14,8,cadena.readColDouble(3,str))+")";
-	    if (i==cadena.getNLine(xeoFormat) ){
+                }
+                ret+=cadena.formatFortran(2,14,8,cadena.readColDouble(1,str))+","
+                +cadena.formatFortran(2,14,8,cadena.readColDouble(2,str))+","
+                +cadena.formatFortran(2,14,8,cadena.readColDouble(3,str))+")";
+            
+                if (i==cadena.getNLine(xeoFormat) ){
 		    ret+="])\n";
-	    }else{
+                }else{
 		    ret+=",\n";
-	    }
-        }
+                }
 
+            }  
+            FRAGMENTS+="])\natoms.set_constraint(FRAGMENTS)";
+            ret+="\n"+FRAGMENTS+"\n";
             out.writeBytes(ret);
             out.close();
             archivo.close();
