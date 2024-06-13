@@ -58,6 +58,8 @@ public class plugin {
     xeo         xeo           = new xeo();
 //    more        more          = new more();
     xyz         xyz           = new xyz();
+    ase         ase           = new ase();
+
     
     
     String SEP,ret;
@@ -78,6 +80,11 @@ public class plugin {
         end_InputFile.add("");
         info.add("unknown");
         
+        //--------- Abinit ------------
+        type.add("ase");
+        end_InputFile.add(".py");
+        info.add("read (on process)"); 
+
         //--------- Abinit ------------
         type.add("amber");
         end_InputFile.add(".inpcrd");
@@ -177,6 +184,7 @@ public class plugin {
         if(sort.equals("xeo"))                  xeo.write(outputFile,xeoFormat);
 //        if(sort.equals("more"))                more.write(outputFile,xeoFormat);
         if(sort.equals("xyz"))                  xyz.write(outputFile,xeoFormat);
+        if(sort.equals("ase"))                  ase.write(outputFile,xeoFormat);
         
     }
     
