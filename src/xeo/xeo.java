@@ -952,7 +952,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane6.add(xeoBabel);
         xeoBabel.setBounds(2, 280, 196, 18);
 
-        xeoBabel_types.setBackground(new java.awt.Color(255, 255, 255));
         xeoBabel_types.setFont(fuente);
         xeoBabel_types.setMaximumRowCount(20);
         jDesktopPane6.add(xeoBabel_types);
@@ -968,7 +967,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane6.add(useBabel);
         useBabel.setBounds(2, 300, 196, 18);
 
-        Babel_types.setBackground(new java.awt.Color(255, 255, 255));
         Babel_types.setFont(fuente);
         Babel_types.setMaximumRowCount(20);
         jDesktopPane6.add(Babel_types);
@@ -1028,7 +1026,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane7.add(Te66);
-        Te66.setBounds(400, 10, 33, 18);
+        Te66.setBounds(400, 10, 32, 18);
 
         OptBulk.setBackground(new java.awt.Color(255, 255, 255));
         OptBulk.setFont(fuente);
@@ -2013,7 +2011,7 @@ public class xeo extends javax.swing.JFrame {
 
         jLabel34.setText("Font:");
         jDesktopPane11.add(jLabel34);
-        jLabel34.setBounds(10, 10, 220, 15);
+        jLabel34.setBounds(10, 10, 220, 20);
 
         jTextFont.setEditable(false);
         jTextFont.setText("font");
@@ -2036,7 +2034,7 @@ public class xeo extends javax.swing.JFrame {
 
         jLabel36.setText("Style:");
         jDesktopPane11.add(jLabel36);
-        jLabel36.setBounds(240, 10, 100, 15);
+        jLabel36.setBounds(240, 10, 100, 20);
 
         jTextStyle.setEditable(false);
         jTextStyle.setText("Plain");
@@ -2065,7 +2063,7 @@ public class xeo extends javax.swing.JFrame {
 
         jLabel37.setText("Size:");
         jDesktopPane11.add(jLabel37);
-        jLabel37.setBounds(350, 10, 65, 15);
+        jLabel37.setBounds(350, 10, 65, 20);
 
         jTextSize.setText("12");
         jTextSize.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -2105,7 +2103,7 @@ public class xeo extends javax.swing.JFrame {
         jTextFont1.setEditable(false);
         jTextFont1.setText("use a (ttf) file for Fonts");
         jDesktopPane11.add(jTextFont1);
-        jTextFont1.setBounds(10, 320, 410, 19);
+        jTextFont1.setBounds(10, 320, 410, 26);
 
         jButton63.setFont(fuente);
         jButton63.setText("...");
@@ -2122,7 +2120,6 @@ public class xeo extends javax.swing.JFrame {
         File_ttf.setFont(fuente);
         File_ttf.setToolTipText("the step to move the atoms selected");
         File_ttf.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        File_ttf.setOpaque(false);
         jDesktopPane11.add(File_ttf);
         File_ttf.setBounds(40, 350, 260, 18);
 
@@ -2186,7 +2183,6 @@ public class xeo extends javax.swing.JFrame {
         Te42.setText("select this atom for (0,0,0)");
         Te42.setToolTipText("");
         Te42.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te42.setOpaque(false);
         jDesktopPane2.add(Te42);
         Te42.setBounds(66, 28, 180, 18);
 
@@ -2202,7 +2198,6 @@ public class xeo extends javax.swing.JFrame {
         Te41.setText("select this atom for Axis-Z");
         Te41.setToolTipText("");
         Te41.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te41.setOpaque(false);
         jDesktopPane2.add(Te41);
         Te41.setBounds(66, 50, 180, 18);
 
@@ -2218,7 +2213,6 @@ public class xeo extends javax.swing.JFrame {
         Te43.setText("select this atom for Axis-X");
         Te43.setToolTipText("");
         Te43.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te43.setOpaque(false);
         jDesktopPane2.add(Te43);
         Te43.setBounds(66, 72, 180, 18);
 
@@ -2246,7 +2240,6 @@ public class xeo extends javax.swing.JFrame {
         Te45.setText("(0,0,0) Center");
         Te45.setToolTipText("");
         Te45.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te45.setOpaque(false);
         jDesktopPane2.add(Te45);
         Te45.setBounds(106, 140, 140, 18);
 
@@ -2261,7 +2254,6 @@ public class xeo extends javax.swing.JFrame {
         Te46.setText("Axis-Z");
         Te46.setToolTipText("");
         Te46.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te46.setOpaque(false);
         jDesktopPane2.add(Te46);
         Te46.setBounds(106, 162, 140, 18);
 
@@ -2270,7 +2262,6 @@ public class xeo extends javax.swing.JFrame {
         Te47.setText("Axis-X");
         Te47.setToolTipText("");
         Te47.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te47.setOpaque(false);
         jDesktopPane2.add(Te47);
         Te47.setBounds(106, 184, 140, 18);
 
@@ -2400,7 +2391,6 @@ public class xeo extends javax.swing.JFrame {
         Tdespl33.setText("  X = ");
         Tdespl33.setToolTipText("");
         Tdespl33.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Tdespl33.setOpaque(false);
         jDesktopPane3.add(Tdespl33);
         Tdespl33.setBounds(4, 4, 40, 18);
 
@@ -2409,7 +2399,6 @@ public class xeo extends javax.swing.JFrame {
         Tdespl34.setText("  Y = ");
         Tdespl34.setToolTipText("");
         Tdespl34.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Tdespl34.setOpaque(false);
         jDesktopPane3.add(Tdespl34);
         Tdespl34.setBounds(4, 26, 40, 18);
 
@@ -2418,7 +2407,6 @@ public class xeo extends javax.swing.JFrame {
         Tdespl35.setText("  Z = ");
         Tdespl35.setToolTipText("");
         Tdespl35.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Tdespl35.setOpaque(false);
         jDesktopPane3.add(Tdespl35);
         Tdespl35.setBounds(4, 48, 40, 18);
 
@@ -2466,7 +2454,6 @@ public class xeo extends javax.swing.JFrame {
         Te36.setText("rescalate atoms positions and lvs");
         Te36.setToolTipText("");
         Te36.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te36.setOpaque(false);
         jDesktopPane3.add(Te36);
         Te36.setBounds(186, 94, 210, 18);
 
@@ -2475,7 +2462,6 @@ public class xeo extends javax.swing.JFrame {
         Te37.setText("rotate atoms ans lvs (Z) with angle");
         Te37.setToolTipText("");
         Te37.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te37.setOpaque(false);
         jDesktopPane3.add(Te37);
         Te37.setBounds(186, 116, 210, 18);
 
@@ -2484,7 +2470,6 @@ public class xeo extends javax.swing.JFrame {
         Te38.setText("rotate atoms ans lvs (Y) with angle");
         Te38.setToolTipText("");
         Te38.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te38.setOpaque(false);
         jDesktopPane3.add(Te38);
         Te38.setBounds(186, 138, 210, 18);
 
@@ -2493,7 +2478,6 @@ public class xeo extends javax.swing.JFrame {
         Te39.setText("rotate atoms ans lvs (X) with angle");
         Te39.setToolTipText("");
         Te39.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te39.setOpaque(false);
         jDesktopPane3.add(Te39);
         Te39.setBounds(186, 160, 210, 18);
 
@@ -2666,13 +2650,11 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane5.add(jLabel8);
         jLabel8.setBounds(2, 122, 480, 18);
 
-        jComboBoxBabelRead.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxBabelRead.setFont(fuente);
         jComboBoxBabelRead.setMaximumRowCount(20);
         jDesktopPane5.add(jComboBoxBabelRead);
         jComboBoxBabelRead.setBounds(312, 62, 170, 18);
 
-        jComboBoxBabelWrite.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxBabelWrite.setFont(fuente);
         jComboBoxBabelWrite.setMaximumRowCount(20);
         jDesktopPane5.add(jComboBoxBabelWrite);
@@ -2773,7 +2755,6 @@ public class xeo extends javax.swing.JFrame {
         Te20.setText("perspective");
         Te20.setToolTipText("the step to move the atoms selected");
         Te20.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te20.setOpaque(false);
         Te20.setScrollOffset(2);
         jDesktopPane1.add(Te20);
         Te20.setBounds(2, 24, 198, 18);
@@ -2782,7 +2763,6 @@ public class xeo extends javax.swing.JFrame {
         PERS.setValue(100);
         PERS.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         PERS.setEnabled(false);
-        PERS.setOpaque(false);
         PERS.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 PERSMouseDragged(evt);
@@ -2915,7 +2895,6 @@ public class xeo extends javax.swing.JFrame {
         Te25.setText("change center");
         Te25.setToolTipText("the step to move the atoms selected");
         Te25.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te25.setOpaque(false);
         Te25.setScrollOffset(2);
         jDesktopPane1.add(Te25);
         Te25.setBounds(2, 166, 198, 18);
@@ -3091,7 +3070,6 @@ public class xeo extends javax.swing.JFrame {
         Te73.setText("show the trajectory of the atoms:");
         Te73.setToolTipText("");
         Te73.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te73.setOpaque(false);
         jDesktopPane13.add(Te73);
         Te73.setBounds(0, 40, 198, 18);
 
@@ -3126,7 +3104,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jButton47);
-        jButton47.setBounds(0, 80, 17, 17);
+        jButton47.setBounds(0, 80, 22, 22);
 
         colorLabel.setBackground(new java.awt.Color(255, 51, 51));
         colorLabel.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3147,14 +3125,13 @@ public class xeo extends javax.swing.JFrame {
         colorLabel.setBounds(20, 80, 0, 0);
 
         ancho.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        ancho.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(1), null, null, Integer.valueOf(1)));
+        ancho.setModel(new javax.swing.SpinnerNumberModel(1, null, null, 1));
         ancho.setToolTipText("");
         ancho.setAlignmentX(0.0F);
         ancho.setAlignmentY(0.0F);
         ancho.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
-        ancho.setOpaque(false);
         jDesktopPane13.add(ancho);
-        ancho.setBounds(166, 80, 32, 18);
+        ancho.setBounds(166, 80, 32, 23);
 
         Tdespl65.setEditable(false);
         Tdespl65.setFont(fuente);
@@ -3166,7 +3143,7 @@ public class xeo extends javax.swing.JFrame {
         Tdespl65.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Tdespl65.setFocusable(false);
         jDesktopPane13.add(Tdespl65);
-        Tdespl65.setBounds(0, 100, 96, 17);
+        Tdespl65.setBounds(0, 100, 96, 22);
 
         jlvs_1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jlvs_1.setAlignmentX(0.0F);
@@ -3178,7 +3155,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jlvs_1);
-        jlvs_1.setBounds(98, 100, 32, 18);
+        jlvs_1.setBounds(98, 100, 32, 23);
 
         jlvs_2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jlvs_2.setAlignmentX(0.0F);
@@ -3190,7 +3167,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jlvs_2);
-        jlvs_2.setBounds(132, 100, 32, 18);
+        jlvs_2.setBounds(132, 100, 32, 23);
 
         jlvs_3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jlvs_3.setAlignmentX(0.0F);
@@ -3202,7 +3179,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jlvs_3);
-        jlvs_3.setBounds(166, 100, 32, 18);
+        jlvs_3.setBounds(166, 100, 32, 23);
 
         jtrlasttext.setEditable(false);
         jtrlasttext.setFont(fuente);
@@ -3219,7 +3196,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jtrlasttext);
-        jtrlasttext.setBounds(0, 140, 84, 17);
+        jtrlasttext.setBounds(0, 140, 84, 22);
 
         jtrfisttext.setEditable(false);
         jtrfisttext.setFont(fuente);
@@ -3236,7 +3213,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane13.add(jtrfisttext);
-        jtrfisttext.setBounds(0, 120, 84, 17);
+        jtrfisttext.setBounds(0, 120, 84, 22);
 
         jtrlast.setFont(fuente);
         jtrlast.setText("2147483647");
@@ -3244,7 +3221,7 @@ public class xeo extends javax.swing.JFrame {
         jtrlast.setAlignmentY(0.0F);
         jtrlast.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.focus")));
         jDesktopPane13.add(jtrlast);
-        jtrlast.setBounds(86, 140, 112, 17);
+        jtrlast.setBounds(86, 140, 112, 22);
 
         jtrfirst.setFont(fuente);
         jtrfirst.setText("0");
@@ -3252,7 +3229,7 @@ public class xeo extends javax.swing.JFrame {
         jtrfirst.setAlignmentY(0.0F);
         jtrfirst.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.focus")));
         jDesktopPane13.add(jtrfirst);
-        jtrfirst.setBounds(86, 120, 112, 17);
+        jtrfirst.setBounds(86, 120, 112, 22);
 
         Te78.setFont(fuente);
         Te78.setText("preview");
@@ -3352,7 +3329,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane12.add(xyztFile);
         xyztFile.setBounds(20, 40, 178, 18);
 
-        color_inter_2.setBackground(new java.awt.Color(255, 255, 255));
         color_inter_2.setForeground(new java.awt.Color(153, 153, 255));
         color_inter_2.setText("...");
         color_inter_2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3364,7 +3340,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane12.add(color_inter_2);
         color_inter_2.setBounds(160, 60, 18, 18);
 
-        color_fin.setBackground(new java.awt.Color(255, 255, 255));
         color_fin.setForeground(new java.awt.Color(153, 153, 255));
         color_fin.setText("...");
         color_fin.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3376,7 +3351,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane12.add(color_fin);
         color_fin.setBounds(180, 60, 18, 18);
 
-        color_ini.setBackground(new java.awt.Color(255, 255, 255));
         color_ini.setForeground(new java.awt.Color(153, 153, 255));
         color_ini.setText("...");
         color_ini.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3388,7 +3362,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktopPane12.add(color_ini);
         color_ini.setBounds(0, 60, 18, 18);
 
-        color_inter_1.setBackground(new java.awt.Color(255, 255, 255));
         color_inter_1.setForeground(new java.awt.Color(153, 153, 255));
         color_inter_1.setText("...");
         color_inter_1.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3410,7 +3383,7 @@ public class xeo extends javax.swing.JFrame {
             }
         });
         jDesktopPane12.add(Sinter1);
-        Sinter1.setBounds(0, 80, 198, 18);
+        Sinter1.setBounds(0, 80, 198, 22);
 
         Clabel.setBackground(new java.awt.Color(255, 255, 255));
         Clabel.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
@@ -3421,14 +3394,13 @@ public class xeo extends javax.swing.JFrame {
         Sinter2.setValue(40);
         Sinter2.setAlignmentX(0.0F);
         Sinter2.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Sinter2.setOpaque(false);
         Sinter2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 Sinter2MouseDragged(evt);
             }
         });
         jDesktopPane12.add(Sinter2);
-        Sinter2.setBounds(0, 120, 198, 18);
+        Sinter2.setBounds(0, 120, 198, 22);
 
         Te53.setFont(fuente);
         Te53.setText("accept");
@@ -3490,7 +3462,6 @@ public class xeo extends javax.swing.JFrame {
             }
         });
 
-        jSplitForm.setBorder(null);
         jSplitForm.setDividerLocation(180);
         jSplitForm.setDividerSize(4);
         jSplitForm.setFocusable(false);
@@ -3729,7 +3700,6 @@ public class xeo extends javax.swing.JFrame {
         Te7.setToolTipText("");
         Te7.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te7.setFocusable(false);
-        Te7.setOpaque(false);
         jDeskt0.add(Te7);
         Te7.setBounds(20, 120, 160, 18);
 
@@ -3739,7 +3709,6 @@ public class xeo extends javax.swing.JFrame {
         Te6.setToolTipText("");
         Te6.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te6.setFocusable(false);
-        Te6.setOpaque(false);
         jDeskt0.add(Te6);
         Te6.setBounds(20, 100, 160, 18);
 
@@ -3749,7 +3718,6 @@ public class xeo extends javax.swing.JFrame {
         Te12.setToolTipText("");
         Te12.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te12.setFocusable(false);
-        Te12.setOpaque(false);
         jDeskt0.add(Te12);
         Te12.setBounds(20, 60, 160, 18);
 
@@ -3781,7 +3749,6 @@ public class xeo extends javax.swing.JFrame {
         Te8.setToolTipText("");
         Te8.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te8.setFocusable(false);
-        Te8.setOpaque(false);
         jDeskt0.add(Te8);
         Te8.setBounds(80, 140, 100, 18);
 
@@ -3838,7 +3805,6 @@ public class xeo extends javax.swing.JFrame {
         Te10.setToolTipText("");
         Te10.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te10.setFocusable(false);
-        Te10.setOpaque(false);
         jDeskt0.add(Te10);
         Te10.setBounds(20, 40, 160, 18);
 
@@ -3848,7 +3814,6 @@ public class xeo extends javax.swing.JFrame {
         Te14.setToolTipText("");
         Te14.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te14.setFocusable(false);
-        Te14.setOpaque(false);
         jDeskt0.add(Te14);
         Te14.setBounds(20, 80, 160, 18);
 
@@ -3872,7 +3837,6 @@ public class xeo extends javax.swing.JFrame {
         Te9.setFont(fuente);
         Te9.setText("save");
         Te9.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te9.setOpaque(false);
         Te9.setScrollOffset(2);
         jDeskt0.add(Te9);
         Te9.setBounds(20, 20, 160, 18);
@@ -3911,12 +3875,10 @@ public class xeo extends javax.swing.JFrame {
         jDeskt0.add(seePos);
         seePos.setBounds(0, 160, 18, 18);
 
-        jCOrdenar.setBackground(new java.awt.Color(255, 255, 255));
         jCOrdenar.setFont(fuente);
         jCOrdenar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "order Z", "order X", "order Y", "order a" }));
         jCOrdenar.setToolTipText("");
         jCOrdenar.setFocusable(false);
-        jCOrdenar.setOpaque(false);
         jDeskt0.add(jCOrdenar);
         jCOrdenar.setBounds(20, 180, 160, 18);
 
@@ -3957,7 +3919,6 @@ public class xeo extends javax.swing.JFrame {
         Te21.setToolTipText("");
         Te21.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
         Te21.setFocusable(false);
-        Te21.setOpaque(false);
         jDeskt0.add(Te21);
         Te21.setBounds(20, 160, 160, 18);
 
@@ -4021,7 +3982,6 @@ public class xeo extends javax.swing.JFrame {
         jDeskt1.add(Tdespl);
         Tdespl.setBounds(0, 202, 180, 18);
 
-        jCAxis.setBackground(new java.awt.Color(255, 255, 255));
         jCAxis.setFont(fuente);
         jCAxis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Axis", "2 Axis", "3 Axis", "nearest neighbour" }));
         jCAxis.setToolTipText("");
@@ -4031,7 +3991,6 @@ public class xeo extends javax.swing.JFrame {
         jDesktOpt.add(jDeskt1);
         jDeskt1.setBounds(0, 202, 180, 240);
 
-        jCFix.setBackground(new java.awt.Color(255, 255, 255));
         jCFix.setFont(fuente);
         jCFix.setMaximumRowCount(20);
         jCFix.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "fix only selected atoms", "add selected atoms to fix", "add (X) selected atoms to fix", "add (Y) selected atoms to fix", "add (Z) selected atoms to fix", "free all", "free selected atoms", "free (X) selected atoms", "free (Y) selected atoms", "free (Z) selected atoms" }));
@@ -4088,7 +4047,6 @@ public class xeo extends javax.swing.JFrame {
         Te11.setText("see fix atoms");
         Te11.setToolTipText("");
         Te11.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te11.setOpaque(false);
         jDeskt3.add(Te11);
         Te11.setBounds(20, 20, 160, 18);
 
@@ -4127,7 +4085,6 @@ public class xeo extends javax.swing.JFrame {
         Te13.setText("change lattice vectors");
         Te13.setToolTipText("");
         Te13.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te13.setOpaque(false);
         jDeskt4.add(Te13);
         Te13.setBounds(20, 80, 160, 18);
 
@@ -4242,7 +4199,6 @@ public class xeo extends javax.swing.JFrame {
         Te15.setText("atoms inside box");
         Te15.setToolTipText("");
         Te15.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te15.setOpaque(false);
         jDeskt5.add(Te15);
         Te15.setBounds(20, 20, 160, 18);
 
@@ -4332,7 +4288,6 @@ public class xeo extends javax.swing.JFrame {
         Te16.setText("repeat lvs vectors (i,j,k)");
         Te16.setToolTipText("");
         Te16.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te16.setOpaque(false);
         jDeskt5.add(Te16);
         Te16.setBounds(20, 100, 160, 18);
 
@@ -4427,7 +4382,6 @@ public class xeo extends javax.swing.JFrame {
         Te18.setText("see bonds");
         Te18.setToolTipText("");
         Te18.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te18.setOpaque(false);
         jDeskt6.add(Te18);
         Te18.setBounds(80, 40, 100, 18);
 
@@ -4452,7 +4406,6 @@ public class xeo extends javax.swing.JFrame {
         Te17.setText("covalent radio");
         Te17.setToolTipText("");
         Te17.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("info")));
-        Te17.setOpaque(false);
         jDeskt6.add(Te17);
         Te17.setBounds(80, 60, 100, 18);
 
@@ -4632,7 +4585,6 @@ public class xeo extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
-        jSplitPane1.setBorder(null);
         jSplitPane1.setDividerLocation(240);
         jSplitPane1.setDividerSize(4);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -4787,7 +4739,6 @@ public class xeo extends javax.swing.JFrame {
         });
         jScrollPaneTreeB.setViewportView(TreeB);
 
-        jSplitPane2.setBorder(null);
         jSplitPane2.setDividerLocation(60);
         jSplitPane2.setDividerSize(4);
 
@@ -4807,7 +4758,6 @@ public class xeo extends javax.swing.JFrame {
         tipo.setEditable(false);
         tipo.setFont(fuente
         );
-        tipo.setForeground(new java.awt.Color(0, 0, 0));
         tipo.setToolTipText("");
         tipo.setBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.shadow")));
         jSplitPane2.setRightComponent(tipo);
@@ -4869,13 +4819,11 @@ public class xeo extends javax.swing.JFrame {
 
         menuPpal.setFont(fuente);
 
-        Me0.setBackground(new java.awt.Color(255, 255, 255));
         Me0.setBorder(null);
         Me0.setText("File");
         Me0.setFont(fuente
         );
 
-        me0.setBackground(new java.awt.Color(255, 255, 255));
         me0.setFont(fuente);
         me0.setText("open project (F4)");
         me0.setActionCommand("open project");
@@ -4886,7 +4834,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me0.add(me0);
 
-        me1.setBackground(new java.awt.Color(255, 255, 255));
         me1.setFont(fuente);
         me1.setText("load project (F5)");
         me1.setActionCommand("load project ");
@@ -4897,7 +4844,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me0.add(me1);
 
-        me2.setBackground(new java.awt.Color(255, 255, 255));
         me2.setFont(fuente);
         me2.setText("open file (F3)");
         me2.setActionCommand("open file");
@@ -4909,7 +4855,6 @@ public class xeo extends javax.swing.JFrame {
         Me0.add(me2);
         Me0.add(jSeparator1);
 
-        me3.setBackground(new java.awt.Color(255, 255, 255));
         me3.setFont(fuente);
         me3.setText("hide Inspector (F7)");
         me3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4919,7 +4864,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me0.add(me3);
 
-        me4.setBackground(new java.awt.Color(255, 255, 255));
         me4.setFont(fuente);
         me4.setText("save *.jpg (F8)");
         me4.setActionCommand("save *.jpg");
@@ -4930,7 +4874,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me0.add(me4);
 
-        me5.setBackground(new java.awt.Color(255, 255, 255));
         me5.setFont(fuente);
         me5.setText("show picture (F9)");
         me5.setActionCommand("show picture");
@@ -4947,7 +4890,6 @@ public class xeo extends javax.swing.JFrame {
         Me1.setText("Utilities");
         Me1.setFont(fuente);
 
-        me_rot.setBackground(new java.awt.Color(255, 255, 255));
         me_rot.setFont(fuente);
         me_rot.setText("rotate and rescale (structure)");
         me_rot.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4958,7 +4900,6 @@ public class xeo extends javax.swing.JFrame {
         Me1.add(me_rot);
         Me1.add(jSeparator4);
 
-        me_dinamic.setBackground(new java.awt.Color(255, 255, 255));
         me_dinamic.setFont(fuente);
         me_dinamic.setText("dinamic");
         me_dinamic.setFocusable(true);
@@ -4969,7 +4910,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me1.add(me_dinamic);
 
-        me_STM.setBackground(new java.awt.Color(255, 255, 255));
         me_STM.setFont(fuente);
         me_STM.setText("STM");
         me_STM.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4979,7 +4919,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me1.add(me_STM);
 
-        me_kpoints.setBackground(new java.awt.Color(255, 255, 255));
         me_kpoints.setFont(fuente);
         me_kpoints.setText("kpoints");
         me_kpoints.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4989,7 +4928,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me1.add(me_kpoints);
 
-        me_Bulk.setBackground(new java.awt.Color(255, 255, 255));
         me_Bulk.setFont(fuente);
         me_Bulk.setText("Bulk modulus");
         me_Bulk.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4999,7 +4937,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me1.add(me_Bulk);
 
-        me_script.setBackground(new java.awt.Color(255, 255, 255));
         me_script.setFont(fuente);
         me_script.setText("script");
         me_script.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5010,7 +4947,6 @@ public class xeo extends javax.swing.JFrame {
         Me1.add(me_script);
         Me1.add(jSeparator3);
 
-        me_ediotr.setBackground(new java.awt.Color(255, 255, 255));
         me_ediotr.setFont(fuente);
         me_ediotr.setText("editor");
         me_ediotr.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5020,7 +4956,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me1.add(me_ediotr);
 
-        me_cal.setBackground(new java.awt.Color(255, 255, 255));
         me_cal.setFont(fuente);
         me_cal.setText("calculator");
         me_cal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5031,30 +4966,25 @@ public class xeo extends javax.swing.JFrame {
         Me1.add(me_cal);
         Me1.add(jSeparator14);
 
-        Me5.setBackground(new java.awt.Color(255, 255, 255));
         Me5.setText("Other programs");
         Me5.setFont(fuente);
         Me5.setOpaque(true);
 
-        jMenuItem13.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem13.setFont(fuente);
         jMenuItem13.setText("abinit");
         jMenuItem13.setEnabled(false);
         Me5.add(jMenuItem13);
 
-        jMenuItem11.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem11.setFont(fuente);
         jMenuItem11.setText("castep");
         jMenuItem11.setEnabled(false);
         Me5.add(jMenuItem11);
 
-        jMenu_Fireball.setBackground(new java.awt.Color(255, 255, 255));
         jMenu_Fireball.setText("fireball");
         jMenu_Fireball.setFont(fuente);
         jMenu_Fireball.setOpaque(true);
         Me5.add(jMenu_Fireball);
 
-        jMenuItem12.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem12.setFont(fuente);
         jMenuItem12.setText("vasp");
         jMenuItem12.setEnabled(false);
@@ -5067,14 +4997,12 @@ public class xeo extends javax.swing.JFrame {
         Me2.setText("Export");
         Me2.setFont(fuente);
 
-        Menu_xeoBabel.setBackground(new java.awt.Color(255, 255, 255));
         Menu_xeoBabel.setText("xeoBabel");
         Menu_xeoBabel.setFont(fuente
         );
         Menu_xeoBabel.setOpaque(true);
         Me2.add(Menu_xeoBabel);
 
-        me_babel.setBackground(new java.awt.Color(255, 255, 255));
         me_babel.setFont(fuente);
         me_babel.setText("babel");
         me_babel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5084,7 +5012,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me2.add(me_babel);
 
-        me_POVRAY.setBackground(new java.awt.Color(255, 255, 255));
         me_POVRAY.setFont(fuente);
         me_POVRAY.setText("POV-Ray");
         me_POVRAY.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5100,7 +5027,6 @@ public class xeo extends javax.swing.JFrame {
         Me3.setText("Options");
         Me3.setFont(fuente);
 
-        jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem1.setFont(fuente);
         jMenuItem1.setText("visual options");
         jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5110,13 +5036,11 @@ public class xeo extends javax.swing.JFrame {
         });
         Me3.add(jMenuItem1);
 
-        Me_Language.setBackground(new java.awt.Color(255, 255, 255));
         Me_Language.setText("language");
         Me_Language.setFont(fuente);
         Me_Language.setOpaque(true);
         Me3.add(Me_Language);
 
-        me6.setBackground(new java.awt.Color(255, 255, 255));
         me6.setFont(fuente);
         me6.setText("Font");
         me6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5126,7 +5050,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me3.add(me6);
 
-        me7.setBackground(new java.awt.Color(255, 255, 255));
         me7.setFont(fuente);
         me7.setText("save options");
         me7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5136,7 +5059,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me3.add(me7);
 
-        me8.setBackground(new java.awt.Color(255, 255, 255));
         me8.setFont(fuente);
         me8.setText("restore intial options");
         me8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5160,7 +5082,6 @@ public class xeo extends javax.swing.JFrame {
         Me7.setText("about box");
         Me7.setFont(fuente);
 
-        me35.setBackground(new java.awt.Color(255, 255, 255));
         me35.setFont(fuente);
         me35.setText("about");
         me35.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5170,7 +5091,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me7.add(me35);
 
-        me36.setBackground(new java.awt.Color(255, 255, 255));
         me36.setFont(fuente);
         me36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/gplv3.gif"))); // NOI18N
         me36.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5180,7 +5100,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me7.add(me36);
 
-        me37.setBackground(new java.awt.Color(255, 255, 255));
         me37.setFont(fuente);
         me37.setText("show w");
         me37.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5190,7 +5109,6 @@ public class xeo extends javax.swing.JFrame {
         });
         Me7.add(me37);
 
-        me38.setBackground(new java.awt.Color(255, 255, 255));
         me38.setFont(fuente);
         me38.setText("show c");
         me38.addMouseListener(new java.awt.event.MouseAdapter() {

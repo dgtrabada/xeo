@@ -1,11 +1,9 @@
-git clone git@github.com:dgtrabada/xeo.git
-
 you can run xeo (different ways):
                    1.)       ./xeo
                    2.)       java -jar xeo.jar 
 also you can modify your profile (.bashrc or .profile or .cshrc, depending on the shell).
 this is an example using the .bashrc                    
-                   3.)       export PATH="$PATH:/where_is_xeo/"  #recommended 
+                   3.)       export PATH="$PATH:/home/dani/bin/xeo/"  #recommended 
   
 if you want to install xeo for all users write 4.) in /etc/profile 
 
